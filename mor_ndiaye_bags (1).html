@@ -1,0 +1,1371 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mor Ndiaye Bags — Maroquinerie de Luxe, Guédiawaye</title>
+<meta name="description" content="Maroquinerie artisanale sénégalaise. Sacs en cuir 100% véritable, fabriqués à la main à Guédiawaye, Dakar. Livraison partout au Sénégal.">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=DM+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+/* ═══════════ VARIABLES ═══════════ */
+:root{
+  --gold:#C9973A;--gl:#E0B55A;--gp:#F5E6C0;
+  --dk:#0D0803;--dp:#16100a;--d2:#1a140f;--d3:#221810;--d4:#2a1e12;--d5:#321f0e;
+  --cr:#FFF8EE;--mt:#8a7060;--bdr:rgba(201,151,58,.16);
+  --green:#22c55e;--amber:#f59e0b;--red:#E05050;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--dk);color:var(--cr);font-family:'DM Sans',sans-serif;font-weight:400;overflow-x:hidden}
+
+/* ═══════════ CURSOR (desktop seulement) ═══════════ */
+@media(hover:hover) and (pointer:fine){
+  body{cursor:none}
+  #cur{position:fixed;width:10px;height:10px;background:var(--gold);border-radius:50%;pointer-events:none;z-index:99999;transform:translate(-50%,-50%);transition:width .22s,height .22s;mix-blend-mode:difference}
+  #curR{position:fixed;width:34px;height:34px;border:1px solid var(--gl);border-radius:50%;pointer-events:none;z-index:99998;transform:translate(-50%,-50%);transition:all .18s ease-out;opacity:.5}
+  button,a,.cat-item,.pcard,.ccard,.mthumb,[onclick]{cursor:none}
+}
+/* Touch : supprimer le délai 300ms */
+button,a,[onclick]{touch-action:manipulation;-webkit-tap-highlight-color:rgba(201,151,58,.12)}
+
+/* ═══════════ GRAIN ═══════════ */
+.grain{position:fixed;inset:0;pointer-events:none;z-index:9998;opacity:.025;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+
+/* ═══════════ MARQUEE ═══════════ */
+.mbar{background:var(--gold);overflow:hidden;white-space:nowrap;padding:10px 0;position:sticky;top:0;z-index:1000;border-bottom:2px solid var(--gl)}
+.mtrack{display:inline-flex;animation:mq 32s linear infinite}
+.mtrack span{padding:0 28px;font-size:.72rem;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:#000}
+.mtrack .sep{opacity:.35;padding:0}
+@keyframes mq{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* ═══════════ NAV ═══════════ */
+nav{background:rgba(13,8,3,.97);backdrop-filter:blur(24px);border-bottom:1px solid var(--bdr);padding:0 36px;height:70px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:38px;z-index:999;gap:12px}
+.nlogo{font-family:'Playfair Display',serif;color:var(--gold);font-size:1.55rem;font-style:italic;letter-spacing:.03em;text-decoration:none;white-space:nowrap;flex:0 0 auto}
+.nlinks{display:flex;gap:22px;align-items:center}
+.nlinks a{text-decoration:none;color:var(--mt);font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;transition:color .3s;white-space:nowrap}
+.nlinks a:hover{color:var(--gl)}
+.nright{display:flex;gap:6px;align-items:center}
+
+/* search */
+.swrap{position:relative;display:flex;align-items:center}
+.sinput{background:var(--d3);border:1px solid var(--bdr);color:var(--cr);padding:8px 32px 8px 12px;border-radius:20px;font-size:.76rem;font-family:'DM Sans',sans-serif;outline:none;width:170px;transition:all .35s}
+.sinput::placeholder{color:var(--mt)}
+.sinput:focus{border-color:var(--gold);width:230px;background:var(--d4)}
+.sico{position:absolute;right:10px;color:var(--mt);pointer-events:none;font-size:.8rem}
+.sres{position:absolute;top:calc(100% + 8px);left:0;width:300px;background:var(--d2);border:1px solid var(--bdr);border-radius:10px;overflow:hidden;z-index:2000;box-shadow:0 16px 40px rgba(0,0,0,.55);display:none}
+.sres.open{display:block}
+.sri{display:flex;align-items:center;gap:11px;padding:10px 13px;transition:background .2s}
+.sri:hover,.sri:active{background:var(--d4)}
+.srimg{width:40px;height:40px;object-fit:cover;border-radius:5px;background:var(--d4);flex:0 0 40px}
+.srname{font-size:.82rem;font-weight:500;color:var(--cr)}
+.srprice{font-size:.7rem;color:var(--gold);margin-top:2px}
+.srempty{padding:18px;font-size:.8rem;color:var(--mt);text-align:center}
+
+/* socials nav */
+.socials{display:flex;gap:6px}
+.sbtn{width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;border:1px solid var(--bdr);background:none;transition:all .3s;text-decoration:none;color:var(--mt)}
+.sbtn svg{width:14px;height:14px;fill:currentColor;display:block}
+.sbtn:hover,.sbtn:active{border-color:var(--gold);color:var(--gold);transform:translateY(-2px)}
+.sbtn.ig:hover,.sbtn.ig:active{background:linear-gradient(135deg,#833ab4,#fd1d1d,#f77737);border-color:transparent;color:#fff}
+.sbtn.fb:hover,.sbtn.fb:active{background:#1877F2;border-color:transparent;color:#fff}
+.sbtn.tw:hover,.sbtn.tw:active{background:#000;border-color:#000;color:#fff}
+
+/* nav buttons */
+.nbtn{background:none;border:1px solid var(--bdr);color:var(--mt);padding:8px 14px;font-size:.7rem;letter-spacing:.09em;text-transform:uppercase;border-radius:4px;transition:all .3s;font-family:'DM Sans',sans-serif;white-space:nowrap}
+.nbtn:hover,.nbtn:active{border-color:var(--gold);color:var(--gold)}
+.cartbtn{position:relative;display:flex;align-items:center;gap:6px;background:none;border:1px solid var(--bdr);color:var(--mt);padding:8px 14px;font-size:.7rem;letter-spacing:.09em;text-transform:uppercase;border-radius:4px;transition:all .3s;font-family:'DM Sans',sans-serif}
+.cartbtn:hover,.cartbtn:active{border-color:var(--gold);color:var(--gold)}
+.cbadge{position:absolute;top:-7px;right:-7px;background:var(--gold);color:#000;font-size:.55rem;font-weight:700;width:17px;height:17px;border-radius:50%;display:flex;align-items:center;justify-content:center;opacity:0;transition:all .3s;transform:scale(0)}
+.cbadge.vis{opacity:1;transform:scale(1)}
+
+/* hamburger */
+.hambtn{display:none;background:none;border:1px solid var(--bdr);color:var(--mt);width:38px;height:38px;border-radius:4px;flex-direction:column;align-items:center;justify-content:center;gap:4px;transition:all .3s}
+.hambtn:hover{border-color:var(--gold)}
+.hambtn span{display:block;width:16px;height:2px;background:currentColor;border-radius:2px;transition:all .3s}
+
+/* ═══════════ MENU MOBILE ═══════════ */
+.mmenu{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(13,8,3,.99);z-index:9997;transform:translateX(-100%);transition:transform .38s cubic-bezier(.25,.46,.45,.94);display:flex;flex-direction:column;padding:70px 28px 40px;overflow-y:auto}
+.mmenu.open{transform:translateX(0)}
+.mmclose{position:absolute;top:16px;right:16px;background:none;border:none;color:var(--mt);font-size:1.5rem;padding:10px;min-width:44px;min-height:44px;display:flex;align-items:center;justify-content:center;transition:color .3s}
+.mmclose:hover{color:var(--cr)}
+.mmlogo{font-family:'Playfair Display',serif;font-size:1.6rem;font-style:italic;color:var(--gold);margin-bottom:28px}
+.mmsrch{position:relative;margin-bottom:24px}
+.mmsrch input{width:100%;padding:14px 40px 14px 16px;background:var(--d4);border:1px solid var(--bdr);border-radius:25px;color:var(--cr);font-size:16px;font-family:'DM Sans',sans-serif;outline:none;-webkit-appearance:none}
+.mmsrch input:focus{border-color:var(--gold)}
+.mmsrch input::placeholder{color:var(--mt)}
+.mmsico{position:absolute;right:14px;top:50%;transform:translateY(-50%);color:var(--mt);pointer-events:none}
+.mmlinks{display:flex;flex-direction:column;gap:4px;flex:1}
+.mmlinks a{text-decoration:none;color:var(--cr);font-size:1.45rem;font-family:'Playfair Display',serif;font-style:italic;padding:13px 0;border-bottom:1px solid var(--bdr);transition:color .3s}
+.mmlinks a:hover,.mmlinks a:active{color:var(--gold)}
+.mmsocs{display:flex;gap:12px;margin-top:28px}
+
+/* ═══════════ HERO ═══════════ */
+.hero{position:relative;min-height:90vh;display:flex;align-items:center;overflow:hidden;background:linear-gradient(to bottom,var(--dp),var(--dk))}
+.hbg{position:absolute;inset:0;background:radial-gradient(ellipse 70% 60% at 70% 50%,rgba(201,151,58,.1),transparent 65%)}
+.hgrid{position:absolute;inset:0;background-image:linear-gradient(90deg,rgba(201,151,58,.04) 1px,transparent 1px),linear-gradient(rgba(201,151,58,.04) 1px,transparent 1px);background-size:70px 70px;mask-image:radial-gradient(ellipse 80% 80% at 50% 50%,black 20%,transparent 100%)}
+.hcontent{position:relative;z-index:2;padding:0 80px;max-width:700px;animation:fadeUp 1.1s ease both}
+@keyframes fadeUp{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:translateY(0)}}
+.hbadge{display:inline-flex;align-items:center;gap:9px;border:1px solid var(--bdr);border-radius:50px;padding:6px 18px;margin-bottom:26px;font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold)}
+.hbadge::before{content:'';width:5px;height:5px;border-radius:50%;background:var(--gold);animation:blink 2s infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
+.hero h1{font-family:'Playfair Display',serif;font-size:clamp(2.8rem,5.5vw,5.2rem);font-weight:700;line-height:1.08;margin-bottom:20px;color:var(--cr)}
+.hero h1 em{font-style:italic;color:var(--gl)}
+.hero p{font-size:1rem;line-height:1.78;color:var(--mt);max-width:460px;margin-bottom:36px}
+.hcta{display:flex;gap:14px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:9px;padding:13px 30px;font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;font-weight:700;border-radius:6px;text-decoration:none;transition:all .3s;font-family:'DM Sans',sans-serif;border:none}
+.btn-gld{background:var(--gold);color:#000}
+.btn-gld:hover,.btn-gld:active{background:var(--gl);transform:translateY(-2px);box-shadow:0 12px 28px rgba(201,151,58,.3)}
+.btn-ghost{background:transparent;color:var(--cr);border:1px solid var(--bdr)}
+.btn-ghost:hover,.btn-ghost:active{border-color:var(--gold);color:var(--gold);transform:translateY(-2px)}
+.hvisual{position:absolute;right:0;top:0;width:48%;height:100%;z-index:1}
+.hvisual img{width:100%;height:100%;object-fit:cover;mask-image:linear-gradient(to left,rgba(0,0,0,.85) 0%,rgba(0,0,0,.2) 55%,transparent 100%)}
+.hscroll{position:absolute;bottom:32px;left:50%;transform:translateX(-50%);z-index:3;display:flex;flex-direction:column;align-items:center;gap:8px;font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;color:var(--mt)}
+.hline{width:1px;height:44px;background:linear-gradient(to bottom,var(--gold),transparent);animation:sp 2s ease-in-out infinite}
+@keyframes sp{0%,100%{opacity:.35}50%{opacity:1}}
+
+/* ═══════════ STATS ═══════════ */
+.statsband{background:var(--dp);border-top:1px solid var(--bdr);border-bottom:1px solid var(--bdr);padding:40px 60px;display:grid;grid-template-columns:repeat(4,1fr)}
+.stat{text-align:center;padding:0 10px;position:relative}
+.stat+.stat::before{content:'';position:absolute;left:0;top:15%;height:70%;width:1px;background:var(--bdr)}
+.stn{font-family:'Playfair Display',serif;font-size:2.6rem;font-style:italic;color:var(--gl);line-height:1}
+.stl{font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--mt);margin-top:7px}
+
+/* ═══════════ CATEGORIES ═══════════ */
+.catwrap{background:var(--dp);border-bottom:1px solid var(--bdr);padding:0 40px}
+.catbar{display:flex;overflow-x:auto;gap:10px;padding:20px 0;scrollbar-width:none}
+.catbar::-webkit-scrollbar{display:none}
+.cat-item{flex:0 0 auto;padding:9px 24px;border:1px solid var(--bdr);border-radius:50px;transition:all .3s;font-size:.78rem;font-weight:500;color:var(--mt);background:none;font-family:'DM Sans',sans-serif;letter-spacing:.05em}
+.cat-item:hover,.cat-item:active{border-color:var(--gold);color:var(--gl)}
+.cat-item.active{background:var(--gold);border-color:var(--gold);color:#000;font-weight:700}
+
+/* ═══════════ SECTION UTILS ═══════════ */
+section{padding:88px 60px}
+.slbl{display:inline-flex;align-items:center;gap:10px;font-size:.66rem;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);margin-bottom:16px}
+.slbl::before{content:'';flex:0 0 24px;height:2px;background:var(--gold)}
+.stitle{font-family:'Playfair Display',serif;font-size:clamp(2rem,3.5vw,3rem);font-weight:700;line-height:1.15;color:var(--cr)}
+.stitle em{font-style:italic;color:var(--gl)}
+
+/* ═══════════ PRODUCT GRID ═══════════ */
+.pgsec{padding:56px 40px 80px}
+.pgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(295px,1fr));gap:22px}
+.pcard{background:var(--d2);border-radius:12px;overflow:hidden;border:1px solid var(--bdr);transition:all .35s;display:flex;flex-direction:column;position:relative}
+.pcard:hover{transform:translateY(-6px);border-color:var(--gold);box-shadow:0 20px 50px rgba(0,0,0,.5)}
+.pcard.is-out{opacity:.8}
+.pcard.is-out:hover{transform:none;box-shadow:none;border-color:var(--bdr)}
+.pcard.has-promo{border-color:rgba(224,80,80,.3)}
+.pcard.has-promo:hover{border-color:rgba(224,80,80,.7);box-shadow:0 20px 50px rgba(224,80,80,.1)}
+
+/* media slider */
+.pm{position:relative;width:100%;height:330px;background:var(--d4);overflow:hidden}
+.pslider{display:flex;height:100%;transition:transform .55s ease}
+.pslide{flex:0 0 100%;height:100%}
+.pslide img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s ease}
+.pcard:not(.is-out):hover .pslide:first-child img{transform:scale(1.04)}
+.pslide video{width:100%;height:100%;object-fit:cover;display:block}
+.parr{position:absolute;top:50%;transform:translateY(-50%);background:rgba(13,8,3,.6);border:none;color:var(--cr);width:30px;height:30px;border-radius:50%;z-index:5;font-size:.85rem;display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity .3s}
+.pcard:hover .parr{opacity:1}
+.pprev{left:9px}.pnext{right:9px}
+.pdots{position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:5px;z-index:5}
+.pdot{width:5px;height:5px;border-radius:50%;background:rgba(255,248,238,.3);transition:background .3s}
+.pdot.on{background:var(--gold)}
+
+/* badges sur image */
+.pbadge{position:absolute;top:13px;left:13px;background:var(--gold);color:#000;font-size:.58rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:5px 12px;border-radius:4px;z-index:4}
+.promo-badge{position:absolute;top:13px;right:13px;background:var(--red);color:#fff;font-size:.68rem;font-weight:700;letter-spacing:.07em;text-transform:uppercase;padding:6px 13px;border-radius:20px;z-index:6;animation:ppulse 2s ease-in-out infinite;box-shadow:0 4px 16px rgba(224,80,80,.45)}
+@keyframes ppulse{0%,100%{box-shadow:0 4px 16px rgba(224,80,80,.45)}50%{box-shadow:0 4px 26px rgba(224,80,80,.75)}}
+.pvid-badge{position:absolute;bottom:13px;right:13px;background:rgba(13,8,3,.8);backdrop-filter:blur(6px);color:var(--gold);font-size:.6rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:5px 12px;border-radius:4px;z-index:4;border:1px solid var(--bdr);display:flex;align-items:center;gap:5px}
+
+/* overlay rupture */
+.out-overlay{position:absolute;inset:0;background:rgba(13,8,3,.6);z-index:5;display:flex;align-items:center;justify-content:center}
+.out-overlay span{font-family:'Playfair Display',serif;font-style:italic;color:var(--red);font-size:1.35rem;font-weight:700;text-shadow:0 2px 8px rgba(0,0,0,.8);letter-spacing:.04em}
+
+/* card body */
+.pbody{padding:18px 20px 22px;flex:1;display:flex;flex-direction:column}
+.pname{font-family:'Playfair Display',serif;font-size:1.35rem;font-weight:700;margin-bottom:3px;color:var(--cr)}
+.pcat{font-size:.66rem;color:var(--mt);letter-spacing:.1em;text-transform:uppercase;margin-bottom:10px}
+
+/* disponibilité */
+.dispo{display:inline-flex;align-items:center;gap:5px;font-size:.65rem;font-weight:600;letter-spacing:.07em;text-transform:uppercase;margin-bottom:11px}
+.ddot{width:7px;height:7px;border-radius:50%;flex:0 0 7px}
+.dispo.ok{color:var(--green)}.dispo.ok .ddot{background:var(--green);box-shadow:0 0 6px rgba(34,197,94,.6)}
+.dispo.low{color:var(--amber)}.dispo.low .ddot{background:var(--amber);box-shadow:0 0 6px rgba(245,158,11,.6)}
+.dispo.out{color:var(--red)}.dispo.out .ddot{background:var(--red);box-shadow:0 0 6px rgba(224,80,80,.6)}
+
+/* prix */
+.price-block{margin-bottom:14px}
+.pprice{font-size:1.22rem;font-weight:700;color:var(--gold)}
+.pprice span{font-size:.66rem;color:var(--mt);font-weight:400;margin-left:3px}
+.price-orig{font-size:.8rem;color:var(--mt);text-decoration:line-through;margin-bottom:2px}
+.price-promo{font-size:1.28rem;font-weight:700;color:var(--red)}
+.price-promo span{font-size:.66rem;color:var(--mt);font-weight:400;margin-left:3px}
+.price-eco{display:inline-flex;align-items:center;gap:5px;font-size:.62rem;font-weight:600;background:rgba(224,80,80,.1);color:var(--red);border:1px solid rgba(224,80,80,.22);padding:3px 9px;border-radius:50px;margin-top:4px}
+
+/* actions */
+.pactions{display:flex;flex-direction:column;gap:6px;margin-top:auto}
+.btncart{display:flex;align-items:center;justify-content:center;gap:8px;padding:12px;background:var(--d4);border:1px solid var(--bdr);color:var(--cr);border-radius:7px;font-size:.72rem;font-weight:600;letter-spacing:.07em;text-transform:uppercase;font-family:'DM Sans',sans-serif;transition:all .3s;width:100%}
+.btncart:hover,.btncart:active{border-color:var(--gold);color:var(--gold);background:rgba(201,151,58,.07)}
+.btncart.added{border-color:var(--gold);background:rgba(201,151,58,.1);color:var(--gold)}
+.btnwa{display:flex;align-items:center;justify-content:center;gap:8px;padding:12px;background:var(--gold);color:#000;border:none;border-radius:7px;font-size:.72rem;font-weight:700;letter-spacing:.07em;text-transform:uppercase;font-family:'DM Sans',sans-serif;transition:all .3s;width:100%}
+.btnwa:hover,.btnwa:active{background:var(--gl);transform:translateY(-1px);box-shadow:0 8px 22px rgba(201,151,58,.3)}
+
+/* ═══════════ CART ═══════════ */
+.cbkdrop{position:fixed;inset:0;background:rgba(0,0,0,.6);backdrop-filter:blur(6px);z-index:7998;opacity:0;pointer-events:none;transition:opacity .4s}
+.cbkdrop.open{opacity:1;pointer-events:all}
+.cside{position:fixed;right:0;top:0;width:420px;height:100%;background:var(--d2);border-left:1px solid var(--bdr);z-index:7999;display:flex;flex-direction:column;transform:translateX(100%);transition:transform .42s cubic-bezier(.25,.46,.45,.94)}
+.cside.open{transform:translateX(0)}
+.chead{padding:22px 24px 18px;border-bottom:1px solid var(--bdr);display:flex;align-items:center;justify-content:space-between}
+.ctitle{font-family:'Playfair Display',serif;font-size:1.5rem;font-style:italic;color:var(--gold)}
+.cxbtn{background:none;border:none;color:var(--mt);font-size:1.3rem;transition:color .3s;padding:8px;min-width:40px;min-height:40px;display:flex;align-items:center;justify-content:center}
+.cxbtn:hover{color:var(--cr)}
+.citems{flex:1;overflow-y:auto;padding:14px 24px}
+.cempty{display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:200px;color:var(--mt);text-align:center;gap:12px}
+.cempty-ico{font-size:2.5rem;opacity:.35}
+.citem{display:flex;gap:12px;padding:14px 0;border-bottom:1px solid rgba(201,151,58,.07);align-items:flex-start}
+.ciimg{width:62px;height:70px;object-fit:cover;border-radius:6px;flex:0 0 62px;background:var(--d4)}
+.ciinfo{flex:1;min-width:0}
+.ciname{font-family:'Playfair Display',serif;font-size:.98rem;margin-bottom:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.cicat{font-size:.62rem;color:var(--mt);letter-spacing:.07em;text-transform:uppercase;margin-bottom:5px}
+.ciprice{font-size:.86rem;font-weight:700}
+.ciqty{display:flex;align-items:center;gap:9px;margin-top:8px}
+.qbtn{background:var(--d4);border:1px solid var(--bdr);color:var(--cr);width:26px;height:26px;border-radius:4px;font-size:1rem;display:flex;align-items:center;justify-content:center;transition:all .3s;font-family:'DM Sans',sans-serif;line-height:1}
+.qbtn:hover,.qbtn:active{border-color:var(--gold);color:var(--gold)}
+.qval{font-size:.88rem;font-weight:700;min-width:16px;text-align:center}
+.cidel{background:none;border:none;color:rgba(224,80,80,.4);font-size:.88rem;margin-left:auto;transition:color .3s;padding:6px;line-height:1}
+.cidel:hover,.cidel:active{color:var(--red)}
+.cfoot{padding:18px 24px;border-top:1px solid var(--bdr)}
+.ctotrow{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px}
+.ctotlbl{font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--mt)}
+.ctotval{font-family:'Playfair Display',serif;font-size:1.5rem;font-style:italic;color:var(--gold)}
+.csave{font-size:.68rem;color:var(--red);font-weight:600;text-align:right;margin-bottom:14px}
+.cchk{width:100%;padding:15px;background:var(--gold);color:#000;border:none;border-radius:7px;font-size:.78rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;font-family:'DM Sans',sans-serif;transition:all .3s;margin-bottom:7px;display:flex;align-items:center;justify-content:center;gap:8px}
+.cchk:hover,.cchk:active{background:var(--gl);transform:translateY(-1px)}
+.cclr{width:100%;padding:9px;background:none;border:1px solid rgba(224,80,80,.18);color:rgba(224,80,80,.5);border-radius:6px;font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;font-family:'DM Sans',sans-serif;transition:all .3s}
+.cclr:hover,.cclr:active{border-color:var(--red);color:var(--red)}
+
+/* ═══════════ MODAL PRODUIT ═══════════ */
+.mov{position:fixed;inset:0;z-index:9000;background:rgba(0,0,0,.92);backdrop-filter:blur(14px);display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .4s;padding:16px}
+.mov.open{opacity:1;pointer-events:all}
+.modal{background:var(--d2);border:1px solid var(--bdr);border-radius:14px;max-width:680px;width:100%;max-height:92vh;overflow-y:auto;position:relative;transform:translateY(22px);transition:transform .4s}
+.mov.open .modal{transform:translateY(0)}
+.mox{position:absolute;top:12px;right:12px;background:rgba(13,8,3,.7);backdrop-filter:blur(8px);border:1px solid var(--bdr);color:var(--mt);font-size:.9rem;width:32px;height:32px;border-radius:50%;z-index:10;transition:all .3s;display:flex;align-items:center;justify-content:center}
+.mox:hover,.mox:active{color:var(--cr);border-color:var(--gold)}
+.mgal{position:relative;height:290px;overflow:hidden;border-radius:14px 14px 0 0;background:var(--d4)}
+.mgsl{display:flex;height:100%;transition:transform .52s ease}
+.mgslide{flex:0 0 100%;height:100%}
+.mgslide img,.mgslide video{width:100%;height:100%;object-fit:cover;display:block}
+.mgarr{position:absolute;top:50%;transform:translateY(-50%);background:rgba(13,8,3,.6);border:none;color:var(--cr);width:34px;height:34px;border-radius:50%;z-index:5;font-size:1rem;display:flex;align-items:center;justify-content:center;transition:all .3s}
+.mgarr:hover,.mgarr:active{background:var(--gold);color:#000}
+.mgprev{left:10px}.mgnext{right:10px}
+.mthumbs{display:flex;gap:7px;padding:9px 20px;overflow-x:auto;scrollbar-width:none;background:rgba(13,8,3,.4)}
+.mthumbs::-webkit-scrollbar{display:none}
+.mthumb{width:48px;height:48px;object-fit:cover;border-radius:4px;border:2px solid transparent;transition:all .3s;flex:0 0 48px;background:var(--d4)}
+.mthumb.on{border-color:var(--gold)}
+.mbody{padding:20px 24px 26px}
+.mname{font-family:'Playfair Display',serif;font-size:1.85rem;font-weight:700;margin-bottom:4px;color:var(--cr)}
+.mdesc{color:var(--mt);font-size:.87rem;line-height:1.82;margin-bottom:18px}
+.mactions{display:flex;flex-direction:column;gap:7px}
+
+/* ═══════════ ATELIER ═══════════ */
+.about-sec{background:var(--dp);border-top:1px solid var(--bdr)}
+.agrid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.aimgw{position:relative}
+.aimg{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:12px}
+.aacc{position:absolute;bottom:-20px;right:-20px;width:55%;height:55%;border:1px solid var(--gold);border-radius:12px;z-index:-1}
+.aquote{font-family:'Playfair Display',serif;font-size:1.28rem;font-style:italic;color:var(--cr);line-height:1.55;border-left:3px solid var(--gold);padding-left:20px;margin:26px 0}
+.ap{color:var(--mt);font-size:.92rem;line-height:1.88;margin-bottom:16px}
+
+/* ═══════════ CONTACT ═══════════ */
+.csec{background:var(--d2);border-top:1px solid var(--bdr)}
+.cinner{max-width:780px;margin:0 auto;text-align:center}
+.cdesc{color:var(--mt);font-size:.92rem;line-height:1.78;margin:20px 0 30px}
+.ccards{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:30px}
+.ccard{background:var(--dk);border:1px solid var(--bdr);border-radius:10px;padding:22px 12px;text-align:center;transition:all .3s}
+.ccard:hover,.ccard:active{border-color:var(--gold);transform:translateY(-3px)}
+.ccico{font-size:1.5rem;margin-bottom:9px}
+.cclbl{font-size:.62rem;letter-spacing:.13em;text-transform:uppercase;color:var(--mt);margin-bottom:6px}
+.ccval{font-size:.82rem;color:var(--cr);font-weight:600}
+.soc-row{display:flex;justify-content:center;gap:10px;flex-wrap:wrap}
+.soc-card{display:flex;align-items:center;gap:9px;padding:11px 18px;border:1px solid var(--bdr);border-radius:50px;text-decoration:none;color:var(--mt);font-size:.75rem;font-weight:500;transition:all .3s;background:var(--dk)}
+.soc-card svg{width:17px;height:17px;fill:currentColor}
+.soc-card:hover,.soc-card:active{transform:translateY(-3px);box-shadow:0 8px 24px rgba(0,0,0,.4)}
+.soc-card.wa:hover,.soc-card.wa:active{border-color:#25D366;background:rgba(37,211,102,.08);color:#25D366}
+.soc-card.ig:hover,.soc-card.ig:active{border-color:transparent;background:linear-gradient(135deg,#833ab4,#fd1d1d,#f77737);color:#fff}
+.soc-card.fb:hover,.soc-card.fb:active{border-color:#1877F2;background:rgba(24,119,242,.08);color:#1877F2}
+.soc-card.tw:hover,.soc-card.tw:active{border-color:#000;background:#000;color:#fff}
+.soc-card.em:hover,.soc-card.em:active{border-color:var(--gold);background:rgba(201,151,58,.08);color:var(--gold)}
+
+/* ═══════════ FOOTER ═══════════ */
+footer{background:var(--dk);border-top:1px solid var(--bdr);padding:48px 60px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}
+.flogo{font-family:'Playfair Display',serif;font-size:1.3rem;font-style:italic;color:var(--gold);letter-spacing:.04em}
+.fcopy{font-size:.68rem;color:var(--mt);letter-spacing:.1em;text-align:center;line-height:1.7}
+.fcopy a{color:var(--gold);text-decoration:none}
+.fsocs{display:flex;gap:8px}
+.fsocbtn{width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;border:1px solid var(--bdr);background:none;transition:all .3s;text-decoration:none;color:var(--mt)}
+.fsocbtn svg{width:15px;height:15px;fill:currentColor;display:block}
+.fsocbtn:hover,.fsocbtn:active{transform:translateY(-3px)}
+.fsocbtn.wa:hover,.fsocbtn.wa:active{background:#25D366;border-color:#25D366;color:#fff}
+.fsocbtn.ig:hover,.fsocbtn.ig:active{background:linear-gradient(135deg,#833ab4,#fd1d1d,#f77737);border-color:transparent;color:#fff}
+.fsocbtn.fb:hover,.fsocbtn.fb:active{background:#1877F2;border-color:transparent;color:#fff}
+.fsocbtn.tw:hover,.fsocbtn.tw:active{background:#000;border-color:#000;color:#fff}
+.flinks{display:flex;gap:18px}
+.flinks a{font-size:.68rem;color:var(--mt);text-decoration:none;letter-spacing:.1em;text-transform:uppercase;transition:color .3s}
+.flinks a:hover,.flinks a:active{color:var(--gold)}
+
+/* ═══════════ WA FLOTTANT ═══════════ */
+.wafloat{position:fixed;bottom:32px;left:24px;z-index:8000;display:flex;align-items:center;gap:10px;background:#25D366;color:#fff;border:none;border-radius:50px;padding:12px 18px 12px 14px;font-size:.76rem;font-weight:700;letter-spacing:.05em;box-shadow:0 8px 28px rgba(37,211,102,.4);transition:all .35s;font-family:'DM Sans',sans-serif;text-decoration:none}
+.wafloat:hover,.wafloat:active{background:#1ebe5d;transform:translateY(-3px) scale(1.04);box-shadow:0 14px 36px rgba(37,211,102,.55)}
+.wafloat svg{width:22px;height:22px;fill:#fff;flex:0 0 22px}
+.waft{display:flex;flex-direction:column;line-height:1.2}
+.waft small{font-size:.6rem;font-weight:400;opacity:.85;letter-spacing:.08em}
+
+/* ═══════════ LOGIN ═══════════ */
+#loginMod{display:none;position:fixed;inset:0;z-index:99998;background:rgba(0,0,0,.97);backdrop-filter:blur(18px);align-items:center;justify-content:center;padding:20px}
+.lbox{background:var(--d2);border:1px solid var(--bdr);border-radius:14px;width:100%;max-width:380px;padding:36px 30px;position:relative}
+.ltitle{font-family:'Playfair Display',serif;font-size:1.7rem;font-style:italic;color:var(--gold);text-align:center;margin-bottom:5px}
+.lsub{font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--mt);text-align:center;margin-bottom:26px}
+.lfield{width:100%;padding:15px 16px;background:var(--d4);border:1px solid var(--bdr);border-radius:6px;color:var(--cr);font-size:16px;font-family:'DM Sans',sans-serif;outline:none;transition:border-color .3s;margin-bottom:12px;-webkit-appearance:none}
+.lfield:focus{border-color:var(--gold)}
+.lerr{display:none;font-size:.75rem;color:var(--red);text-align:center;margin-bottom:12px}
+.lbtn{width:100%;padding:16px;background:var(--gold);color:#000;border:none;border-radius:7px;font-size:.88rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;font-family:'DM Sans',sans-serif;transition:all .3s;min-height:52px;-webkit-appearance:none}
+.lbtn:hover,.lbtn:active{background:var(--gl)}
+.lcls{position:absolute;top:10px;right:10px;background:none;border:none;color:var(--mt);font-size:1.4rem;transition:color .3s;padding:10px;min-width:44px;min-height:44px;display:flex;align-items:center;justify-content:center}
+.lcls:hover{color:var(--cr)}
+
+/* ═══════════ ADMIN ═══════════ */
+.aov{display:none;position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,.97);backdrop-filter:blur(18px);overflow-y:auto;padding:44px 28px}
+.ainn{max-width:820px;margin:0 auto}
+.ahd{display:flex;justify-content:space-between;align-items:center;margin-bottom:30px;flex-wrap:wrap;gap:12px}
+.attl{font-family:'Playfair Display',serif;font-size:1.85rem;font-style:italic;color:var(--gold)}
+.axbtn{background:none;border:1px solid var(--bdr);color:var(--mt);padding:9px 18px;font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;border-radius:6px;font-family:'DM Sans',sans-serif;transition:all .3s}
+.axbtn:hover,.axbtn:active{border-color:var(--gold);color:var(--gold)}
+.atabs{display:flex;gap:2px;margin-bottom:26px;background:var(--d4);padding:4px;border-radius:8px;border:1px solid var(--bdr)}
+.atab{flex:1;padding:10px 4px;background:none;border:none;color:var(--mt);font-size:.62rem;letter-spacing:.08em;text-transform:uppercase;border-radius:6px;font-family:'DM Sans',sans-serif;transition:all .3s;white-space:nowrap}
+.atab.on{background:var(--gold);color:#000;font-weight:700}
+.atc{display:none}.atc.on{display:block}
+.fg{margin-bottom:17px}
+.fl{display:block;font-size:.64rem;letter-spacing:.18em;text-transform:uppercase;color:var(--mt);margin-bottom:7px}
+.fi{width:100%;padding:12px 14px;background:var(--d4);border:1px solid var(--bdr);border-radius:6px;color:var(--cr);font-size:16px;font-family:'DM Sans',sans-serif;outline:none;transition:border-color .3s;-webkit-appearance:none}
+.fi:focus{border-color:var(--gold)}
+.fi::placeholder{color:var(--mt)}
+.fta{min-height:88px;resize:vertical;font-size:.9rem!important}
+.fr2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.fr3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px}
+.fsel{appearance:none;width:100%;padding:12px 14px;background:var(--d4);border:1px solid var(--bdr);border-radius:6px;color:var(--cr);font-size:.9rem;font-family:'DM Sans',sans-serif;outline:none;transition:border-color .3s}
+.fsel:focus{border-color:var(--gold)}
+.fsel option{background:var(--d4)}
+
+/* promo fields */
+.promobox{background:rgba(224,80,80,.06);border:1px solid rgba(224,80,80,.2);border-radius:8px;padding:18px;margin-bottom:17px}
+.promobox .fl{color:rgba(224,80,80,.85)!important}
+.ptogrow{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.ptogsw{width:42px;height:23px;background:var(--d5);border-radius:12px;position:relative;transition:background .3s;flex:0 0 42px;border:1px solid var(--bdr)}
+.ptogsw.on{background:var(--red)}
+.ptogkn{position:absolute;top:2px;left:2px;width:17px;height:17px;background:#fff;border-radius:50%;transition:transform .3s;box-shadow:0 1px 4px rgba(0,0,0,.3)}
+.ptogsw.on .ptogkn{transform:translateX(19px)}
+.ptoglbl{font-size:.76rem;font-weight:600;color:var(--mt);letter-spacing:.05em;text-transform:uppercase}
+.ptogsw.on+.ptoglbl{color:var(--red)}
+.promopreview{padding:11px 14px;background:var(--d4);border:1px solid rgba(224,80,80,.22);border-radius:6px;font-size:.88rem;min-height:44px;display:flex;align-items:center}
+
+/* media upload */
+.mzone{border:2px dashed var(--bdr);border-radius:10px;padding:26px 20px;text-align:center;transition:all .3s;background:var(--d4);position:relative;margin-bottom:10px}
+.mzone:hover,.mzone.drag{border-color:var(--gold);background:rgba(201,151,58,.04)}
+.mzone input[type=file]{position:absolute;inset:0;opacity:0;width:100%;height:100%}
+.mzone-ico{font-size:2rem;margin-bottom:9px;display:block}
+.mzone p{font-size:.82rem;color:var(--mt);margin-bottom:4px}
+.mzone small{font-size:.68rem;color:var(--mt);opacity:.6}
+.altsep{text-align:center;font-size:.64rem;letter-spacing:.14em;text-transform:uppercase;color:var(--mt);opacity:.5;margin:11px 0;position:relative}
+.altsep::before,.altsep::after{content:'';position:absolute;top:50%;width:42%;height:1px;background:var(--bdr)}
+.altsep::before{left:0}.altsep::after{right:0}
+.mprevs{display:flex;flex-wrap:wrap;gap:8px;margin-top:11px}
+.mprev{position:relative;width:72px;height:72px;border-radius:6px;overflow:hidden;border:1px solid var(--bdr);flex:0 0 72px;background:var(--d5)}
+.mprev img,.mprev video{width:100%;height:100%;object-fit:cover;display:block}
+.mprevdel{position:absolute;top:3px;right:3px;background:rgba(13,8,3,.8);border:none;color:var(--cr);width:18px;height:18px;border-radius:50%;font-size:.7rem;display:flex;align-items:center;justify-content:center;line-height:1;transition:background .3s}
+.mprevdel:hover,.mprevdel:active{background:var(--red)}
+.mprevtype{position:absolute;bottom:3px;left:3px;background:rgba(13,8,3,.7);border-radius:3px;font-size:.5rem;padding:1px 5px;text-transform:uppercase;color:var(--cr)}
+.asub{width:100%;padding:15px;background:var(--gold);color:#000;border:none;border-radius:7px;font-size:.8rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;font-family:'DM Sans',sans-serif;transition:all .3s;margin-top:6px}
+.asub:hover,.asub:active{background:var(--gl);transform:translateY(-2px);box-shadow:0 12px 28px rgba(201,151,58,.28)}
+
+/* admin list */
+.alist-hd{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;flex-wrap:wrap;gap:10px}
+.alistmeta{font-size:.72rem;color:var(--mt)}
+.alistmeta strong{color:var(--gl)}
+.aitm{display:flex;gap:12px;padding:14px 0;border-bottom:1px solid rgba(201,151,58,.07);align-items:center;flex-wrap:wrap}
+.aitm-img{width:56px;height:62px;object-fit:cover;border-radius:6px;background:var(--d4);flex:0 0 56px}
+.aitm-info{flex:1;min-width:180px}
+.aitm-name{font-family:'Playfair Display',serif;font-size:1rem;color:var(--cr)}
+.aitm-meta{font-size:.63rem;color:var(--mt);margin-top:3px}
+.aitm-actions{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px}
+.aitm-p{font-size:.82rem;color:var(--gold);font-weight:700;white-space:nowrap;margin-left:8px}
+.adel{background:none;border:1px solid rgba(224,80,80,.25);color:rgba(224,80,80,.5);padding:5px 11px;font-size:.62rem;letter-spacing:.09em;text-transform:uppercase;border-radius:5px;font-family:'DM Sans',sans-serif;transition:all .3s;white-space:nowrap}
+.adel:hover,.adel:active{border-color:var(--red);color:var(--red)}
+.abtn{background:none;border:1px solid var(--bdr);color:var(--mt);padding:5px 11px;font-size:.62rem;letter-spacing:.09em;text-transform:uppercase;border-radius:5px;font-family:'DM Sans',sans-serif;transition:all .3s;white-space:nowrap}
+.abtn:hover,.abtn:active{border-color:var(--gold);color:var(--gold)}
+.abtn.red{border-color:rgba(224,80,80,.25);color:rgba(224,80,80,.6)}
+.abtn.red:hover{border-color:var(--red);color:var(--red)}
+
+/* admin misc */
+.scard{background:var(--d4);border:1px solid var(--bdr);border-radius:8px;padding:20px;margin-bottom:16px}
+.scard-title{font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:15px;display:flex;align-items:center;gap:8px}
+.scard-title::before{content:'';flex:0 0 18px;height:2px;background:var(--gold)}
+.stgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:20px}
+.stcard{background:var(--d4);border:1px solid var(--bdr);border-radius:8px;padding:18px;text-align:center}
+.stcard-n{font-family:'Playfair Display',serif;font-size:2.1rem;font-style:italic;color:var(--gl);line-height:1}
+.stcard-l{font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:var(--mt);margin-top:6px}
+.datarow{display:flex;gap:10px;flex-wrap:wrap}
+.dact{display:inline-flex;align-items:center;gap:7px;padding:11px 16px;font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;border-radius:6px;font-family:'DM Sans',sans-serif;transition:all .3s;border:1px solid var(--bdr);background:none;color:var(--mt)}
+.dact:hover,.dact:active{border-color:var(--gold);color:var(--gold)}
+.dact.danger:hover,.dact.danger:active{border-color:var(--red);color:var(--red)}
+.oitm{background:var(--d4);border:1px solid var(--bdr);border-radius:7px;padding:13px 15px;margin-bottom:9px}
+.oitm-hd{display:flex;justify-content:space-between;font-size:.73rem;color:var(--mt);margin-bottom:7px;flex-wrap:wrap;gap:4px}
+.oitm-hd span{color:var(--gold)}
+.oitm-prod{font-size:.83rem;color:var(--cr);line-height:1.6}
+
+/* toast */
+.toast{position:fixed;bottom:32px;right:24px;z-index:99999;background:var(--d2);border:1px solid var(--gold);color:var(--cr);padding:13px 20px;border-radius:8px;font-size:.8rem;letter-spacing:.04em;transform:translateY(16px);opacity:0;transition:all .38s;pointer-events:none;max-width:300px}
+.toast.err{border-color:var(--red)}
+.toast.show{transform:translateY(0);opacity:1}
+
+/* ═══════════ RESPONSIVE ═══════════ */
+@media(max-width:860px){
+  nav{padding:0 16px;top:36px;height:62px}
+  .nlinks,.socials,.swrap{display:none!important}
+  .hambtn{display:flex}
+  section{padding:56px 20px}
+  .hcontent{padding:0 20px}
+  .hvisual{width:100%;opacity:.1}
+  .statsband{grid-template-columns:repeat(2,1fr);padding:32px 20px}
+  .stat+.stat::before{display:none}
+  .agrid{grid-template-columns:1fr;gap:36px}
+  .ccards{grid-template-columns:1fr 1fr}
+  footer{flex-direction:column;text-align:center;padding:36px 20px}
+  .fr2,.fr3,.stgrid{grid-template-columns:1fr}
+  .cside{width:100%}
+  .atab{font-size:.56rem;padding:8px 2px}
+  .catwrap{padding:0 16px}
+  .pgsec{padding:36px 16px 60px}
+  .pgrid{grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px}
+  .wafloat{padding:11px 16px 11px 13px;font-size:.72rem}
+  .waft small{display:none}
+}
+@media(max-width:500px){
+  .ccards{grid-template-columns:1fr}
+  .pgrid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<div id="cur"></div><div id="curR"></div>
+<div class="grain"></div>
+
+<!-- MARQUEE -->
+<div class="mbar">
+  <div class="mtrack" id="mtrk">
+    <span>Nouvelle Collection</span><span class="sep">◆</span>
+    <span>Livraison Partout au Sénégal</span><span class="sep">◆</span>
+    <span>Cuir 100% Véritable</span><span class="sep">◆</span>
+    <span>Atelier Guédiawaye, Dakar</span><span class="sep">◆</span>
+    <span>Artisanat Sénégalais</span><span class="sep">◆</span>
+    <span>Nouvelle Collection</span><span class="sep">◆</span>
+    <span>Livraison Partout au Sénégal</span><span class="sep">◆</span>
+    <span>Cuir 100% Véritable</span><span class="sep">◆</span>
+    <span>Atelier Guédiawaye, Dakar</span><span class="sep">◆</span>
+    <span>Artisanat Sénégalais</span><span class="sep">◆</span>
+  </div>
+</div>
+
+<!-- NAV -->
+<nav>
+  <a class="nlogo" href="#">Mor Ndiaye Bags</a>
+  <div class="nlinks">
+    <a href="#collection">Collection</a>
+    <a href="#atelier">L'Atelier</a>
+    <a href="#contact">Contact</a>
+    <a href="mailto:morndiaye896@gmail.com">✉ Email</a>
+  </div>
+  <div class="nright">
+    <div class="swrap" id="swrap">
+      <input class="sinput" id="sinput" type="text" placeholder="Rechercher…" autocomplete="off"
+        oninput="doSearch(this.value)" onfocus="doSearch(this.value)" onblur="setTimeout(closeSearch,200)">
+      <span class="sico">🔍</span>
+      <div class="sres" id="sres"></div>
+    </div>
+    <div class="socials">
+      <a class="sbtn ig" href="https://instagram.com/" target="_blank" title="Instagram">
+        <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+      </a>
+      <a class="sbtn fb" href="https://facebook.com/" target="_blank" title="Facebook">
+        <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+      </a>
+      <a class="sbtn tw" href="https://x.com/" target="_blank" title="X (Twitter)">
+        <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+      </a>
+    </div>
+    <button class="cartbtn" onclick="openCart()">🛍 Panier <span class="cbadge" id="cbadge">0</span></button>
+    <button class="nbtn" onclick="openAdmin()">⚙ Artisan</button>
+    <button class="hambtn" onclick="openMM()" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<!-- MENU MOBILE -->
+<div class="mmenu" id="mmenu">
+  <button class="mmclose" onclick="closeMM()">✕</button>
+  <div class="mmlogo">Mor Ndiaye Bags</div>
+  <div class="mmsrch">
+    <input type="text" placeholder="Rechercher un sac…" id="mmsinput" oninput="doSearchMob(this.value)">
+    <span class="mmsico">🔍</span>
+    <div class="sres" id="mmsres" style="width:100%;left:0"></div>
+  </div>
+  <div class="mmlinks">
+    <a href="#collection" onclick="closeMM()">Collection</a>
+    <a href="#atelier" onclick="closeMM()">L'Atelier</a>
+    <a href="#contact" onclick="closeMM()">Contact</a>
+    <a href="mailto:morndiaye896@gmail.com">✉ morndiaye896@gmail.com</a>
+  </div>
+  <div class="mmsocs">
+    <a class="sbtn ig" href="https://instagram.com/" target="_blank"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+    <a class="sbtn fb" href="https://facebook.com/" target="_blank"><svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+    <a class="sbtn tw" href="https://x.com/" target="_blank"><svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+  </div>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hbg"></div><div class="hgrid"></div>
+  <div class="hcontent">
+    <div class="hbadge">Atelier Guédiawaye — Dakar</div>
+    <h1>Excellence à<br><em>Guédiawaye</em></h1>
+    <p>Chaque sac est une œuvre unique. Cuirs 100% véritables, coutures précises, finitions impeccables — l'artisanat sénégalais dans toute sa splendeur.</p>
+    <div class="hcta">
+      <a href="#collection" class="btn btn-gld">Voir la Collection →</a>
+      <a href="#atelier" class="btn btn-ghost">Notre Savoir-Faire</a>
+    </div>
+  </div>
+  <div class="hvisual"><img id="heroImg" src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?q=80&w=1200&auto=format" alt="Maroquinerie Mor Ndiaye"></div>
+  <div class="hscroll"><div class="hline"></div>Défiler</div>
+</div>
+
+<!-- STATS -->
+<div class="statsband">
+  <div class="stat"><div class="stn" id="stp">0</div><div class="stl">Créations publiées</div></div>
+  <div class="stat"><div class="stn">5+</div><div class="stl">Années d'expérience</div></div>
+  <div class="stat"><div class="stn">100%</div><div class="stl">Cuir véritable</div></div>
+  <div class="stat"><div class="stn">🇸🇳</div><div class="stl">Made in Sénégal</div></div>
+</div>
+
+<!-- CATEGORIES -->
+<div class="catwrap" id="collection"><div class="catbar" id="catbar"></div></div>
+
+<!-- GRID -->
+<div class="pgsec">
+  <div style="margin-bottom:30px">
+    <div class="slbl">Collection</div>
+    <h2 class="stitle">Nos <em>Créations</em></h2>
+  </div>
+  <div id="pgrid" class="pgrid"></div>
+</div>
+
+<!-- ATELIER -->
+<section class="about-sec" id="atelier">
+  <div class="agrid">
+    <div class="aimgw">
+      <img class="aimg" id="atImg" src="https://images.unsplash.com/photo-1551698618-1dfe5d97d256?q=80&w=800&auto=format" alt="Atelier Guédiawaye">
+      <div class="aacc"></div>
+    </div>
+    <div>
+      <div class="slbl">L'Atelier</div>
+      <h2 class="stitle" style="margin-bottom:22px">Savoir-faire<br><em>sénégalais</em></h2>
+      <p class="ap" id="atTxt1">Fondé à Guédiawaye, notre atelier perpétue les traditions de la maroquinerie sénégalaise tout en y apportant une touche de modernité. Chaque pièce est conçue de A à Z entre nos mains.</p>
+      <p class="ap" id="atTxt2">Nous sélectionnons des cuirs 100% véritables et travaillons avec des techniques transmises de génération en génération. Le résultat : des créations durables, belles, et authentiquement sénégalaises.</p>
+      <div class="aquote" id="atQuote">"Un sac Mor Ndiaye, c'est une histoire que vous portez chaque jour."</div>
+      <a href="#contact" class="btn btn-gld">Nous contacter</a>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="csec" id="contact">
+  <div class="cinner">
+    <div class="slbl" style="justify-content:center">Contact</div>
+    <h2 class="stitle">Commandez<br><em>votre pièce unique</em></h2>
+    <p class="cdesc">Contactez-nous via WhatsApp ou email pour passer commande ou visiter l'atelier sur rendez-vous. Réponse rapide garantie !</p>
+    <div class="ccards">
+      <div class="ccard" onclick="window.open('https://wa.me/'+cfg.phone,'_blank')">
+        <div class="ccico">💬</div><div class="cclbl">WhatsApp</div>
+        <div class="ccval" id="dispPhone">+221 77 598 03 04</div>
+      </div>
+      <div class="ccard" onclick="window.location.href='mailto:morndiaye896@gmail.com'">
+        <div class="ccico">✉️</div><div class="cclbl">Email</div>
+        <div class="ccval" style="font-size:.72rem">morndiaye896@gmail.com</div>
+      </div>
+      <div class="ccard">
+        <div class="ccico">📍</div><div class="cclbl">Atelier</div>
+        <div class="ccval" id="dispAddr">Guédiawaye, Dakar</div>
+      </div>
+      <div class="ccard">
+        <div class="ccico">🚚</div><div class="cclbl">Livraison</div>
+        <div class="ccval" id="dispLivr">Tout le Sénégal</div>
+      </div>
+    </div>
+    <div style="font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:var(--mt);text-align:center;margin-bottom:14px">Suivez-nous</div>
+    <div class="soc-row">
+      <a class="soc-card wa" href="javascript:void(0)" onclick="window.open('https://wa.me/'+cfg.phone,'_blank')">
+        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        WhatsApp
+      </a>
+      <a class="soc-card ig" href="https://instagram.com/" target="_blank">
+        <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        Instagram
+      </a>
+      <a class="soc-card fb" href="https://facebook.com/" target="_blank">
+        <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+        Facebook
+      </a>
+      <a class="soc-card tw" href="https://x.com/" target="_blank">
+        <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        X / Twitter
+      </a>
+      <a class="soc-card em" href="mailto:morndiaye896@gmail.com">
+        <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+        Email
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="flogo">Mor Ndiaye Bags</div>
+  <div class="fcopy">© 2025 — Maroquinerie artisanale, Guédiawaye, Dakar<br><a href="mailto:morndiaye896@gmail.com">morndiaye896@gmail.com</a></div>
+  <div class="fsocs">
+    <a class="fsocbtn wa" href="javascript:void(0)" onclick="window.open('https://wa.me/'+cfg.phone,'_blank')" title="WhatsApp"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+    <a class="fsocbtn ig" href="https://instagram.com/" target="_blank" title="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+    <a class="fsocbtn fb" href="https://facebook.com/" target="_blank" title="Facebook"><svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+    <a class="fsocbtn tw" href="https://x.com/" target="_blank" title="X"><svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+  </div>
+  <div class="flinks"><a href="#collection">Collection</a><a href="#atelier">Atelier</a><a href="#contact">Contact</a></div>
+</footer>
+
+<!-- BOUTON WA FLOTTANT -->
+<a class="wafloat" href="javascript:void(0)" onclick="window.open('https://wa.me/'+cfg.phone+'?text='+encodeURIComponent('Bonjour Mor Ndiaye Bags ! 🌟 Je souhaite passer une commande.'),'_blank')">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  <div class="waft">Commander maintenant<small>Réponse rapide garantie</small></div>
+</a>
+
+<!-- PANIER -->
+<div class="cbkdrop" id="cbkdrop" onclick="closeCart()"></div>
+<div class="cside" id="cside">
+  <div class="chead"><div class="ctitle">🛍 Mon Panier</div><button class="cxbtn" onclick="closeCart()">✕</button></div>
+  <div class="citems" id="citems"></div>
+  <div class="cfoot" id="cfoot" style="display:none">
+    <div class="ctotrow"><div class="ctotlbl">Total</div><div class="ctotval" id="ctotval">0 FCFA</div></div>
+    <div class="csave" id="csave"></div>
+    <button class="cchk" onclick="checkoutCart()">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      Commander via WhatsApp
+    </button>
+    <button class="cclr" onclick="clearCart()">Vider le panier</button>
+  </div>
+</div>
+
+<!-- MODAL PRODUIT -->
+<div class="mov" id="mov" onclick="if(event.target===this)closeModal()">
+  <div class="modal">
+    <button class="mox" onclick="closeModal()">✕</button>
+    <div class="mgal"><div class="mgsl" id="mgsl"></div>
+      <button class="mgarr mgprev" id="mgprev">&#8592;</button>
+      <button class="mgarr mgnext" id="mgnext">&#8594;</button>
+    </div>
+    <div class="mthumbs" id="mthumbs"></div>
+    <div class="mbody">
+      <div class="mname" id="mname"></div>
+      <div id="mpricebox" style="margin:8px 0 10px"></div>
+      <div id="mdispo" style="margin-bottom:10px"></div>
+      <div class="mdesc" id="mdesc"></div>
+      <div class="mactions">
+        <button class="btncart" id="mAddCart">Ajouter au panier</button>
+        <button class="btnwa" id="mwv">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Commander via WhatsApp
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- LOGIN -->
+<div id="loginMod" style="display:none;position:fixed;inset:0;z-index:99998;background:rgba(0,0,0,.97);backdrop-filter:blur(18px);align-items:center;justify-content:center;padding:20px">
+  <div class="lbox">
+    <button class="lcls" onclick="closeLogin()">✕</button>
+    <div class="ltitle">Espace Artisan</div>
+    <div class="lsub">Accès réservé</div>
+    <input id="loginPwd" type="password" class="lfield" placeholder="Mot de passe" autocomplete="current-password" onkeydown="if(event.key==='Enter')tryLogin()">
+    <div class="lerr" id="loginErr">⚠️ Mot de passe incorrect</div>
+    <button class="lbtn" onclick="tryLogin()">Accéder →</button>
+  </div>
+</div>
+
+<!-- ADMIN -->
+<div class="aov" id="aov">
+<div class="ainn">
+  <div class="ahd"><div class="attl">⚙ Espace Artisan</div><button class="axbtn" onclick="closeAdmin()">Fermer ✕</button></div>
+  <div class="atabs">
+    <button class="atab on" onclick="stab('add')">➕ Ajouter</button>
+    <button class="atab" onclick="stab('list')">📦 Produits</button>
+    <button class="atab" onclick="stab('site')">🌐 Paramètres</button>
+    <button class="atab" onclick="stab('hist')">📋 Commandes</button>
+    <button class="atab" onclick="stab('stats')">📊 Stats</button>
+  </div>
+
+  <!-- AJOUTER -->
+  <div class="atc on" id="tab-add">
+    <div class="fg"><label class="fl">Nom du produit *</label><input class="fi" id="pName" placeholder="ex : Le Sahel Classique"></div>
+    <div class="fr2">
+      <div class="fg"><label class="fl">Prix (FCFA) *</label><input class="fi" id="pPrice" type="number" placeholder="45000" oninput="livePromoPreview()"></div>
+      <div class="fg"><label class="fl">Catégorie</label>
+        <select class="fsel" id="pCat"><option>Sacs à main</option><option>Portefeuilles</option><option>Sacs de voyage</option><option>Vidéos Ateliers</option><option>Accessoires</option></select>
+      </div>
+    </div>
+    <div class="fr3">
+      <div class="fg"><label class="fl">Badge</label><input class="fi" id="pBadge" placeholder="Nouveauté · Bestseller"></div>
+      <div class="fg"><label class="fl">Stock (vide = ∞)</label><input class="fi" id="pStock" type="number" placeholder="ex: 5"></div>
+      <div class="fg"><label class="fl">Réf. SKU</label><input class="fi" id="pSku" placeholder="MNB-001"></div>
+    </div>
+
+    <!-- PROMOTION -->
+    <div class="promobox">
+      <div class="ptogrow" onclick="togglePromo()">
+        <div class="ptogsw" id="ptogsw"><div class="ptogkn"></div></div>
+        <span class="ptoglbl" id="ptoglbl">Activer une promotion</span>
+      </div>
+      <div id="promofields" style="display:none">
+        <div class="fr2">
+          <div class="fg"><label class="fl">% de réduction</label><input class="fi" id="pPromo" type="number" min="1" max="99" placeholder="ex: 25 pour -25%" oninput="livePromoPreview()"></div>
+          <div class="fg"><label class="fl">Aperçu du prix promo</label><div class="promopreview" id="promoprev">—</div></div>
+        </div>
+        <div class="fg"><label class="fl">Libellé de la promo (optionnel)</label><input class="fi" id="pPromoLabel" placeholder="ex: Soldes · Fête des mères · Fin de série"></div>
+      </div>
+    </div>
+
+    <div class="fg"><label class="fl">Description</label><textarea class="fi fta" id="pDesc" placeholder="Matière, finitions, dimensions…"></textarea></div>
+    <div class="fg">
+      <label class="fl">📸 Photos &amp; Vidéos * — depuis votre galerie ou ordinateur</label>
+      <div class="mzone" id="mzone">
+        <span class="mzone-ico">📷</span>
+        <p>Glissez photos/vidéos ici, ou touchez pour choisir</p>
+        <small>JPG · PNG · WEBP · GIF · MP4 · MOV — max 25 Mo/fichier</small>
+        <input type="file" id="mfiles" accept="image/*,video/*" multiple onchange="handleFiles(this.files)">
+      </div>
+      <div class="altsep">ou URL directe</div>
+      <div style="display:flex;gap:8px;margin-bottom:10px">
+        <input class="fi" id="pUrl" placeholder="https://… (image ou vidéo)" style="flex:1">
+        <button onclick="addUrlMedia()" style="background:var(--d5);border:1px solid var(--bdr);color:var(--mt);padding:0 16px;border-radius:6px;font-family:'DM Sans',sans-serif;font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;transition:all .3s;white-space:nowrap" onmouseover="this.style.borderColor='var(--gold)';this.style.color='var(--gold)'" onmouseout="this.style.borderColor='var(--bdr)';this.style.color='var(--mt)'">+ URL</button>
+      </div>
+      <div class="mprevs" id="mprevs"></div>
+      <div style="font-size:.64rem;color:var(--mt);margin-top:6px;opacity:.7" id="mcount">0 média(s)</div>
+    </div>
+    <button class="asub" onclick="saveProd()">✓ Publier le Produit</button>
+  </div>
+
+  <!-- LISTE PRODUITS -->
+  <div class="atc" id="tab-list">
+    <div class="alist-hd"><div class="alistmeta"><strong id="pcount">0</strong> produits — Valeur catalogue : <strong id="ptotalval">—</strong></div></div>
+    <div id="alist"></div>
+  </div>
+
+  <!-- PARAMÈTRES -->
+  <div class="atc" id="tab-site">
+    <div class="scard">
+      <div class="scard-title">Contact &amp; Livraison</div>
+      <div class="fr2">
+        <div class="fg"><label class="fl">WhatsApp (avec indicatif, sans +)</label><input class="fi" id="cfPhone" placeholder="221775980304"></div>
+        <div class="fg"><label class="fl">Adresse atelier</label><input class="fi" id="cfAddr" placeholder="Guédiawaye, Dakar"></div>
+      </div>
+      <div class="fg"><label class="fl">Info livraison</label><input class="fi" id="cfLivr" placeholder="Tout le Sénégal"></div>
+    </div>
+    <div class="scard">
+      <div class="scard-title">Section Atelier</div>
+      <div class="fg"><label class="fl">URL image atelier</label><input class="fi" id="cfAtImg" placeholder="https://…"></div>
+      <div class="fg"><label class="fl">Paragraphe 1</label><textarea class="fi fta" id="cfAt1"></textarea></div>
+      <div class="fg"><label class="fl">Paragraphe 2</label><textarea class="fi fta" id="cfAt2"></textarea></div>
+      <div class="fg"><label class="fl">Citation</label><input class="fi" id="cfQuote" placeholder="Votre citation…"></div>
+    </div>
+    <div class="scard">
+      <div class="scard-title">Bannière Hero</div>
+      <div class="fg"><label class="fl">URL image hero</label><input class="fi" id="cfHeroImg" placeholder="https://…"></div>
+    </div>
+    <div class="scard">
+      <div class="scard-title">Texte du bandeau défilant</div>
+      <div class="fg"><input class="fi" id="cfMq" placeholder="Message 1 ◆ Message 2 ◆ Message 3"></div>
+    </div>
+    <button class="asub" onclick="saveSettings()">💾 Sauvegarder</button>
+    <div style="margin-top:20px">
+      <div style="font-size:.64rem;letter-spacing:.16em;text-transform:uppercase;color:var(--mt);margin-bottom:12px">Sauvegarde des données</div>
+      <div class="datarow">
+        <button class="dact" onclick="exportD()">⬇ Exporter JSON</button>
+        <label class="dact">⬆ Importer JSON<input type="file" accept=".json" style="display:none" onchange="importD(event)"></label>
+        <button class="dact danger" onclick="resetD()">🔄 Réinitialiser démo</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- COMMANDES -->
+  <div class="atc" id="tab-hist">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;flex-wrap:wrap;gap:10px">
+      <div style="font-size:.72rem;color:var(--mt)">Commandes envoyées via WhatsApp</div>
+      <button class="dact danger" onclick="clearOrders()" style="font-size:.62rem;padding:8px 14px">🗑 Effacer</button>
+    </div>
+    <div id="ohist"></div>
+  </div>
+
+  <!-- STATS -->
+  <div class="atc" id="tab-stats">
+    <div class="stgrid">
+      <div class="stcard"><div class="stcard-n" id="stP">0</div><div class="stcard-l">Produits</div></div>
+      <div class="stcard"><div class="stcard-n" id="stC">0</div><div class="stcard-l">Catégories</div></div>
+      <div class="stcard"><div class="stcard-n" id="stO">0</div><div class="stcard-l">Commandes</div></div>
+    </div>
+    <div class="scard"><div class="scard-title">Par catégorie</div><div id="catbd"></div></div>
+    <div class="scard"><div class="scard-title">Produits les plus consultés</div><div id="topviews"></div></div>
+  </div>
+</div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+/* ═══════ CONSTANTES ═══════ */
+const WA_DEF='221775980304';
+const DC={phone:WA_DEF,addr:'Guédiawaye, Dakar',livr:'Tout le Sénégal',atImg:'',at1:'',at2:'',quote:'',marquee:'',heroImg:''};
+
+/* ═══════ DONNÉES DÉMO ═══════ */
+const DP=[
+  {id:1,name:'Signature Guédiawaye',price:45000,cat:'Sacs à main',badge:'Bestseller',sku:'MNB-001',stock:null,promo:null,promoLabel:null,desc:'Cuir vachette pleine fleur, coutures sellier renforcées, doublure coton tissé. Le classique absolu de l\'atelier.',media:[{t:'img',s:'https://images.unsplash.com/photo-1584917865442-de89df76afd3?q=80&w=800&auto=format'},{t:'img',s:'https://images.unsplash.com/photo-1548036328-c9fa89d128fa?q=80&w=800&auto=format'}],views:0},
+  {id:2,name:'Le Dakar Tote',price:32000,cat:'Sacs à main',badge:'Soldes',sku:'MNB-002',stock:5,promo:20,promoLabel:'Soldes',desc:'Grand cabas cuir souple tanné végétal, anses larges, poche intérieure zippée. Idéal pour le quotidien.',media:[{t:'img',s:'https://images.unsplash.com/photo-1590874103328-eac38a683ce7?q=80&w=800&auto=format'}],views:0},
+  {id:3,name:'Le Sahel Clutch',price:18000,cat:'Accessoires',badge:'Exclusif',sku:'MNB-003',stock:3,promo:null,promoLabel:null,desc:'Pochette cuir façon lézard, fermeture magnétique, chaîne dorée amovible. Parfaite pour les soirées.',media:[{t:'img',s:'https://images.unsplash.com/photo-1553062407-98eeb64c6a62?q=80&w=800&auto=format'}],views:0},
+  {id:4,name:'Le Teranga Wallet',price:12000,cat:'Portefeuilles',badge:null,sku:'MNB-004',stock:null,promo:15,promoLabel:'Promo',desc:'Portefeuille bi-fold cuir pleine fleur, 8 emplacements cartes, poche monnaie zippée.',media:[{t:'img',s:'https://images.unsplash.com/photo-1627123424574-724758594e93?q=80&w=800&auto=format'}],views:0},
+  {id:5,name:'Le Grand Voyage',price:75000,cat:'Sacs de voyage',badge:'Artisanal',sku:'MNB-005',stock:2,promo:null,promoLabel:null,desc:'Sac de voyage 48h cuir épais tanné, armature laiton, bandoulière réglable, capacité 30L.',media:[{t:'img',s:'https://images.unsplash.com/photo-1553062407-98eeb64c6a61?q=80&w=800&auto=format&fit=crop'}],views:0},
+  {id:6,name:'Le Ngor Mini',price:28000,cat:'Sacs à main',badge:null,sku:'MNB-006',stock:0,promo:null,promoLabel:null,desc:'Mini sac baguette cuir grainé, fermoir doré, chaîne fine ajustable.',media:[{t:'img',s:'https://images.unsplash.com/photo-1566150905458-1bf1ac269d8c?q=80&w=800&auto=format'}],views:0},
+  {id:7,name:'Visite Atelier — Coupe du cuir',price:0,cat:'Vidéos Ateliers',badge:'Vidéo',sku:'VID-001',stock:null,promo:null,promoLabel:null,desc:'Découvrez nos artisans à l\'œuvre dans notre atelier de Guédiawaye.',media:[{t:'video',s:'https://www.w3schools.com/html/mov_bbb.mp4'}],views:0},
+];
+
+/* ═══════ ÉTAT ═══════ */
+let prods=[],cfg={...DC},cart=[],orders=[],pendM=[],mSlideIdx={},activeFilter='Tout',promoOn=false;
+
+/* ═══════ AUTH ═══════ */
+function hashPwd(s){let h=0;for(let i=0;i<s.length;i++){h=Math.imul(31,h)+s.charCodeAt(i)|0;}return Math.abs(h).toString(16).padStart(8,'0');}
+const PWD_H=hashPwd('Dakar2023@');
+let adminAuth=sessionStorage.getItem('mnb_auth')===PWD_H;
+
+/* ═══════ DATA ═══════ */
+function loadData(){
+  try{prods=JSON.parse(localStorage.getItem('mnb_p'))||JSON.parse(JSON.stringify(DP));}catch{prods=JSON.parse(JSON.stringify(DP));}
+  try{cfg={...DC,...JSON.parse(localStorage.getItem('mnb_c'))};}catch{}
+  try{cart=JSON.parse(localStorage.getItem('mnb_cart'))||[];}catch{cart=[];}
+  try{orders=JSON.parse(localStorage.getItem('mnb_orders'))||[];}catch{orders=[];}
+}
+function saveData(){
+  localStorage.setItem('mnb_p',JSON.stringify(prods));
+  localStorage.setItem('mnb_c',JSON.stringify(cfg));
+  localStorage.setItem('mnb_cart',JSON.stringify(cart));
+  localStorage.setItem('mnb_orders',JSON.stringify(orders));
+}
+function fmt(n){return Number(n).toLocaleString('fr-FR');}
+
+/* ═══════ PROMO HELPERS ═══════ */
+function hasPromo(p){return p.promo&&p.promo>0&&p.promo<100&&p.price>0;}
+function promoPrice(p){return hasPromo(p)?Math.round(p.price*(1-p.promo/100)):p.price;}
+
+/* ═══════ CONFIG ═══════ */
+function applyConfig(){
+  if(cfg.addr)document.getElementById('dispAddr').textContent=cfg.addr;
+  if(cfg.livr)document.getElementById('dispLivr').textContent=cfg.livr;
+  if(cfg.phone)document.getElementById('dispPhone').textContent='+'+cfg.phone;
+  if(cfg.atImg){const e=document.getElementById('atImg');if(e)e.src=cfg.atImg;}
+  if(cfg.at1){const e=document.getElementById('atTxt1');if(e)e.textContent=cfg.at1;}
+  if(cfg.at2){const e=document.getElementById('atTxt2');if(e)e.textContent=cfg.at2;}
+  if(cfg.quote){const e=document.getElementById('atQuote');if(e)e.textContent='"'+cfg.quote+'"';}
+  if(cfg.heroImg)document.getElementById('heroImg').src=cfg.heroImg;
+  if(cfg.marquee){
+    const msgs=cfg.marquee.split('◆').map(s=>s.trim()).filter(Boolean);
+    if(msgs.length){const t=document.getElementById('mtrk');const d=[...msgs,...msgs];t.innerHTML=d.map((m,i)=>`<span>${m}</span>${i<d.length-1?'<span class="sep">◆</span>':''}`).join('');}
+  }
+  document.getElementById('stp').textContent=prods.length;
+}
+
+/* ═══════ CATEGORIES ═══════ */
+function renderCats(){
+  const cats=['Tout',...new Set(prods.map(p=>p.cat))];
+  document.getElementById('catbar').innerHTML=cats.map(c=>`<button class="cat-item${c===activeFilter?' active':''}" onclick="filterCat('${c}')">${c==='Tout'?'Tous les sacs':c}</button>`).join('');
+}
+function filterCat(c){activeFilter=c;renderCats();renderGrid();}
+
+/* ═══════ GRID ═══════ */
+const WAICO=`<svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>`;
+
+function buildDispoHtml(p,cls=''){
+  if(p.cat==='Vidéos Ateliers')return '';
+  if(p.stock===0)return `<div class="dispo out${cls}"><span class="ddot"></span>Rupture de stock</div>`;
+  if(p.stock!=null&&p.stock<=3)return `<div class="dispo low${cls}"><span class="ddot"></span>Dernières pièces (${p.stock} restant${p.stock>1?'s':''})</div>`;
+  return `<div class="dispo ok${cls}"><span class="ddot"></span>Disponible</div>`;
+}
+function buildPriceHtml(p){
+  if(!p.price)return `<span style="font-size:.78rem;font-style:italic;color:var(--mt)">Vidéo gratuite</span>`;
+  if(hasPromo(p)){
+    const pp=promoPrice(p);
+    return `<div class="price-block">
+      <div class="price-orig">${fmt(p.price)} FCFA</div>
+      <div class="price-promo">${fmt(pp)}<span>FCFA</span></div>
+      <div class="price-eco">💸 Économie : ${fmt(p.price-pp)} FCFA</div>
+    </div>`;
+  }
+  return `<div class="price-block"><div class="pprice">${fmt(p.price)}<span>FCFA</span></div></div>`;
+}
+
+function renderGrid(){
+  const g=document.getElementById('pgrid');
+  const list=activeFilter==='Tout'?prods:prods.filter(p=>p.cat===activeFilter);
+  if(!list.length){g.innerHTML=`<div style="grid-column:1/-1;text-align:center;padding:72px 20px;color:var(--mt)">Aucun produit dans cette catégorie.</div>`;return;}
+  g.innerHTML=list.map(p=>{
+    const isVid=p.cat==='Vidéos Ateliers';
+    const isOut=p.stock===0;
+    const hp=hasPromo(p);
+    const inCart=cart.some(c=>c.id===p.id);
+    const slides=(p.media&&p.media.length)?p.media.map(m=>m.t==='video'?`<div class="pslide"><video src="${m.s}" autoplay muted loop playsinline></video></div>`:`<div class="pslide"><img src="${m.s}" alt="${p.name}" loading="lazy"></div>`).join(''):`<div class="pslide"><img src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?q=80&w=800"></div>`;
+    const hasMany=p.media&&p.media.length>1;
+    const dots=hasMany?`<div class="pdots">${p.media.map((_,i)=>`<div class="pdot${i===0?' on':''}" id="pd-${p.id}-${i}"></div>`).join('')}</div>`:'';
+    const arrows=hasMany?`<button class="parr pprev" onclick="event.stopPropagation();slCard(${p.id},-1)">&#8592;</button><button class="parr pnext" onclick="event.stopPropagation();slCard(${p.id},1)">&#8594;</button>`:'';
+    return `<div class="pcard${isOut?' is-out':''}${hp?' has-promo':''}" onclick="openModal(${p.id})">
+      <div class="pm">
+        <div class="pslider" id="psl-${p.id}">${slides}</div>
+        ${arrows}${dots}
+        ${p.badge&&!hp?`<div class="pbadge">${p.badge}</div>`:''}
+        ${hp?`<div class="promo-badge">-${p.promo}% ${p.promoLabel||'Promo'}</div>`:''}
+        ${isVid?'<div class="pvid-badge">▶ Vidéo</div>':''}
+        ${isOut?'<div class="out-overlay"><span>Rupture de stock</span></div>':''}
+      </div>
+      <div class="pbody">
+        <div class="pname">${p.name}</div>
+        <div class="pcat">${p.cat}${p.sku?' · '+p.sku:''}</div>
+        ${buildDispoHtml(p)}
+        ${buildPriceHtml(p)}
+        <div class="pactions">
+          ${!isVid?`
+          <button class="btncart${inCart?' added':''}" id="bcart-${p.id}" ${isOut?'disabled':''} onclick="event.stopPropagation();toggleCart(${p.id})">
+            ${isOut?'Épuisé':inCart?'✓ Dans le panier':'Ajouter au panier'}
+          </button>
+          <button class="btnwa" ${isOut?'disabled style="opacity:.45"':''} onclick="event.stopPropagation();orderDirect(${p.id})">
+            ${WAICO} Commander via WhatsApp
+          </button>`:`<button class="btnwa" onclick="event.stopPropagation();openModal(${p.id})">▶ Voir la vidéo</button>`}
+        </div>
+      </div>
+    </div>`;
+  }).join('');
+  document.querySelectorAll('.pslide video').forEach(v=>{
+    new IntersectionObserver(es=>es.forEach(e=>e.isIntersecting?v.play().catch(()=>{}):v.pause()),{threshold:.4}).observe(v);
+  });
+}
+function slCard(id,dir){
+  if(mSlideIdx[id]==null)mSlideIdx[id]=0;
+  const p=prods.find(x=>x.id===id);if(!p||!p.media)return;
+  mSlideIdx[id]=(mSlideIdx[id]+dir+p.media.length)%p.media.length;
+  const sl=document.getElementById('psl-'+id);if(sl)sl.style.transform=`translateX(-${mSlideIdx[id]*100}%)`;
+  p.media.forEach((_,i)=>{const d=document.getElementById(`pd-${id}-${i}`);if(d)d.classList.toggle('on',i===mSlideIdx[id]);});
+}
+
+/* ═══════ MODAL ═══════ */
+let mIdx=0,mProd=null;
+function openModal(id){
+  const p=prods.find(x=>x.id===id);if(!p)return;
+  mProd=p;mIdx=0;p.views=(p.views||0)+1;saveData();
+  document.getElementById('mname').textContent=p.name;
+  // Prix
+  const pb=document.getElementById('mpricebox');
+  if(!p.price){pb.innerHTML='<div style="font-style:italic;color:var(--mt);font-size:.9rem">Vidéo gratuite</div>';}
+  else if(hasPromo(p)){
+    const pp=promoPrice(p);
+    pb.innerHTML=`<div style="font-size:.82rem;color:var(--mt);text-decoration:line-through">${fmt(p.price)} FCFA</div>
+      <div style="font-family:'Playfair Display',serif;font-size:1.7rem;font-weight:700;color:var(--red)">${fmt(pp)} <span style="font-size:.76rem;color:var(--mt);font-weight:400">FCFA</span></div>
+      <div style="display:inline-flex;align-items:center;gap:5px;font-size:.68rem;font-weight:600;background:rgba(224,80,80,.1);color:var(--red);border:1px solid rgba(224,80,80,.22);padding:4px 10px;border-radius:50px;margin-top:4px">💸 -${p.promo}% · Économie ${fmt(p.price-pp)} FCFA${p.promoLabel?' · '+p.promoLabel:''}</div>`;
+  }else{pb.innerHTML=`<div style="font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:700;color:var(--gold)">${fmt(p.price)} <span style="font-size:.76rem;color:var(--mt);font-weight:400">FCFA</span></div>`;}
+  // Dispo
+  document.getElementById('mdispo').innerHTML=buildDispoHtml(p,' style="margin-bottom:0"');
+  // Desc
+  document.getElementById('mdesc').textContent=p.desc||'Création artisanale de l\'atelier Mor Ndiaye, Guédiawaye.';
+  // Galerie
+  const media=p.media&&p.media.length?p.media:[{t:'img',s:'https://images.unsplash.com/photo-1548036328-c9fa89d128fa?q=80&w=800'}];
+  document.getElementById('mgsl').innerHTML=media.map(m=>`<div class="mgslide">${m.t==='video'?`<video src="${m.s}" controls autoplay playsinline style="width:100%;height:100%;object-fit:cover">`:`<img src="${m.s}" style="width:100%;height:100%;object-fit:cover">`}</div>`).join('');
+  document.getElementById('mgsl').style.transform='translateX(0)';
+  const VTHUMB='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'48\' height=\'48\'%3E%3Crect fill=\'%232a1e12\' width=\'48\' height=\'48\'/%3E%3Ctext x=\'50%25\' y=\'58%25\' text-anchor=\'middle\' fill=\'%23C9973A\' font-size=\'20\'%3E&#9654;%3C/text%3E%3C/svg%3E';
+  document.getElementById('mthumbs').innerHTML=media.length>1?media.map((m,i)=>`<img class="mthumb${i===0?' on':''}" src="${m.t==='video'?VTHUMB:m.s}" onclick="goMSl(${i})" alt="">`).join(''):'';
+  const hm=media.length>1;
+  document.getElementById('mgprev').style.display=hm?'flex':'none';
+  document.getElementById('mgnext').style.display=hm?'flex':'none';
+  document.getElementById('mgprev').onclick=()=>goMSl(mIdx-1);
+  document.getElementById('mgnext').onclick=()=>goMSl(mIdx+1);
+  // Boutons
+  const isVid=p.cat==='Vidéos Ateliers';const isOut=p.stock===0;
+  const inCart=cart.some(c=>c.id===p.id);
+  const ab=document.getElementById('mAddCart');
+  ab.style.display=isVid?'none':'flex';
+  ab.disabled=isOut;
+  ab.textContent=isOut?'Épuisé':inCart?'✓ Dans le panier — Voir le panier':'Ajouter au panier';
+  ab.onclick=()=>{if(isOut)return;if(inCart){closeModal();openCart();}else{addToCart(p.id);ab.textContent='✓ Dans le panier — Voir le panier';}};
+  const wb=document.getElementById('mwv');
+  wb.style.display=isVid?'none':'flex';wb.disabled=isOut;
+  wb.style.opacity=isOut?'.45':'1';
+  wb.onclick=()=>orderDirect(p.id);
+  document.getElementById('mov').classList.add('open');
+  document.body.style.overflow='hidden';
+}
+function goMSl(i){if(!mProd||!mProd.media)return;mIdx=(i+mProd.media.length)%mProd.media.length;document.getElementById('mgsl').style.transform=`translateX(-${mIdx*100}%)`;document.querySelectorAll('.mthumb').forEach((t,j)=>t.classList.toggle('on',j===mIdx));}
+function closeModal(){document.getElementById('mov').classList.remove('open');document.body.style.overflow='';}
+
+/* ═══════ CART ═══════ */
+function toggleCart(id){
+  if(cart.some(c=>c.id===id)){cart=cart.filter(c=>c.id!==id);toast('Retiré du panier');}
+  else addToCart(id);
+  saveData();updBadge();renderCart();renderGrid();
+}
+function addToCart(id){
+  const p=prods.find(x=>x.id===id);if(!p||p.cat==='Vidéos Ateliers'||p.stock===0)return;
+  const hp=hasPromo(p),fp=promoPrice(p);
+  const ex=cart.find(c=>c.id===id);
+  if(ex){ex.qty++;toast('Quantité mise à jour');}
+  else{cart.push({id:p.id,name:p.name,cat:p.cat,price:fp,origPrice:hp?p.price:null,promo:hp?p.promo:null,qty:1,img:p.media&&p.media[0]&&p.media[0].t==='img'?p.media[0].s:''});}
+  saveData();updBadge();renderCart();renderGrid();toast('🛍 Ajouté au panier !');
+}
+function updBadge(){const tot=cart.reduce((a,c)=>a+c.qty,0);const b=document.getElementById('cbadge');b.textContent=tot;b.classList.toggle('vis',tot>0);}
+function renderCart(){
+  const el=document.getElementById('citems'),foot=document.getElementById('cfoot');
+  if(!cart.length){el.innerHTML=`<div class="cempty"><div class="cempty-ico">🛍</div><div>Votre panier est vide</div><div style="font-size:.75rem;opacity:.6">Ajoutez des produits depuis la collection</div></div>`;foot.style.display='none';return;}
+  foot.style.display='block';
+  el.innerHTML=cart.map(c=>`<div class="citem">
+    <img class="ciimg" src="${c.img||''}" alt="${c.name}" onerror="this.style.display='none'">
+    <div class="ciinfo">
+      <div class="ciname">${c.name}</div>
+      <div class="cicat">${c.cat}</div>
+      <div class="ciprice" style="color:${c.promo?'var(--red)':'var(--gold)'}">
+        ${c.origPrice?`<span style="text-decoration:line-through;color:var(--mt);font-size:.72rem;font-weight:400;margin-right:6px">${fmt(c.origPrice)}</span>`:''}
+        ${fmt(c.price)} FCFA${c.promo?` <span style="font-size:.6rem;background:rgba(224,80,80,.1);border:1px solid rgba(224,80,80,.2);padding:2px 6px;border-radius:10px;color:var(--red);font-weight:700">-${c.promo}%</span>`:''}
+      </div>
+      <div class="ciqty">
+        <button class="qbtn" onclick="chgQty(${c.id},-1)">−</button>
+        <span class="qval">${c.qty}</span>
+        <button class="qbtn" onclick="chgQty(${c.id},1)">+</button>
+      </div>
+    </div>
+    <button class="cidel" onclick="rmCart(${c.id})">✕</button>
+  </div>`).join('');
+  const tot=cart.reduce((a,c)=>a+c.price*c.qty,0);
+  const totOrig=cart.reduce((a,c)=>a+(c.origPrice||c.price)*c.qty,0);
+  const sav=totOrig-tot;
+  document.getElementById('ctotval').textContent=fmt(tot)+' FCFA';
+  const se=document.getElementById('csave');
+  se.textContent=sav>0?`💸 Économies totales : ${fmt(sav)} FCFA`:'';
+}
+function chgQty(id,d){const c=cart.find(x=>x.id===id);if(!c)return;c.qty+=d;if(c.qty<=0)cart=cart.filter(x=>x.id!==id);saveData();updBadge();renderCart();renderGrid();}
+function rmCart(id){cart=cart.filter(c=>c.id!==id);saveData();updBadge();renderCart();renderGrid();toast('Retiré du panier');}
+function clearCart(){if(!confirm('Vider le panier ?'))return;cart=[];saveData();updBadge();renderCart();renderGrid();}
+function openCart(){document.getElementById('cside').classList.add('open');document.getElementById('cbkdrop').classList.add('open');document.body.style.overflow='hidden';}
+function closeCart(){document.getElementById('cside').classList.remove('open');document.getElementById('cbkdrop').classList.remove('open');document.body.style.overflow='';}
+function checkoutCart(){
+  if(!cart.length)return;
+  const lines=cart.map(c=>`• *${c.name}* x${c.qty}${c.promo?' (-'+c.promo+'%)':''} — ${fmt(c.price*c.qty)} FCFA`).join('\n');
+  const tot=cart.reduce((a,c)=>a+c.price*c.qty,0);
+  const txt=`*COMMANDE MOR NDIAYE BAGS* 🌟\n\n📦 Ma commande :\n${lines}\n\n💰 Total : *${fmt(tot)} FCFA*\n\nMerci de confirmer la disponibilité !`;
+  orders.unshift({date:new Date().toLocaleString('fr-FR'),items:cart.map(c=>({name:c.name,qty:c.qty,price:c.price})),total:tot});
+  saveData();window.open(`https://wa.me/${cfg.phone||WA_DEF}?text=${encodeURIComponent(txt)}`,'_blank');
+  toast('✅ Redirection WhatsApp…');
+}
+function orderDirect(id){
+  const p=prods.find(x=>x.id===id);if(!p||p.stock===0)return;
+  const hp=hasPromo(p),fp=promoPrice(p);
+  const promoLine=hp?`\n🏷 Promotion : *-${p.promo}%*${p.promoLabel?' ('+p.promoLabel+')':''} (prix original : ${fmt(p.price)} FCFA)`:'';
+  const txt=`*COMMANDE MOR NDIAYE BAGS* 🌟\n\n🛍 Produit : *${p.name}*${p.sku?' ('+p.sku+')':''}\n💰 Prix : *${fmt(fp)} FCFA*${promoLine}\n\nJe souhaite valider cette commande.`;
+  orders.unshift({date:new Date().toLocaleString('fr-FR'),items:[{name:p.name,qty:1,price:fp}],total:fp});
+  saveData();window.open(`https://wa.me/${cfg.phone||WA_DEF}?text=${encodeURIComponent(txt)}`,'_blank');
+}
+
+/* ═══════ MEDIA UPLOAD ═══════ */
+function handleFiles(files){
+  Array.from(files).forEach(f=>{
+    if(f.size>26000000){toast('⚠️ Trop lourd (max 25Mo) : '+f.name,'err');return;}
+    const r=new FileReader();
+    r.onload=e=>{pendM.push({t:f.type.startsWith('video/')?'video':'img',s:e.target.result});renderPrev();};
+    r.readAsDataURL(f);
+  });
+}
+function addUrlMedia(){
+  const url=document.getElementById('pUrl').value.trim();if(!url)return;
+  pendM.push({t:/\.(mp4|mov|webm)(\?.*)?$/i.test(url)?'video':'img',s:url});
+  document.getElementById('pUrl').value='';renderPrev();
+}
+function renderPrev(){
+  document.getElementById('mprevs').innerHTML=pendM.map((m,i)=>`<div class="mprev">
+    ${m.t==='video'?`<video src="${m.s}" muted playsinline></video><div class="mprevtype">vidéo</div>`:`<img src="${m.s}"><div class="mprevtype">img</div>`}
+    <button class="mprevdel" onclick="delPrev(${i})">✕</button>
+  </div>`).join('');
+  document.getElementById('mcount').textContent=pendM.length+' média(s)';
+}
+function delPrev(i){pendM.splice(i,1);renderPrev();}
+const mz=document.getElementById('mzone');
+mz.addEventListener('dragover',e=>{e.preventDefault();mz.classList.add('drag');});
+mz.addEventListener('dragleave',()=>mz.classList.remove('drag'));
+mz.addEventListener('drop',e=>{e.preventDefault();mz.classList.remove('drag');handleFiles(e.dataTransfer.files);});
+
+/* ═══════ PROMO TOGGLE & PREVIEW ═══════ */
+function togglePromo(){
+  promoOn=!promoOn;
+  document.getElementById('ptogsw').classList.toggle('on',promoOn);
+  document.getElementById('ptoglbl').textContent=promoOn?'Promotion activée ✓':'Activer une promotion';
+  document.getElementById('promofields').style.display=promoOn?'block':'none';
+  if(!promoOn){const e=document.getElementById('pPromo');if(e)e.value='';document.getElementById('promoprev').innerHTML='—';}
+}
+function livePromoPreview(){
+  if(!promoOn)return;
+  const price=parseInt(document.getElementById('pPrice').value)||0;
+  const pct=parseInt(document.getElementById('pPromo').value)||0;
+  const el=document.getElementById('promoprev');
+  if(!price||!pct||pct<=0||pct>=100){el.innerHTML='<span style="color:var(--mt);font-size:.82rem">Entrez le prix et le %</span>';return;}
+  const fp=Math.round(price*(1-pct/100));
+  el.innerHTML=`<span style="text-decoration:line-through;color:var(--mt);font-size:.78rem">${fmt(price)} FCFA</span>&nbsp; <strong style="color:var(--red);font-size:1.05rem">${fmt(fp)} FCFA</strong>&nbsp; <span style="color:var(--red);font-size:.72rem">(-${pct}% · éco. ${fmt(price-fp)} FCFA)</span>`;
+}
+
+/* ═══════ SAVE PRODUCT ═══════ */
+function saveProd(){
+  const name=document.getElementById('pName').value.trim();
+  const price=parseInt(document.getElementById('pPrice').value)||0;
+  const cat=document.getElementById('pCat').value;
+  const badge=document.getElementById('pBadge').value.trim();
+  const stock=document.getElementById('pStock').value.trim();
+  const sku=document.getElementById('pSku').value.trim();
+  const desc=document.getElementById('pDesc').value.trim();
+  const promoVal=promoOn?parseInt(document.getElementById('pPromo').value)||0:0;
+  const promoLbl=promoOn?document.getElementById('pPromoLabel').value.trim():'';
+  if(!name){toast('⚠️ Nom obligatoire','err');return;}
+  if(!pendM.length){toast('⚠️ Ajoutez au moins un média','err');return;}
+  prods.unshift({id:Date.now(),name,price,cat,badge:badge||null,sku:sku||null,
+    stock:stock?parseInt(stock):null,
+    promo:promoVal>0&&promoVal<100?promoVal:null,
+    promoLabel:promoLbl||null,
+    desc,media:pendM.map(m=>({t:m.t,s:m.s})),views:0});
+  saveData();renderGrid();renderCats();
+  ['pName','pPrice','pBadge','pStock','pSku','pDesc','pUrl','pPromo','pPromoLabel'].forEach(id=>{const e=document.getElementById(id);if(e)e.value='';});
+  promoOn=false;
+  document.getElementById('ptogsw').classList.remove('on');
+  document.getElementById('ptoglbl').textContent='Activer une promotion';
+  document.getElementById('promofields').style.display='none';
+  document.getElementById('promoprev').innerHTML='—';
+  pendM=[];renderPrev();document.getElementById('mfiles').value='';
+  document.getElementById('stp').textContent=prods.length;
+  stab('list');toast('✅ Produit publié avec succès !');
+}
+
+/* ═══════ ADMIN LIST ═══════ */
+function renderAlist(){
+  const el=document.getElementById('alist');
+  const tot=prods.filter(p=>p.price>0).reduce((a,p)=>a+p.price,0);
+  document.getElementById('pcount').textContent=prods.length;
+  document.getElementById('ptotalval').textContent=fmt(tot)+' FCFA';
+  if(!prods.length){el.innerHTML='<div style="color:var(--mt);text-align:center;padding:28px;font-size:.85rem">Aucun produit.</div>';return;}
+  el.innerHTML=prods.map(p=>{
+    const hp=hasPromo(p),fp=promoPrice(p);
+    return `<div class="aitm">
+      <img class="aitm-img" src="${p.media&&p.media[0]&&p.media[0].t==='img'?p.media[0].s:''}" alt="" onerror="this.style.visibility='hidden'">
+      <div class="aitm-info">
+        <div class="aitm-name">${p.name} ${hp?`<span style="background:var(--red);color:#fff;font-size:.52rem;padding:2px 7px;border-radius:10px;vertical-align:middle;font-weight:700">-${p.promo}%</span>`:''}</div>
+        <div class="aitm-meta">${p.cat}${p.sku?' · '+p.sku:''}${p.badge?' · 🏷 '+p.badge:''} · ${(p.media||[]).length} média(s) · ${p.views||0} vue(s) · Stock: ${p.stock!=null?p.stock:'∞'}${hp?' · Promo: '+fmt(fp)+' FCFA':''}</div>
+        <div class="aitm-actions">
+          <button class="abtn${hp?' red':''}" onclick="openEditPromo(${p.id})">${hp?'✏ Modifier promo':'＋ Ajouter promo'}</button>
+          <button class="abtn" onclick="editStock(${p.id})">📦 Stock</button>
+        </div>
+      </div>
+      <div style="text-align:right;white-space:nowrap;margin-left:8px">
+        ${hp?`<div style="font-size:.72rem;text-decoration:line-through;color:var(--mt)">${fmt(p.price)} FCFA</div><div class="aitm-p" style="color:var(--red)">${fmt(fp)} FCFA</div>`:`<div class="aitm-p">${p.price>0?fmt(p.price)+' FCFA':'Vidéo'}</div>`}
+      </div>
+      <button class="adel" onclick="delProd(${p.id})">Suppr.</button>
+    </div>`;
+  }).join('');
+}
+function openEditPromo(id){
+  const p=prods.find(x=>x.id===id);if(!p)return;
+  const hp=hasPromo(p);
+  document.body.insertAdjacentHTML('beforeend',`<div id="epm" style="position:fixed;inset:0;z-index:99999;background:rgba(0,0,0,.92);display:flex;align-items:center;justify-content:center;padding:20px">
+    <div style="background:var(--d2);border:1px solid var(--bdr);border-radius:12px;width:100%;max-width:420px;padding:28px">
+      <div style="font-family:'Playfair Display',serif;font-size:1.3rem;font-style:italic;color:var(--gold);margin-bottom:20px">${hp?'Modifier':'Ajouter'} promotion — ${p.name}</div>
+      <div class="fg"><label class="fl">% de réduction (0 = désactiver)</label><input id="epmVal" class="fi" type="number" min="0" max="99" value="${p.promo||''}" placeholder="ex: 25" oninput="epmPrev(${p.price})"></div>
+      <div id="epmPrevEl" style="padding:10px 14px;background:var(--d4);border:1px solid rgba(224,80,80,.2);border-radius:6px;font-size:.85rem;min-height:38px;margin-bottom:14px;color:var(--red)">${hp?fmt(Math.round(p.price*(1-p.promo/100)))+' FCFA (−'+p.promo+'%)':'Entrez un %'}</div>
+      <div class="fg"><label class="fl">Libellé (optionnel)</label><input id="epmLbl" class="fi" value="${p.promoLabel||''}" placeholder="ex: Soldes · Fin de série"></div>
+      <div style="display:flex;gap:10px;margin-top:4px">
+        <button onclick="saveEpm(${id})" style="flex:1;padding:13px;background:var(--gold);color:#000;border:none;border-radius:6px;font-size:.78rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;font-family:'DM Sans',sans-serif">Enregistrer</button>
+        <button onclick="document.getElementById('epm').remove()" style="padding:13px 18px;background:none;border:1px solid var(--bdr);color:var(--mt);border-radius:6px;font-family:'DM Sans',sans-serif">Annuler</button>
+      </div>
+    </div>
+  </div>`);
+}
+function epmPrev(price){
+  const pct=parseInt(document.getElementById('epmVal').value)||0;
+  const el=document.getElementById('epmPrevEl');
+  if(!pct||pct<=0||pct>=100){el.style.color='var(--mt)';el.textContent='Entrez une valeur entre 1 et 99';return;}
+  const fp=Math.round(price*(1-pct/100));
+  el.style.color='var(--red)';
+  el.innerHTML=`<strong>${fmt(fp)} FCFA</strong> &nbsp;·&nbsp; -${pct}% &nbsp;·&nbsp; Économie : ${fmt(price-fp)} FCFA`;
+}
+function saveEpm(id){
+  const p=prods.find(x=>x.id===id);if(!p)return;
+  const pct=parseInt(document.getElementById('epmVal').value)||0;
+  const lbl=document.getElementById('epmLbl').value.trim();
+  p.promo=pct>0&&pct<100?pct:null;p.promoLabel=lbl||null;
+  saveData();renderGrid();renderAlist();
+  document.getElementById('epm').remove();
+  toast(p.promo?`✅ Promo -${p.promo}% appliquée !`:'Promo supprimée');
+}
+function editStock(id){
+  const p=prods.find(x=>x.id===id);if(!p)return;
+  const v=prompt(`Stock de "${p.name}"\nActuel : ${p.stock!=null?p.stock:' Illimité'}\nEntrez le nouveau stock (vide = illimité) :`,p.stock!=null?p.stock:'');
+  if(v===null)return;
+  p.stock=v.trim()===''?null:Math.max(0,parseInt(v)||0);
+  saveData();renderGrid();renderAlist();
+  toast(`📦 Stock mis à jour : ${p.stock!=null?p.stock:'Illimité'}`);
+}
+function delProd(id){
+  if(!confirm('Supprimer ce produit ?'))return;
+  prods=prods.filter(p=>p.id!==id);cart=cart.filter(c=>c.id!==id);
+  saveData();renderGrid();renderCats();renderAlist();renderStats();updBadge();renderCart();
+  document.getElementById('stp').textContent=prods.length;toast('🗑 Produit supprimé');
+}
+
+/* ═══════ SETTINGS ═══════ */
+function loadCfgForm(){
+  const map={cfPhone:'phone',cfAddr:'addr',cfLivr:'livr',cfAtImg:'atImg',cfAt1:'at1',cfAt2:'at2',cfQuote:'quote',cfMq:'marquee',cfHeroImg:'heroImg'};
+  Object.entries(map).forEach(([id,k])=>{const e=document.getElementById(id);if(e)e.value=cfg[k]||'';});
+}
+function saveSettings(){
+  const map={cfPhone:'phone',cfAddr:'addr',cfLivr:'livr',cfAtImg:'atImg',cfAt1:'at1',cfAt2:'at2',cfQuote:'quote',cfMq:'marquee',cfHeroImg:'heroImg'};
+  Object.entries(map).forEach(([id,k])=>{const e=document.getElementById(id);if(e)cfg[k]=e.value.trim();});
+  if(!cfg.phone)cfg.phone=WA_DEF;
+  saveData();applyConfig();toast('✅ Paramètres sauvegardés !');
+}
+
+/* ═══════ ORDERS ═══════ */
+function renderOrders(){
+  const el=document.getElementById('ohist');
+  if(!orders.length){el.innerHTML='<div style="color:var(--mt);text-align:center;padding:28px;font-size:.85rem">Aucune commande.</div>';return;}
+  el.innerHTML=orders.map(o=>`<div class="oitm"><div class="oitm-hd"><span>${o.date}</span><span>${fmt(o.total)} FCFA</span></div><div class="oitm-prod">${o.items.map(it=>`${it.name} ×${it.qty}`).join(' · ')}</div></div>`).join('');
+}
+function clearOrders(){if(!confirm('Effacer tout ?'))return;orders=[];saveData();renderOrders();toast('Historique effacé');}
+
+/* ═══════ STATS ═══════ */
+function renderStats(){
+  document.getElementById('stP').textContent=prods.length;
+  const cats=[...new Set(prods.map(p=>p.cat))];
+  document.getElementById('stC').textContent=cats.length;
+  document.getElementById('stO').textContent=orders.length;
+  const bd=document.getElementById('catbd');
+  bd.innerHTML=cats.length?cats.map(c=>{const cnt=prods.filter(p=>p.cat===c).length;const pct=Math.round(cnt/prods.length*100);return `<div style="margin-bottom:14px"><div style="display:flex;justify-content:space-between;font-size:.78rem;margin-bottom:5px"><span>${c}</span><span style="color:var(--gold)">${cnt}</span></div><div style="height:3px;background:var(--d5);border-radius:2px;overflow:hidden"><div style="height:100%;width:${pct}%;background:var(--gold);border-radius:2px"></div></div></div>`;}).join(''):'<div style="color:var(--mt);font-size:.8rem">Aucun produit.</div>';
+  const top=[...prods].sort((a,b)=>(b.views||0)-(a.views||0)).slice(0,5);
+  document.getElementById('topviews').innerHTML=top.length?top.map(p=>`<div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--bdr);font-size:.82rem"><span>${p.name}</span><span style="color:var(--gold)">${p.views||0} vue(s)</span></div>`).join(''):'<div style="color:var(--mt);font-size:.8rem">Aucune vue.</div>';
+}
+function stab(id){
+  const ids=['add','list','site','hist','stats'];
+  document.querySelectorAll('.atab').forEach((t,i)=>t.classList.toggle('on',ids[i]===id));
+  document.querySelectorAll('.atc').forEach(c=>c.classList.remove('on'));
+  document.getElementById('tab-'+id).classList.add('on');
+  if(id==='list')renderAlist();if(id==='site')loadCfgForm();if(id==='hist')renderOrders();if(id==='stats')renderStats();
+}
+
+/* ═══════ LOGIN / ADMIN ═══════ */
+function tryLogin(){
+  const val=document.getElementById('loginPwd').value;
+  if(hashPwd(val)===PWD_H){
+    adminAuth=true;sessionStorage.setItem('mnb_auth',PWD_H);
+    document.getElementById('loginMod').style.display='none';
+    document.getElementById('loginErr').style.display='none';
+    document.getElementById('loginPwd').value='';
+    document.getElementById('aov').style.display='block';
+    document.body.style.overflow='hidden';stab('add');
+  }else{
+    document.getElementById('loginErr').style.display='block';
+    document.getElementById('loginPwd').value='';
+    const isMob=window.matchMedia('(pointer:coarse)').matches;
+    if(!isMob)document.getElementById('loginPwd').focus();
+  }
+}
+function closeLogin(){document.getElementById('loginMod').style.display='none';document.body.style.overflow='';}
+function openAdmin(){
+  if(adminAuth){document.getElementById('aov').style.display='block';document.body.style.overflow='hidden';stab('add');return;}
+  document.getElementById('loginMod').style.display='flex';
+  document.body.style.overflow='hidden';
+  const isMob=window.matchMedia('(pointer:coarse)').matches;
+  if(!isMob)setTimeout(()=>document.getElementById('loginPwd').focus(),200);
+}
+function closeAdmin(){document.getElementById('aov').style.display='none';document.body.style.overflow='';}
+
+/* ═══════ IMPORT / EXPORT ═══════ */
+function exportD(){
+  const b=new Blob([JSON.stringify({products:prods,cfg,orders,exportedAt:new Date().toISOString()},null,2)],{type:'application/json'});
+  const a=document.createElement('a');a.href=URL.createObjectURL(b);a.download='mor_ndiaye_bags_backup.json';a.click();
+  toast('✅ Sauvegarde téléchargée');
+}
+function importD(e){
+  const f=e.target.files[0];if(!f)return;
+  const r=new FileReader();
+  r.onload=ev=>{try{const d=JSON.parse(ev.target.result);if(d.products)prods=d.products;if(d.cfg)cfg={...DC,...d.cfg};if(d.orders)orders=d.orders;saveData();applyConfig();renderGrid();renderCats();renderAlist();renderStats();toast(`✅ ${prods.length} produits importés`);}catch{toast('⚠️ Fichier invalide','err');}};
+  r.readAsText(f);e.target.value='';
+}
+function resetD(){
+  if(!confirm('Remettre les données de démonstration ?'))return;
+  prods=JSON.parse(JSON.stringify(DP));cfg={...DC};cart=[];orders=[];
+  saveData();applyConfig();renderGrid();renderCats();renderAlist();renderStats();updBadge();renderCart();
+  toast('🔄 Données de démo restaurées');
+}
+
+/* ═══════ SEARCH ═══════ */
+function doSearch(q){
+  const r=document.getElementById('sres');
+  if(!q||!q.trim()){r.classList.remove('open');return;}
+  const res=prods.filter(p=>p.name.toLowerCase().includes(q.toLowerCase())||p.cat.toLowerCase().includes(q.toLowerCase())).slice(0,6);
+  if(!res.length){r.innerHTML=`<div class="srempty">Aucun résultat pour "${q}"</div>`;r.classList.add('open');return;}
+  r.innerHTML=res.map(p=>`<div class="sri" onclick="closeSearch();openModal(${p.id})">
+    <img class="srimg" src="${p.media&&p.media[0]&&p.media[0].t==='img'?p.media[0].s:''}" onerror="this.style.display='none'">
+    <div><div class="srname">${p.name}</div><div class="srprice">${hasPromo(p)?`<span style="text-decoration:line-through;font-size:.65rem;color:var(--mt)">${fmt(p.price)}</span> <span style="color:var(--red)">${fmt(promoPrice(p))} FCFA</span>`:p.price>0?fmt(p.price)+' FCFA':'Vidéo'}</div></div>
+  </div>`).join('');
+  r.classList.add('open');
+}
+function closeSearch(){const r=document.getElementById('sres');if(r)r.classList.remove('open');const i=document.getElementById('sinput');if(i)i.value='';}
+function doSearchMob(q){
+  const r=document.getElementById('mmsres');
+  if(!q||!q.trim()){r.classList.remove('open');return;}
+  const res=prods.filter(p=>p.name.toLowerCase().includes(q.toLowerCase())||p.cat.toLowerCase().includes(q.toLowerCase())).slice(0,5);
+  if(!res.length){r.innerHTML=`<div class="srempty">Aucun résultat</div>`;r.classList.add('open');return;}
+  r.innerHTML=res.map(p=>`<div class="sri" onclick="closeMM();openModal(${p.id})">
+    <img class="srimg" src="${p.media&&p.media[0]&&p.media[0].t==='img'?p.media[0].s:''}" onerror="this.style.display='none'">
+    <div><div class="srname">${p.name}</div><div class="srprice">${p.price>0?fmt(promoPrice(p))+' FCFA':'Vidéo'}</div></div>
+  </div>`).join('');
+  r.classList.add('open');
+}
+
+/* ═══════ MOBILE MENU ═══════ */
+function openMM(){document.getElementById('mmenu').classList.add('open');document.body.style.overflow='hidden';}
+function closeMM(){document.getElementById('mmenu').classList.remove('open');document.body.style.overflow='';}
+
+/* ═══════ CURSOR (desktop) ═══════ */
+const cur=document.getElementById('cur'),curR=document.getElementById('curR');
+if(cur&&curR&&!window.matchMedia('(pointer:coarse)').matches){
+  document.addEventListener('mousemove',e=>{cur.style.left=e.clientX+'px';cur.style.top=e.clientY+'px';curR.style.left=e.clientX+'px';curR.style.top=e.clientY+'px';});
+  function atchCur(){document.querySelectorAll('button,a,.cat-item,.pcard,.ccard,.mthumb,.sri').forEach(el=>{if(el._ch)return;el._ch=true;el.addEventListener('mouseenter',()=>{cur.style.width='15px';cur.style.height='15px';curR.style.width='48px';curR.style.height='48px';});el.addEventListener('mouseleave',()=>{cur.style.width='10px';cur.style.height='10px';curR.style.width='34px';curR.style.height='34px';});});}
+  new MutationObserver(atchCur).observe(document.getElementById('pgrid'),{childList:true});
+  atchCur();
+}
+
+/* ═══════ TOAST ═══════ */
+function toast(msg,type='ok'){const t=document.getElementById('toast');t.textContent=msg;t.className='toast '+(type==='err'?'err':'')+' show';clearTimeout(t._t);t._t=setTimeout(()=>t.classList.remove('show'),3200);}
+
+/* ═══════ ESCAPE KEY ═══════ */
+document.addEventListener('keydown',e=>{if(e.key==='Escape'){closeSearch();closeMM();closeModal();}});
+
+/* ═══════ INIT ═══════ */
+loadData();applyConfig();renderCats();renderGrid();updBadge();renderCart();
+</script>
+</body>
+</html>
