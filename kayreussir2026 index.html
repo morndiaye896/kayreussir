@@ -1,0 +1,1943 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KAY REUSSIR | Excellence Scolaire & Coaching</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+:root{--royal:#0a2351;--mid:#0d3270;--light:#1da1f2;--gold:#d4af37;--gold-l:#f0d060;--wa:#25D366;--bg:#f4f6fb;--text:#2a2a2a;--white:#fff;--shadow:0 10px 40px rgba(10,35,81,.12);--red:#e74c3c}
+*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}body{font-family:'Poppins',sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden}
+.promo-bar{background:var(--royal);color:#fff;padding:11px 0;font-size:.82rem;overflow:hidden;white-space:nowrap;font-weight:500;border-bottom:2px solid var(--gold)}
+.promo-track{display:inline-block;animation:scroll 38s linear infinite}
+@keyframes scroll{from{transform:translateX(100vw)}to{transform:translateX(-100%)}}
+header{background:#fff;padding:14px 8%;display:flex;justify-content:space-between;align-items:center;box-shadow:0 2px 20px rgba(0,0,0,.06);position:sticky;top:0;z-index:1000}
+.logo{font-family:'DM Serif Display',serif;font-size:1.9rem;color:var(--royal);text-decoration:none}
+.logo span{color:var(--gold)}
+.nav-links{display:flex;gap:28px;align-items:center}
+.nav-links a{text-decoration:none;color:var(--text);font-weight:500;font-size:.88rem;transition:.3s}
+.nav-links a:hover{color:var(--light)}
+.cta-header{background:var(--royal);color:#fff!important;padding:10px 24px;border-radius:50px;font-weight:600;font-size:.82rem}
+.admin-link-btn{background:none;border:1.5px solid #ccc;color:#888!important;padding:8px 16px;border-radius:50px;font-size:.78rem;cursor:pointer;transition:.3s;font-family:inherit}
+.admin-link-btn:hover{border-color:var(--royal);color:var(--royal)!important}
+.hero{min-height:75vh;background:linear-gradient(135deg,rgba(10,35,81,.88),rgba(10,35,81,.5)),url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&q=80&w=2070')center/cover;display:flex;flex-direction:column;justify-content:center;align-items:center;color:#fff;text-align:center;padding:60px 20px;position:relative}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 60% 40%,rgba(212,175,55,.12),transparent 70%);pointer-events:none}
+.hero-badge{background:rgba(212,175,55,.18);border:1px solid rgba(212,175,55,.5);color:var(--gold-l);padding:6px 18px;border-radius:50px;font-size:.75rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:20px;display:inline-block}
+.hero h1{font-family:'DM Serif Display',serif;font-size:clamp(2.8rem,5.5vw,5rem);margin-bottom:18px;line-height:1.1}
+.hero h1 em{font-style:italic;color:var(--gold-l)}
+.hero p{font-size:1.1rem;max-width:650px;font-weight:300;margin-bottom:35px;opacity:.9;line-height:1.7}
+.hero-actions{display:flex;gap:15px;flex-wrap:wrap;justify-content:center}
+.btn-primary{background:var(--gold);color:var(--royal);padding:14px 32px;border-radius:50px;font-weight:700;text-decoration:none;font-size:.9rem;transition:.3s;border:none;cursor:pointer}
+.btn-primary:hover{background:var(--gold-l);transform:translateY(-2px);box-shadow:0 8px 25px rgba(212,175,55,.4)}
+.btn-outline{background:transparent;color:#fff;padding:14px 32px;border-radius:50px;font-weight:600;text-decoration:none;font-size:.9rem;border:2px solid rgba(255,255,255,.5);transition:.3s}
+.btn-outline:hover{border-color:#fff;background:rgba(255,255,255,.1)}
+.stats-bar{background:var(--royal);padding:28px 8%;display:flex;justify-content:space-around;flex-wrap:wrap;gap:20px}
+.stat-item{text-align:center;color:#fff}
+.stat-item .num{font-family:'DM Serif Display',serif;font-size:2.2rem;color:var(--gold-l);display:block}
+.stat-item .lbl{font-size:.78rem;opacity:.7;text-transform:uppercase;letter-spacing:1px}
+.section{padding:90px 8%}
+.section-alt{background:#fff}
+.section-header{text-align:center;margin-bottom:55px}
+.section-header .eyebrow{color:var(--gold);font-size:.75rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;margin-bottom:10px;display:block}
+.section-header h2{font-family:'DM Serif Display',serif;font-size:2.6rem;color:var(--royal);margin-bottom:12px}
+.section-header p{color:#666;max-width:550px;margin:0 auto;line-height:1.7}
+/* ── Resource cards ── */
+.res-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:24px}
+.res-card{background:#fff;border-radius:16px;overflow:hidden;box-shadow:var(--shadow);transition:.35s;border:1px solid rgba(10,35,81,.05);cursor:pointer}
+.res-card:hover{transform:translateY(-6px);box-shadow:0 20px 50px rgba(10,35,81,.15)}
+.res-thumb{width:100%;height:185px;position:relative;overflow:hidden;background:#111;display:flex;align-items:center;justify-content:center}
+.res-thumb img{width:100%;height:100%;object-fit:cover;transition:.5s}
+.res-card:hover .res-thumb img{transform:scale(1.05)}
+.res-thumb video{width:100%;height:100%;object-fit:cover}
+.pdf-preview{width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;background:linear-gradient(135deg,#fff5f5,#ffe0e0)}
+.pdf-preview i{font-size:3rem;color:#c0392b;margin-bottom:8px}
+.pdf-preview span{font-size:.72rem;font-weight:700;color:#c0392b;text-transform:uppercase;letter-spacing:1px}
+.res-overlay{position:absolute;inset:0;background:rgba(10,35,81,.55);display:flex;align-items:center;justify-content:center;opacity:0;transition:.3s}
+.res-card:hover .res-overlay{opacity:1}
+.res-overlay i{color:#fff;font-size:2.2rem}
+.play-badge{position:absolute;bottom:10px;right:10px;background:rgba(0,0,0,.6);color:#fff;padding:4px 10px;border-radius:50px;font-size:.7rem;font-weight:600;display:flex;align-items:center;gap:5px}
+.res-body{padding:20px}
+.res-tag{display:inline-flex;align-items:center;gap:5px;padding:3px 11px;border-radius:4px;font-size:.67rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-bottom:10px}
+.tag-image{background:#e8f4fd;color:#0a7bbf}.tag-video,.tag-youtube{background:#fde8f0;color:#c0392b}.tag-pdf{background:#fef3e8;color:#d35400}
+.res-body h3{font-family:'DM Serif Display',serif;font-size:1.2rem;color:var(--royal);margin-bottom:6px}
+.res-body p{font-size:.83rem;color:#777;line-height:1.6}
+.res-meta{font-size:.72rem;color:#aaa;margin-top:8px}
+.empty-state{grid-column:1/-1;text-align:center;padding:60px 20px;color:#aaa}
+.empty-state i{font-size:3rem;display:block;margin-bottom:15px;opacity:.4}
+/* ── Lightbox ── */
+.lightbox{display:none;position:fixed;inset:0;background:rgba(5,11,26,.93);z-index:8000;align-items:center;justify-content:center;backdrop-filter:blur(8px)}
+.lightbox.active{display:flex}
+.lb-box{max-width:92vw;max-height:92vh;position:relative;animation:lbIn .3s ease;display:flex;flex-direction:column;align-items:center}
+@keyframes lbIn{from{transform:scale(.9);opacity:0}to{transform:none;opacity:1}}
+.lb-close{position:fixed;top:18px;right:22px;background:rgba(255,255,255,.12);border:none;color:#fff;width:44px;height:44px;border-radius:50%;font-size:1.1rem;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:.2s}
+.lb-close:hover{background:rgba(255,255,255,.25)}
+.lb-box img{max-width:88vw;max-height:82vh;border-radius:10px;display:block}
+.lb-box video{max-width:88vw;max-height:82vh;border-radius:10px}
+.lb-box iframe{width:80vw;height:82vh;border:none;border-radius:10px;background:#fff}
+.lb-caption{color:#fff;text-align:center;margin-top:12px;font-size:.88rem;opacity:.75}
+/* ── Enrollment ── */
+.enroll-box{background:#fff;border-radius:24px;display:grid;grid-template-columns:1fr 1.1fr;overflow:hidden;box-shadow:var(--shadow)}
+.enroll-info{background:linear-gradient(145deg,var(--royal),var(--mid));color:#fff;padding:65px 55px;display:flex;flex-direction:column;justify-content:center;position:relative;overflow:hidden}
+.enroll-info::before{content:'';position:absolute;width:300px;height:300px;border-radius:50%;background:rgba(212,175,55,.07);top:-80px;right:-80px}
+.enroll-info h2{font-family:'DM Serif Display',serif;font-size:2.4rem;margin-bottom:18px;line-height:1.2}
+.enroll-info p{opacity:.8;line-height:1.7;font-size:.92rem}
+.features-list{margin-top:35px;display:flex;flex-direction:column;gap:12px}
+.feature-item{display:flex;align-items:center;gap:12px;font-size:.88rem}
+.fi-icon{width:30px;height:30px;background:rgba(212,175,55,.2);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--gold-l);font-size:.75rem;flex-shrink:0}
+.enroll-form{padding:65px 55px}
+.enroll-form h3{font-family:'DM Serif Display',serif;font-size:1.7rem;color:var(--royal);margin-bottom:28px}
+.fg{margin-bottom:15px}
+.fg label{display:block;font-size:.78rem;font-weight:600;color:#555;margin-bottom:6px}
+input,select,textarea{width:100%;padding:13px 16px;border:1.5px solid #e8eaef;border-radius:10px;font-family:inherit;font-size:.9rem;transition:.2s;outline:none;background:#f9fafc;color:var(--text)}
+input:focus,select:focus,textarea:focus{border-color:var(--light);background:#fff;box-shadow:0 0 0 3px rgba(29,161,242,.1)}
+.btn-wa{width:100%;padding:16px;border:none;border-radius:12px;font-weight:700;color:#fff;cursor:pointer;background:var(--wa);display:flex;align-items:center;justify-content:center;gap:12px;font-size:1rem;transition:.3s;font-family:inherit;margin-top:8px}
+.btn-wa:hover{transform:translateY(-3px);box-shadow:0 8px 20px rgba(37,211,102,.35)}
+.form-note{text-align:center;margin-top:12px;font-size:.75rem;color:#999}
+footer{background:#060d1f;color:#fff;padding:80px 8% 40px}
+.footer-content{display:grid;grid-template-columns:2fr repeat(3,1fr);gap:50px}
+.fc h4{font-size:.78rem;text-transform:uppercase;letter-spacing:2px;color:var(--gold);font-weight:700;margin-bottom:18px}
+.fc a,.fc p{display:block;color:rgba(255,255,255,.55);text-decoration:none;font-size:.85rem;margin-bottom:10px;transition:.2s}
+.fc a:hover{color:#fff}
+.s-icons{display:flex;gap:12px;margin-top:5px}
+.s-icons a{width:40px;height:40px;background:rgba(255,255,255,.05);display:flex;align-items:center;justify-content:center;border-radius:50%;color:rgba(255,255,255,.6);font-size:.85rem;transition:.3s}
+.s-icons a:hover{background:var(--light);color:#fff;transform:translateY(-4px)}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.06);margin-top:60px;padding-top:25px;display:flex;justify-content:space-between;align-items:center;font-size:.72rem;color:rgba(255,255,255,.3)}
+.float-wa{position:fixed;bottom:28px;right:28px;width:58px;height:58px;border-radius:50%;background:var(--wa);color:#fff;display:flex;align-items:center;justify-content:center;font-size:1.6rem;text-decoration:none;box-shadow:0 6px 25px rgba(37,211,102,.45);z-index:900;transition:.3s;animation:pulse 2.5s infinite}
+.float-wa:hover{transform:scale(1.1)}
+@keyframes pulse{0%,100%{box-shadow:0 6px 25px rgba(37,211,102,.45)}50%{box-shadow:0 6px 35px rgba(37,211,102,.7)}}
+
+/* ═══════ ADMIN LOGIN ═══════ */
+.modal-ov{display:none;position:fixed;inset:0;background:rgba(5,11,26,.78);backdrop-filter:blur(6px);z-index:9999;align-items:center;justify-content:center}
+.modal-ov.active{display:flex}
+.modal-box{background:#fff;border-radius:20px;width:100%;max-width:420px;padding:50px 45px;text-align:center;box-shadow:0 30px 80px rgba(0,0,0,.3);position:relative;animation:mIn .3s ease}
+@keyframes mIn{from{transform:scale(.92) translateY(20px);opacity:0}to{transform:none;opacity:1}}
+.m-close{position:absolute;top:18px;right:20px;background:none;border:none;font-size:1.3rem;cursor:pointer;color:#aaa}
+.m-icon{width:65px;height:65px;background:linear-gradient(135deg,var(--royal),var(--mid));border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 22px}
+.m-icon i{color:#fff;font-size:1.5rem}
+.modal-box h3{font-family:'DM Serif Display',serif;font-size:1.7rem;color:var(--royal);margin-bottom:6px}
+.modal-box .sub{color:#888;font-size:.83rem;margin-bottom:28px}
+.iw{position:relative;margin-bottom:14px}
+.iw input{padding-left:44px}
+.iw .ii{position:absolute;left:14px;top:50%;transform:translateY(-50%);color:#aaa;font-size:.9rem}
+.iw .tpw{position:absolute;right:14px;top:50%;transform:translateY(-50%);background:none;border:none;cursor:pointer;color:#aaa;font-size:.85rem}
+.btn-login{width:100%;padding:14px;background:var(--royal);color:#fff;border:none;border-radius:10px;font-weight:700;font-size:.95rem;cursor:pointer;transition:.3s;font-family:inherit}
+.btn-login:hover{background:var(--mid)}
+.lerr{color:var(--red);font-size:.8rem;margin-top:10px;display:none}
+
+/* ═══════ ADMIN PANEL ═══════ */
+#adm{display:none;position:fixed;inset:0;background:#f0f2f7;z-index:9998;overflow-y:auto}
+.adm-hdr{background:var(--royal);padding:16px 40px;display:flex;justify-content:space-between;align-items:center;box-shadow:0 2px 15px rgba(0,0,0,.2);position:sticky;top:0;z-index:10}
+.adm-hdr .logo{color:#fff;font-size:1.5rem}
+.adm-badge{background:var(--red);color:#fff;padding:5px 14px;border-radius:50px;font-size:.72rem;font-weight:700;letter-spacing:1px}
+.btn-logout{background:rgba(255,255,255,.1);color:#fff;border:1px solid rgba(255,255,255,.2);padding:8px 18px;border-radius:50px;font-size:.8rem;cursor:pointer;font-family:inherit;transition:.3s}
+.btn-logout:hover{background:rgba(255,255,255,.2)}
+.adm-tabs{background:#fff;border-bottom:2px solid #eee;padding:0 40px;display:flex;position:sticky;top:61px;z-index:9;overflow-x:auto}
+.atab{padding:15px 20px;background:none;border:none;font-family:inherit;font-size:.83rem;font-weight:600;color:#888;cursor:pointer;border-bottom:3px solid transparent;margin-bottom:-2px;transition:.2s;white-space:nowrap;display:flex;align-items:center;gap:7px}
+.atab:hover{color:var(--royal)}
+.atab.on{color:var(--royal);border-bottom-color:var(--gold)}
+.atp{display:none}.atp.on{display:block}
+.adc{padding:32px 40px;max-width:1300px;margin:0 auto}
+.adc h2{font-family:'DM Serif Display',serif;font-size:1.9rem;color:var(--royal)}
+.adc .sub-h{color:#666;font-size:.87rem;margin-top:3px}
+.adm-stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin:22px 0 30px}
+.asc{background:#fff;border-radius:14px;padding:20px;box-shadow:0 4px 15px rgba(0,0,0,.06);display:flex;align-items:center;gap:14px}
+.asi{width:46px;height:46px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.05rem;flex-shrink:0}
+.asi.b{background:rgba(10,35,81,.1);color:var(--royal)}.asi.g{background:rgba(212,175,55,.15);color:var(--gold)}.asi.gr{background:rgba(37,211,102,.12);color:#1a9e54}.asi.r{background:rgba(231,76,60,.1);color:var(--red)}.asi.p{background:rgba(142,68,173,.1);color:#8e44ad}
+.asc-val{font-size:1.8rem;font-weight:700;color:var(--royal);line-height:1}
+.asc-lbl{font-size:.74rem;color:#888;margin-top:3px}
+.adm-card{background:#fff;border-radius:14px;padding:26px;box-shadow:0 4px 15px rgba(0,0,0,.06);margin-bottom:22px}
+.adm-card-title{font-family:'DM Serif Display',serif;font-size:1.35rem;color:var(--royal);margin-bottom:16px;padding-bottom:10px;border-bottom:2px solid #eee;display:flex;align-items:center;gap:8px}
+.adm-g2{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+
+/* ── Upload zone ── */
+.upzone{border:2.5px dashed #d0d5e8;border-radius:16px;padding:40px 30px;text-align:center;cursor:pointer;transition:.3s;background:#f8f9fc;position:relative;margin-bottom:22px}
+.upzone:hover,.upzone.drag-over{border-color:var(--light);background:#f0f7ff}
+.upzone i{font-size:2.8rem;color:#b0bbd0;margin-bottom:10px;display:block}
+.upzone h4{color:var(--royal);font-size:1rem;margin-bottom:5px}
+.upzone p{color:#999;font-size:.8rem;margin-bottom:12px}
+.upzone input[type=file]{position:absolute;inset:0;opacity:0;cursor:pointer;width:100%;height:100%}
+.utype-badges{display:flex;gap:8px;justify-content:center;flex-wrap:wrap}
+.utb{padding:4px 12px;border-radius:50px;font-size:.68rem;font-weight:700}
+.utb.i{background:#e8f4fd;color:#0a7bbf}.utb.v{background:#fde8f0;color:#c0392b}.utb.p{background:#fef3e8;color:#d35400}
+.prog-wrap{background:#eee;border-radius:50px;height:6px;overflow:hidden;margin:8px 0 0;display:none}
+.prog-bar{height:100%;background:linear-gradient(90deg,var(--light),var(--royal));border-radius:50px;transition:width .3s;width:0}
+
+/* ── URL Form ── */
+.url-form{background:#f8f9fc;border-radius:12px;padding:20px;border:1px solid #eee;margin-bottom:20px}
+.url-form h4{font-size:.88rem;font-weight:700;color:var(--royal);margin-bottom:14px}
+.url-form input,.url-form select,.url-form textarea{margin-bottom:10px;font-size:.85rem;padding:10px 14px}
+.url-form textarea{min-height:65px;resize:vertical}
+.fg-row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.btn-add{background:var(--royal);color:#fff;border:none;border-radius:10px;padding:11px 22px;font-weight:700;font-size:.84rem;cursor:pointer;transition:.3s;font-family:inherit;display:inline-flex;align-items:center;gap:7px}
+.btn-add:hover{background:var(--mid)}
+.btn-sec{background:#f0f2f7;color:var(--royal);border:none;border-radius:10px;padding:11px 18px;font-weight:600;font-size:.84rem;cursor:pointer;font-family:inherit;transition:.2s}
+.btn-sec:hover{background:#e0e3ea}
+
+/* ── Media filters & grid ── */
+.mf-wrap{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px;align-items:center}
+.mfb{padding:7px 16px;border-radius:50px;border:1.5px solid #dde1eb;background:#fff;font-size:.77rem;font-weight:600;cursor:pointer;transition:.25s;color:#666;font-family:inherit;display:flex;align-items:center;gap:5px}
+.mfb:hover,.mfb.on{background:var(--royal);color:#fff;border-color:var(--royal)}
+.m-search{flex:1;max-width:250px;padding:8px 14px;border:1.5px solid #dde1eb;border-radius:50px;font-size:.82rem;font-family:inherit;outline:none}
+.m-search:focus{border-color:var(--light)}
+.media-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(195px,1fr));gap:14px}
+.mi{background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 3px 12px rgba(0,0,0,.07);transition:.3s;border:2px solid transparent}
+.mi:hover{box-shadow:0 8px 25px rgba(0,0,0,.12);border-color:var(--light)}
+.mi-thumb{width:100%;height:135px;position:relative;overflow:hidden;background:#f0f2f7;cursor:pointer;display:flex;align-items:center;justify-content:center}
+.mi-thumb img{width:100%;height:100%;object-fit:cover;transition:.4s}
+.mi:hover .mi-thumb img{transform:scale(1.06)}
+.mi-thumb video{width:100%;height:100%;object-fit:cover}
+.vt{width:100%;height:100%;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#1a1a2e,#16213e)}
+.pt{width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;background:linear-gradient(135deg,#fff5f5,#ffe0e0)}
+.pt i{font-size:2.2rem;color:#c0392b;margin-bottom:4px}
+.pt span{font-size:.62rem;font-weight:700;color:#c0392b;text-transform:uppercase;letter-spacing:1px}
+.yt-play{position:absolute;width:42px;height:42px;background:rgba(255,255,255,.92);border-radius:50%;display:flex;align-items:center;justify-content:center}
+.mi-ov{position:absolute;inset:0;background:rgba(10,35,81,.65);display:flex;align-items:center;justify-content:center;gap:8px;opacity:0;transition:.25s}
+.mi:hover .mi-ov{opacity:1}
+.mi-ov button{background:rgba(255,255,255,.15);border:1.5px solid rgba(255,255,255,.6);color:#fff;width:34px;height:34px;border-radius:50%;cursor:pointer;font-size:.82rem;display:flex;align-items:center;justify-content:center;transition:.2s}
+.mi-ov button:hover{background:#fff;color:var(--royal)}
+.mi-ov button.db:hover{background:var(--red);color:#fff;border-color:var(--red)}
+.mi-info{padding:10px 12px}
+.mi-name{font-size:.78rem;font-weight:600;color:var(--royal);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin-bottom:2px}
+.mi-meta{font-size:.68rem;color:#aaa;display:flex;justify-content:space-between}
+.tdot{width:7px;height:7px;border-radius:50%;display:inline-block;margin-right:3px}
+.di{background:#1da1f2}.dv{background:#e74c3c}.dp{background:#e67e22}
+
+/* ── Students & Announcements ── */
+.tbl-wrap{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:.82rem}
+thead tr{background:#f0f2f7}
+thead th{padding:11px 14px;text-align:left;font-weight:700;color:#555;font-size:.7rem;letter-spacing:.8px;text-transform:uppercase}
+tbody tr{border-bottom:1px solid #f0f2f7;transition:.2s}
+tbody tr:hover{background:#f8f9fc}
+tbody td{padding:11px 14px;color:#444}
+.badge{padding:3px 10px;border-radius:50px;font-size:.7rem;font-weight:600}
+.badge.active{background:rgba(37,211,102,.1);color:#1a9e54}.badge.pending{background:rgba(212,175,55,.15);color:#a0810a}.badge.new{background:rgba(29,161,242,.1);color:#0a7bbf}
+.qab{display:flex;flex-direction:column;gap:10px}
+.qa{display:flex;align-items:center;gap:12px;padding:14px 16px;border-radius:10px;border:none;cursor:pointer;font-family:inherit;font-size:.86rem;font-weight:600;transition:.25s;text-align:left;width:100%}
+.qa .qi{width:34px;height:34px;border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.qa.wa{background:rgba(37,211,102,.08);color:#1a9e54}.qa.wa .qi{background:rgba(37,211,102,.15)}.qa.wa:hover{background:rgba(37,211,102,.15)}
+.qa.bl{background:rgba(10,35,81,.06);color:var(--royal)}.qa.bl .qi{background:rgba(10,35,81,.1)}.qa.bl:hover{background:rgba(10,35,81,.1)}
+.qa.gd{background:rgba(212,175,55,.1);color:#a0810a}.qa.gd .qi{background:rgba(212,175,55,.2)}.qa.gd:hover{background:rgba(212,175,55,.2)}
+.ann-form input,.ann-form select,.ann-form textarea{margin-bottom:11px}
+.ann-form textarea{min-height:80px;resize:vertical}
+.btn-pub{background:var(--royal);color:#fff;border:none;border-radius:10px;padding:12px 24px;font-weight:700;font-size:.85rem;cursor:pointer;transition:.3s;font-family:inherit}
+.btn-pub:hover{background:var(--mid)}
+.ann-list{display:flex;flex-direction:column;gap:9px}
+.ann-it{border:1px solid #eee;border-radius:10px;padding:13px 15px;position:relative}
+.ann-ttl{font-weight:600;font-size:.84rem;color:var(--royal)}
+.ann-meta{font-size:.71rem;color:#999;margin-top:3px}
+.ann-del{position:absolute;top:11px;right:12px;background:none;border:none;color:#ccc;cursor:pointer;font-size:.78rem;transition:.2s}
+.ann-del:hover{color:var(--red)}
+/* Breakdown */
+.bk-row{display:flex;align-items:center;gap:10px;margin-bottom:11px}
+.bk-icon{width:30px;height:30px;border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:.8rem}
+.bk-bar-wrap{flex:1}
+.bk-label{font-size:.79rem;font-weight:600;color:var(--royal);margin-bottom:3px}
+.bk-bar{background:#eee;border-radius:50px;height:5px;overflow:hidden}
+.bk-fill{height:100%;border-radius:50px;transition:.4s}
+/* Toast */
+.toast-n{position:fixed;bottom:28px;left:50%;transform:translateX(-50%) translateY(80px);background:var(--royal);color:#fff;padding:13px 26px;border-radius:50px;font-size:.84rem;font-weight:600;z-index:99999;box-shadow:0 8px 30px rgba(0,0,0,.2);opacity:0;transition:.4s;pointer-events:none;display:flex;align-items:center;gap:9px;white-space:nowrap}
+.toast-n.show{transform:translateX(-50%) translateY(0);opacity:1}
+.toast-n.ok{background:#1a9e54}.toast-n.err{background:var(--red)}
+@keyframes shake{0%,100%{transform:translateX(0)}20%,60%{transform:translateX(-8px)}40%,80%{transform:translateX(8px)}}
+/* ── Social Network Settings ── */
+.net-field{display:flex;align-items:center;gap:12px;margin-bottom:14px}
+.net-icon{width:42px;height:42px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0}
+.net-icon.wa{background:rgba(37,211,102,.12);color:#25D366}
+.net-icon.fb{background:rgba(24,119,242,.12);color:#1877f2}
+.net-icon.ig{background:rgba(228,64,95,.12);color:#e4405f}
+.net-test{background:#f0f2f7;border:none;border-radius:8px;padding:8px 14px;font-size:.75rem;font-weight:700;cursor:pointer;font-family:inherit;color:var(--royal);transition:.2s;white-space:nowrap}
+.net-test:hover{background:var(--royal);color:#fff}
+.net-preview{background:#f8f9fc;border-radius:12px;padding:18px;border:1px solid #eee;margin-top:16px}
+.net-preview h4{font-size:.78rem;font-weight:700;color:#888;text-transform:uppercase;letter-spacing:1px;margin-bottom:12px}
+.net-prev-icons{display:flex;gap:10px}
+.npi{width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1rem;transition:.3s;text-decoration:none}
+.npi:hover{transform:translateY(-3px)}
+.npi.wa{background:rgba(37,211,102,.1);color:#25D366}.npi.fb{background:rgba(24,119,242,.1);color:#1877f2}.npi.ig{background:rgba(228,64,95,.1);color:#e4405f}
+/* ── Cart / Shop ── */
+.cart-btn{position:fixed;bottom:100px;right:28px;width:58px;height:58px;border-radius:50%;background:var(--wa);color:#fff;display:flex;align-items:center;justify-content:center;font-size:1.4rem;box-shadow:0 6px 25px rgba(37,211,102,.45);z-index:900;cursor:pointer;border:none;transition:.3s}
+.cart-btn:hover{transform:scale(1.1)}
+.cart-badge{position:absolute;top:-4px;right:-4px;background:#e74c3c;color:#fff;border-radius:50%;width:20px;height:20px;font-size:.65rem;font-weight:700;display:flex;align-items:center;justify-content:center}
+.cart-panel{position:fixed;bottom:170px;right:28px;width:320px;background:#fff;border-radius:20px;box-shadow:0 20px 60px rgba(0,0,0,.2);z-index:9000;overflow:hidden;transform:scale(.8) translateY(20px);transform-origin:bottom right;opacity:0;pointer-events:none;transition:.3s}
+.cart-panel.open{transform:none;opacity:1;pointer-events:all}
+.cart-hdr{background:var(--royal);padding:16px 20px;color:#fff;display:flex;justify-content:space-between;align-items:center}
+.cart-hdr h4{font-size:.92rem;font-weight:700}
+.cart-close{background:none;border:none;color:#fff;font-size:1rem;cursor:pointer}
+.cart-items{max-height:260px;overflow-y:auto;padding:12px}
+.cart-item{display:flex;align-items:center;gap:10px;padding:10px 0;border-bottom:1px solid #f0f2f7}
+.cart-item:last-child{border:none}
+.ci-img{width:50px;height:50px;border-radius:8px;object-fit:cover;background:#f0f2f7;flex-shrink:0;display:flex;align-items:center;justify-content:center;color:#aaa;font-size:.8rem}
+.ci-info{flex:1;min-width:0}
+.ci-name{font-size:.8rem;font-weight:600;color:var(--royal);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ci-price{font-size:.75rem;color:#888}
+.ci-qty{display:flex;align-items:center;gap:6px}
+.cq-btn{width:24px;height:24px;border-radius:50%;border:1.5px solid #ddd;background:#fff;cursor:pointer;font-size:.85rem;display:flex;align-items:center;justify-content:center;transition:.2s}
+.cq-btn:hover{border-color:var(--royal);color:var(--royal)}
+.cq-n{font-size:.82rem;font-weight:700;min-width:16px;text-align:center}
+.cart-footer{padding:14px 16px;border-top:2px solid #f0f2f7}
+.cart-total{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
+.ct-lbl{font-size:.82rem;color:#666}
+.ct-val{font-family:'DM Serif Display',serif;font-size:1.2rem;color:var(--royal);font-weight:700}
+.cart-wa-btn{width:100%;padding:13px;border:none;border-radius:10px;background:var(--wa);color:#fff;font-weight:700;font-size:.88rem;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;font-family:inherit;transition:.3s}
+.cart-wa-btn:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(37,211,102,.4)}
+.cart-empty{text-align:center;padding:30px 20px;color:#aaa}
+.cart-empty i{font-size:2rem;display:block;margin-bottom:8px;opacity:.3}
+/* ── Course type tabs ── */
+.course-tabs{display:flex;gap:0;background:#f0f2f7;border-radius:14px;padding:5px;margin-bottom:24px}
+.ctab{flex:1;padding:11px 8px;border:none;background:none;border-radius:10px;font-family:inherit;font-size:.78rem;font-weight:700;color:#888;cursor:pointer;transition:.3s;display:flex;flex-direction:column;align-items:center;gap:5px;line-height:1.2}
+.ctab i{font-size:1.1rem}
+.ctab.active{background:#fff;color:var(--royal);box-shadow:0 3px 12px rgba(10,35,81,.12)}
+.ctab.active i{color:var(--gold)}
+.course-fields{display:none}.course-fields.show{display:block}
+/* ── Offers cards section ── */
+.offers-section{padding:80px 8%;background:var(--royal);position:relative;overflow:hidden}
+.offers-section::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 80% 20%,rgba(212,175,55,.1),transparent 60%);pointer-events:none}
+.offers-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.offer-card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:20px;padding:36px 28px;text-align:center;transition:.35s;cursor:pointer;position:relative;overflow:hidden}
+.offer-card::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(212,175,55,.08),transparent);opacity:0;transition:.3s}
+.offer-card:hover{transform:translateY(-8px);border-color:var(--gold);background:rgba(255,255,255,.08)}
+.offer-card:hover::before{opacity:1}
+.offer-card.featured{border-color:var(--gold);background:rgba(212,175,55,.08)}
+.offer-badge{position:absolute;top:16px;right:16px;background:var(--gold);color:var(--royal);font-size:.62rem;font-weight:800;padding:3px 10px;border-radius:50px;text-transform:uppercase;letter-spacing:1px}
+.offer-icon{width:68px;height:68px;border-radius:20px;display:flex;align-items:center;justify-content:center;margin:0 auto 20px;font-size:1.6rem}
+.offer-icon.dom{background:rgba(29,161,242,.15);color:#1da1f2}
+.offer-icon.online{background:rgba(212,175,55,.15);color:var(--gold)}
+.offer-icon.renf{background:rgba(37,211,102,.15);color:var(--wa)}
+.offer-card h3{font-family:'DM Serif Display',serif;font-size:1.35rem;color:#fff;margin-bottom:10px}
+.offer-card p{font-size:.82rem;color:rgba(255,255,255,.6);line-height:1.7;margin-bottom:20px}
+.offer-features{list-style:none;margin-bottom:24px;text-align:left}
+.offer-features li{font-size:.78rem;color:rgba(255,255,255,.7);padding:5px 0;display:flex;align-items:center;gap:8px}
+.offer-features li i{color:var(--gold);font-size:.7rem;flex-shrink:0}
+.offer-cta{display:inline-block;padding:11px 24px;border-radius:50px;font-size:.8rem;font-weight:700;text-decoration:none;border:1.5px solid rgba(255,255,255,.3);color:#fff;transition:.3s;cursor:pointer;background:none;font-family:inherit}
+.offer-card:hover .offer-cta,.offer-card.featured .offer-cta{background:var(--gold);color:var(--royal);border-color:var(--gold)}
+@media(max-width:900px){.offers-grid{grid-template-columns:1fr}}
+@media(max-width:680px){.course-tabs{flex-direction:column}.ctab{flex-direction:row;justify-content:center;gap:8px}}
+.upload-preview-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:10px;margin-top:14px}
+.up-prev-item{position:relative;border-radius:10px;overflow:hidden;aspect-ratio:1;background:#f0f2f7}
+.up-prev-item img,.up-prev-item video{width:100%;height:100%;object-fit:cover}
+.up-prev-overlay{position:absolute;inset:0;background:rgba(0,0,0,.35);display:flex;flex-direction:column;align-items:center;justify-content:flex-end;padding:6px;opacity:0;transition:.2s}
+.up-prev-item:hover .up-prev-overlay{opacity:1}
+.up-prev-name{color:#fff;font-size:.6rem;font-weight:600;text-align:center;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;width:100%}
+.up-prev-del{position:absolute;top:5px;right:5px;width:22px;height:22px;border-radius:50%;background:rgba(231,76,60,.85);border:none;color:#fff;cursor:pointer;font-size:.65rem;display:flex;align-items:center;justify-content:center}
+/* ── Apparence ── */
+.color-pick-item{display:flex;align-items:center;gap:12px;background:#f8f9fc;border-radius:12px;padding:12px;border:1px solid #eee;transition:.2s}
+.color-pick-item:hover{border-color:var(--light)}
+.cp-preview{width:44px;height:44px;border-radius:10px;flex-shrink:0;border:2px solid rgba(0,0,0,.08);cursor:pointer;transition:.2s}
+.cp-info{flex:1;min-width:0;position:relative}
+.cp-label{font-size:.8rem;font-weight:700;color:var(--royal)}
+.cp-sub{font-size:.7rem;color:#aaa;margin-bottom:4px}
+.cp-input{width:100%;height:28px;border:none;border-radius:6px;cursor:pointer;padding:0;background:none;-webkit-appearance:none}
+.cp-input::-webkit-color-swatch-wrapper{padding:0}.cp-input::-webkit-color-swatch{border-radius:6px;border:1.5px solid #ddd}
+.theme-btn{padding:8px 16px;border-radius:50px;border:2px solid transparent;background:linear-gradient(135deg,var(--tc1),color-mix(in srgb,var(--tc1) 70%,var(--tc2)));color:#fff;font-size:.78rem;font-weight:700;cursor:pointer;font-family:inherit;transition:.3s}
+.theme-btn:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(0,0,0,.2)}
+/* Font picker */
+.font-pick-group{background:#f8f9fc;border-radius:14px;padding:16px;border:1px solid #eee}
+.fp-label{font-size:.82rem;font-weight:700;color:var(--royal);margin-bottom:3px;display:flex;align-items:center;gap:7px}
+.fp-sub{font-size:.72rem;color:#aaa;margin-bottom:12px}
+.font-options{display:flex;flex-direction:column;gap:6px}
+.font-opt{display:flex;justify-content:space-between;align-items:center;padding:10px 14px;border-radius:10px;border:2px solid #eee;cursor:pointer;transition:.2s;background:#fff}
+.font-opt:hover{border-color:var(--light)}
+.font-opt.active{border-color:var(--royal);background:rgba(10,35,81,.04)}
+.fo-name{font-size:.8rem;font-weight:700;color:#555}
+.fo-sample{font-size:1rem;color:var(--royal)}
+/* Ticker list */
+.ticker-msg-item{display:flex;align-items:center;gap:8px;background:#f8f9fc;border-radius:8px;padding:8px 12px;border:1px solid #eee}
+.tmi-text{flex:1;font-size:.8rem;color:var(--royal)}
+.tmi-del{background:none;border:none;color:#ccc;cursor:pointer;font-size:.8rem;transition:.2s}
+.tmi-del:hover{color:var(--red)};border-radius:14px;padding:28px 20px;text-align:center;cursor:pointer;transition:.3s;background:#f8f9fc;position:relative;overflow:hidden}
+.app-zone:hover,.app-zone.drag-over{border-color:var(--light);background:#f0f7ff}
+.app-zone input[type=file]{position:absolute;inset:0;opacity:0;cursor:pointer;width:100%;height:100%}
+.app-zone i{font-size:2rem;color:#b0bbd0;margin-bottom:8px;display:block}
+.app-zone p{color:#999;font-size:.8rem}
+.app-zone strong{display:block;color:var(--royal);font-size:.9rem;margin-bottom:4px}
+.app-preview{width:100%;height:120px;border-radius:10px;object-fit:cover;margin-top:12px;display:none;border:2px solid #eee}
+.app-preview.show{display:block}
+.app-preview-logo{width:80px;height:80px;border-radius:12px;object-fit:contain;margin-top:12px;display:none;border:2px solid #eee;background:#f0f2f7;padding:6px}
+.app-preview-logo.show{display:block}
+.app-section-card{background:#fff;border-radius:14px;padding:22px;box-shadow:0 4px 15px rgba(0,0,0,.06);margin-bottom:16px;border-left:4px solid var(--gold)}
+.app-section-title{font-size:.88rem;font-weight:700;color:var(--royal);margin-bottom:4px;display:flex;align-items:center;gap:8px}
+.app-section-desc{font-size:.75rem;color:#999;margin-bottom:14px}
+.app-clear-btn{background:none;border:1.5px solid #e0e3ea;border-radius:8px;padding:6px 14px;font-size:.75rem;font-weight:600;color:#888;cursor:pointer;font-family:inherit;transition:.2s;margin-top:8px}
+.app-clear-btn:hover{border-color:var(--red);color:var(--red)}
+.logo-preview-bar{display:flex;align-items:center;gap:14px;background:#f8f9fc;border-radius:10px;padding:12px 16px;margin-top:10px;border:1px solid #eee}
+.logo-text-prev{font-family:'DM Serif Display',serif;font-size:1.5rem;color:var(--royal)}.logo-text-prev span{color:var(--gold)}
+.overlay-slider-wrap{margin-top:10px}
+.overlay-slider-wrap label{font-size:.75rem;font-weight:600;color:#555;display:block;margin-bottom:6px}
+.overlay-slider-wrap input[type=range]{width:100%;accent-color:var(--royal)}
+@media(max-width:900px){.enroll-box,.adm-g2{grid-template-columns:1fr}.footer-content{grid-template-columns:1fr 1fr}.media-grid{grid-template-columns:repeat(auto-fill,minmax(155px,1fr))}.cart-panel{width:calc(100vw - 40px);right:20px}}
+@media(max-width:680px){.nav-links{display:none}.hero h1{font-size:2.2rem}.footer-content{grid-template-columns:1fr}.adc{padding:18px 18px}.adm-hdr{padding:14px 18px}.adm-tabs{padding:0 18px}.enroll-info,.enroll-form{padding:38px 26px}.fg-row{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<div class="promo-bar"><div class="promo-track">🎓 KAY REUSSIR : Inscriptions 2026 ouvertes — 🏠 Cours à domicile · 💻 Cours en ligne · 🔥 Cours de renforcement — Répétiteurs qualifiés partout à Dakar — Paiement Wave & Orange Money ✨</div></div>
+
+<header>
+  <a href="#" class="logo" id="site-logo-link">
+    <img id="site-logo-img" src="" alt="Logo" style="display:none;height:48px;max-width:160px;object-fit:contain;vertical-align:middle">
+    <span id="site-logo-text">Kay <span>Reussir</span></span>
+  </a>
+  <nav class="nav-links">
+    <a href="#ressources">Ressources</a><a href="#offres">Nos Offres</a><a href="#inscription">S'inscrire</a><a href="#contact">Contact</a>
+    <a href="https://wa.me/221775980304" target="_blank" style="color:var(--wa)"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+  </nav>
+  <div style="display:flex;gap:10px;align-items:center">
+    <button class="admin-link-btn" onclick="openLogin()"><i class="fas fa-lock" style="margin-right:5px"></i>Admin</button>
+    <a href="#inscription" class="cta-header">S'INSCRIRE</a>
+  </div>
+</header>
+
+<section class="hero">
+  <span class="hero-badge">Excellence Scolaire · Dakar, Sénégal</span>
+  <h1>Réussis avec <em>Kay Reussir</em></h1>
+  <p>Prenez une longueur d'avance. Coaching spécialisé du Collège au Lycée pour une réussite garantie aux examens d'État.</p>
+  <div class="hero-actions">
+    <a href="#inscription" class="btn-primary">Commencer maintenant</a>
+    <a href="#ressources" class="btn-outline">Voir les ressources</a>
+  </div>
+</section>
+
+<div class="stats-bar">
+  <div class="stat-item"><span class="num">500+</span><span class="lbl">Élèves accompagnés</span></div>
+  <div class="stat-item"><span class="num">95%</span><span class="lbl">Taux de réussite</span></div>
+  <div class="stat-item"><span class="num">20+</span><span class="lbl">Répétiteurs qualifiés</span></div>
+  <div class="stat-item"><span class="num">5</span><span class="lbl">Années d'expérience</span></div>
+</div>
+
+<!-- PUBLIC RESOURCES -->
+<section class="section" id="ressources">
+  <div class="section-header">
+    <span class="eyebrow">Pédagogie</span>
+    <h2>Cours & Ressources</h2>
+    <p>Documents, vidéos et supports pédagogiques pour tous les niveaux</p>
+  </div>
+  <div class="res-grid" id="pub-grid">
+    <div class="empty-state"><i class="fas fa-book-open"></i><p>Les ressources publiées par l'administrateur apparaîtront ici.</p></div>
+  </div>
+</section>
+
+<!-- NOS OFFRES -->
+<section class="offers-section" id="offres">
+  <div class="section-header" style="margin-bottom:50px">
+    <span class="eyebrow" style="color:var(--gold-l)">Nos Formules</span>
+    <h2 style="color:#fff">Choisissez votre mode d'apprentissage</h2>
+    <p style="color:rgba(255,255,255,.6)">3 formules adaptées à votre emploi du temps et vos objectifs</p>
+  </div>
+  <div class="offers-grid">
+
+    <!-- Cours à domicile -->
+    <div class="offer-card" onclick="selectOffer('domicile')">
+      <div class="offer-icon dom"><i class="fas fa-house-chimney-window"></i></div>
+      <h3>Cours à Domicile</h3>
+      <p>Un répétiteur qualifié se déplace chez vous pour des séances personnalisées, à votre rythme.</p>
+      <ul class="offer-features">
+        <li><i class="fas fa-check-circle"></i>Répétiteur dédié à votre enfant</li>
+        <li><i class="fas fa-check-circle"></i>Horaires flexibles (matin/soir)</li>
+        <li><i class="fas fa-check-circle"></i>Suivi hebdomadaire des progrès</li>
+        <li><i class="fas fa-check-circle"></i>Toute la région de Dakar</li>
+      </ul>
+      <button class="offer-cta"><i class="fas fa-arrow-right" style="margin-right:6px"></i>S'inscrire</button>
+    </div>
+
+    <!-- Cours en ligne -->
+    <div class="offer-card featured" onclick="selectOffer('enligne')">
+      <span class="offer-badge">⭐ Populaire</span>
+      <div class="offer-icon online"><i class="fas fa-laptop-code"></i></div>
+      <h3>Cours en Ligne</h3>
+      <p>Des sessions live ou enregistrées accessibles partout au Sénégal. Apprenez depuis chez vous.</p>
+      <ul class="offer-features">
+        <li><i class="fas fa-check-circle"></i>Sessions Zoom / WhatsApp Video</li>
+        <li><i class="fas fa-check-circle"></i>Vidéos de cours à rejouer</li>
+        <li><i class="fas fa-check-circle"></i>Exercices et corrections PDF</li>
+        <li><i class="fas fa-check-circle"></i>Accessible partout au Sénégal</li>
+      </ul>
+      <button class="offer-cta"><i class="fas fa-arrow-right" style="margin-right:6px"></i>S'inscrire</button>
+    </div>
+
+    <!-- Cours de renforcement -->
+    <div class="offer-card" onclick="selectOffer('renforcement')">
+      <div class="offer-icon renf"><i class="fas fa-rocket"></i></div>
+      <h3>Cours de Renforcement</h3>
+      <p>Stages intensifs avant les examens (BFEM, BAC) pour consolider les acquis et booster les notes.</p>
+      <ul class="offer-features">
+        <li><i class="fas fa-check-circle"></i>Stages avant BFEM & BAC</li>
+        <li><i class="fas fa-check-circle"></i>Groupes de 3 à 8 élèves max</li>
+        <li><i class="fas fa-check-circle"></i>Annales et exercices corrigés</li>
+        <li><i class="fas fa-check-circle"></i>Simulations d'examens</li>
+      </ul>
+      <button class="offer-cta"><i class="fas fa-arrow-right" style="margin-right:6px"></i>S'inscrire</button>
+    </div>
+
+  </div>
+</section>
+
+<!-- INSCRIPTION -->
+<section class="section section-alt" id="inscription">
+  <div class="section-header" style="margin-bottom:40px">
+    <span class="eyebrow">Rejoignez-nous</span>
+    <h2>Formulaire d'inscription</h2>
+    <p>Choisissez votre formule et envoyez votre demande en quelques secondes via WhatsApp</p>
+  </div>
+  <div class="enroll-box">
+    <div class="enroll-info">
+      <h2 id="enroll-title">Démarrer<br><em style="font-style:italic;color:var(--gold-l)">maintenant</em></h2>
+      <p id="enroll-desc">Remplissez le formulaire et envoyez votre demande via WhatsApp. Nous vous répondrons instantanément.</p>
+      <div class="features-list" id="enroll-features">
+        <div class="feature-item"><div class="fi-icon"><i class="fas fa-check"></i></div><span>Tarifs adaptés à chaque budget</span></div>
+        <div class="feature-item"><div class="fi-icon"><i class="fas fa-home"></i></div><span>Répétiteur à domicile qualifié</span></div>
+        <div class="feature-item"><div class="fi-icon"><i class="fas fa-mobile-alt"></i></div><span>Paiement Wave / Orange Money</span></div>
+        <div class="feature-item"><div class="fi-icon"><i class="fas fa-map-marker-alt"></i></div><span>Couverture toute la région de Dakar</span></div>
+      </div>
+    </div>
+    <div class="enroll-form">
+      <h3>Votre inscription</h3>
+
+      <!-- Type de cours selector -->
+      <div class="course-tabs" style="margin-bottom:20px">
+        <button class="ctab active" id="tab-domicile" onclick="switchTab('domicile')">
+          <i class="fas fa-house-chimney-window"></i>À domicile
+        </button>
+        <button class="ctab" id="tab-enligne" onclick="switchTab('enligne')">
+          <i class="fas fa-laptop-code"></i>En ligne
+        </button>
+        <button class="ctab" id="tab-renforcement" onclick="switchTab('renforcement')">
+          <i class="fas fa-rocket"></i>Renforcement
+        </button>
+      </div>
+
+      <!-- Champs communs -->
+      <div class="fg"><label>Nom complet de l'élève</label><input type="text" id="sn" placeholder="Prénom et Nom"></div>
+      <div class="fg"><label>Classe</label>
+        <select id="sl"><option value="">Sélectionnez la classe</option><option>Terminale S1/S2</option><option>Terminale L1/L2</option><option>Première S/L</option><option>Seconde S/L</option><option>Troisième (BFEM)</option><option>Collège (6e, 5e, 4e)</option></select>
+      </div>
+      <div class="fg"><label>Matière(s) souhaitée(s)</label><input type="text" id="ss" placeholder="Ex: Maths, Physique, Français"></div>
+
+      <!-- Champs spécifiques domicile -->
+      <div class="course-fields show" id="fields-domicile">
+        <div class="fg"><label><i class="fas fa-map-marker-alt" style="color:var(--gold);margin-right:5px"></i>Quartier / Adresse</label><input type="text" id="sa-dom" placeholder="Ex: Guédiawaye, VDN, Pikine..."></div>
+        <div class="fg"><label><i class="fas fa-clock" style="color:var(--gold);margin-right:5px"></i>Disponibilités préférées</label>
+          <select id="dispo-dom">
+            <option value="">Quand êtes-vous disponible ?</option>
+            <option>Matin (7h - 12h)</option>
+            <option>Après-midi (14h - 18h)</option>
+            <option>Soir (18h - 21h)</option>
+            <option>Weekend uniquement</option>
+            <option>Flexible / À définir</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Champs spécifiques en ligne -->
+      <div class="course-fields" id="fields-enligne">
+        <div class="fg"><label><i class="fas fa-phone" style="color:var(--gold);margin-right:5px"></i>Numéro WhatsApp / téléphone</label><input type="text" id="tel-online" placeholder="+221 7X XXX XX XX"></div>
+        <div class="fg"><label><i class="fas fa-wifi" style="color:var(--gold);margin-right:5px"></i>Plateforme préférée</label>
+          <select id="plat-online">
+            <option value="">Choisir la plateforme</option>
+            <option>WhatsApp Video</option>
+            <option>Zoom</option>
+            <option>Google Meet</option>
+            <option>Peu importe</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Champs spécifiques renforcement -->
+      <div class="course-fields" id="fields-renforcement">
+        <div class="fg"><label><i class="fas fa-calendar-alt" style="color:var(--gold);margin-right:5px"></i>Examen ciblé</label>
+          <select id="exam-renf">
+            <option value="">Quel examen préparez-vous ?</option>
+            <option>BFEM 2026</option>
+            <option>BAC S1/S2 2026</option>
+            <option>BAC L 2026</option>
+            <option>Révisions générales</option>
+          </select>
+        </div>
+        <div class="fg"><label><i class="fas fa-users" style="color:var(--gold);margin-right:5px"></i>Format souhaité</label>
+          <select id="format-renf">
+            <option value="">Choisir le format</option>
+            <option>Individuel (seul)</option>
+            <option>Petit groupe (3-5 élèves)</option>
+            <option>Groupe (jusqu'à 8 élèves)</option>
+          </select>
+        </div>
+        <div class="fg"><label><i class="fas fa-phone" style="color:var(--gold);margin-right:5px"></i>Numéro de contact</label><input type="text" id="tel-renf" placeholder="+221 7X XXX XX XX"></div>
+      </div>
+
+      <button class="btn-wa" onclick="sendWA()" id="wa-send-btn"><i class="fab fa-whatsapp fa-lg"></i>ENVOYER MA DEMANDE VIA WHATSAPP</button>
+      <p class="form-note">Action gratuite. Sans engagement immédiat.</p>
+    </div>
+  </div>
+</section>
+
+<footer id="contact">
+  <div class="footer-content">
+    <div class="fc" style="max-width:280px">
+      <a href="#" class="logo" style="color:#fff">
+        <img class="footer-logo-img" src="" alt="Logo" style="display:none;height:44px;max-width:150px;object-fit:contain;vertical-align:middle">
+        <span class="footer-logo-txt">Kay <span style="color:var(--gold)">Reussir</span></span>
+      </a>
+      <p style="margin-top:15px;opacity:.5;font-size:.82rem;line-height:1.7">Votre partenaire de confiance pour une éducation d'excellence à Dakar et partout au Sénégal.</p>
+      <div class="s-icons" id="footer-social-icons" style="margin-top:18px"><a href="#" class="fb-link" style="width:40px;height:40px;background:rgba(255,255,255,.05);display:flex;align-items:center;justify-content:center;border-radius:50%;color:rgba(255,255,255,.6);font-size:.85rem;transition:.3s"><i class="fab fa-facebook-f"></i></a><a href="#" class="ig-link" style="width:40px;height:40px;background:rgba(255,255,255,.05);display:flex;align-items:center;justify-content:center;border-radius:50%;color:rgba(255,255,255,.6);font-size:.85rem;transition:.3s"><i class="fab fa-instagram"></i></a><a href="#" class="wa-link" target="_blank" style="width:40px;height:40px;background:rgba(255,255,255,.05);display:flex;align-items:center;justify-content:center;border-radius:50%;color:rgba(255,255,255,.6);font-size:.85rem;transition:.3s"><i class="fab fa-whatsapp"></i></a></div>
+    </div>
+    <div class="fc"><h4>Navigation</h4><a href="#ressources">Ressources</a><a href="#inscription">S'inscrire</a><a href="#contact">Contact</a></div>
+    <div class="fc"><h4>Niveaux</h4><p>Terminale S/L</p><p>Première</p><p>Seconde</p><p>Collège & BFEM</p></div>
+    <div class="fc"><h4>Contact</h4><p><i class="fas fa-phone" style="margin-right:7px;color:var(--gold)"></i>+221 77 598 03 04</p><p><i class="fab fa-whatsapp" style="margin-right:7px;color:var(--wa)"></i>WhatsApp Direct</p><p><i class="fas fa-map-marker-alt" style="margin-right:7px;color:var(--gold)"></i>Dakar, Sénégal</p></div>
+  </div>
+  <div class="footer-bottom"><p>© 2026 KAY REUSSIR. Tous droits réservés.</p><p>Site conçu professionnellement.</p></div>
+</footer>
+
+<a href="https://wa.me/221775980304" class="float-wa" target="_blank"><i class="fab fa-whatsapp"></i></a>
+
+<!-- CART BUTTON -->
+<button class="cart-btn" onclick="toggleCart()" title="Panier WhatsApp" style="display:none" id="cart-btn">
+  <i class="fab fa-whatsapp fa-lg"></i>
+  <span class="cart-badge" id="cart-badge" style="display:none">0</span>
+</button>
+
+<!-- CART PANEL -->
+<div class="cart-panel" id="cart-panel">
+  <div class="cart-hdr">
+    <h4><i class="fab fa-whatsapp" style="margin-right:8px"></i>Panier WhatsApp</h4>
+    <button class="cart-close" onclick="toggleCart()"><i class="fas fa-times"></i></button>
+  </div>
+  <div id="cart-body">
+    <div class="cart-empty"><i class="fas fa-shopping-basket"></i><p>Votre panier est vide</p></div>
+  </div>
+  <div class="cart-footer" id="cart-footer" style="display:none">
+    <div class="cart-total"><span class="ct-lbl">Total estimé</span><span class="ct-val" id="cart-total-val">0 FCFA</span></div>
+    <button class="cart-wa-btn" onclick="sendCartWA()"><i class="fab fa-whatsapp fa-lg"></i>Commander via WhatsApp</button>
+  </div>
+</div>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lb" onclick="closeLB(event)">
+  <button class="lb-close" onclick="closeLB()"><i class="fas fa-times"></i></button>
+  <div class="lb-box"><div id="lb-ct"></div><div class="lb-caption" id="lb-cap"></div></div>
+</div>
+
+<!-- ADMIN LOGIN -->
+<div class="modal-ov" id="aml">
+  <div class="modal-box">
+    <button class="m-close" onclick="closeLogin()"><i class="fas fa-times"></i></button>
+    <div class="m-icon"><i class="fas fa-shield-halved"></i></div>
+    <h3>Espace Administrateur</h3>
+    <p class="sub">Accès réservé au personnel autorisé</p>
+    <div class="iw"><i class="fas fa-user ii"></i><input type="text" id="au" placeholder="Identifiant"></div>
+    <div class="iw"><i class="fas fa-lock ii"></i><input type="password" id="ap" placeholder="Mot de passe" onkeydown="if(event.key==='Enter')doLogin()"><button class="tpw" onclick="tpw()"><i class="fas fa-eye" id="pweye"></i></button></div>
+    <p class="lerr" id="lerr"><i class="fas fa-exclamation-circle"></i> Identifiants incorrects.</p>
+    <button class="btn-login" onclick="doLogin()">Se connecter</button>
+  </div>
+</div>
+
+<!-- ADMIN PANEL -->
+<div id="adm">
+  <div class="adm-hdr">
+    <a href="#" class="logo" style="color:#fff;text-decoration:none">
+      <img id="adm-logo-img" src="" alt="Logo" style="display:none;height:38px;max-width:130px;object-fit:contain;vertical-align:middle">
+      <span id="adm-logo-txt">Kay <span style="color:var(--gold)">Reussir</span></span>
+    </a>
+    <div style="display:flex;align-items:center;gap:14px">
+      <span class="adm-badge"><i class="fas fa-shield-halved" style="margin-right:5px"></i>ADMIN</span>
+      <button class="btn-logout" onclick="logout()"><i class="fas fa-right-from-bracket" style="margin-right:6px"></i>Déconnexion</button>
+    </div>
+  </div>
+  <div class="adm-tabs">
+    <button class="atab on" onclick="stab('dashboard',this)"><i class="fas fa-gauge-high"></i>Tableau de bord</button>
+    <button class="atab" onclick="stab('media',this)"><i class="fas fa-photo-film"></i>Médias & Ressources</button>
+    <button class="atab" onclick="stab('students',this)"><i class="fas fa-graduation-cap"></i>Élèves</button>
+    <button class="atab" onclick="stab('ann',this)"><i class="fas fa-megaphone"></i>Annonces</button>
+    <button class="atab" onclick="stab('reseaux',this)"><i class="fas fa-share-nodes"></i>Réseaux</button>
+    <button class="atab" onclick="stab('apparence',this)"><i class="fas fa-palette"></i>Apparence</button>
+  </div>
+  <div class="adc">
+
+    <!-- DASHBOARD -->
+    <div class="atp on" id="tp-dashboard">
+      <h2>Tableau de Bord</h2><p class="sub-h" id="adm-date">…</p>
+      <div class="adm-stats">
+        <div class="asc"><div class="asi b"><i class="fas fa-users"></i></div><div><div class="asc-val" id="sv-stu">0</div><div class="asc-lbl">Élèves inscrits</div></div></div>
+        <div class="asc"><div class="asi g"><i class="fas fa-hourglass-half"></i></div><div><div class="asc-val" id="sv-pend">0</div><div class="asc-lbl">En attente</div></div></div>
+        <div class="asc"><div class="asi p"><i class="fas fa-photo-film"></i></div><div><div class="asc-val" id="sv-med">0</div><div class="asc-lbl">Ressources publiées</div></div></div>
+        <div class="asc"><div class="asi r"><i class="fas fa-bullhorn"></i></div><div><div class="asc-val" id="sv-ann">0</div><div class="asc-lbl">Annonces actives</div></div></div>
+      </div>
+      <div class="adm-g2">
+        <div class="adm-card">
+          <div class="adm-card-title"><i class="fas fa-bolt" style="color:var(--gold)"></i>Actions Rapides</div>
+          <div class="qab">
+            <button class="qa wa" onclick="window.open('https://wa.me/221775980304','_blank')"><div class="qi"><i class="fab fa-whatsapp"></i></div>Ouvrir WhatsApp Business</button>
+            <button class="qa bl" onclick="stab('media',document.querySelectorAll('.atab')[1])"><div class="qi"><i class="fas fa-upload"></i></div>Ajouter une ressource</button>
+            <button class="qa gd" onclick="exportCSV()"><div class="qi"><i class="fas fa-download"></i></div>Exporter la liste CSV</button>
+          </div>
+        </div>
+        <div class="adm-card">
+          <div class="adm-card-title"><i class="fas fa-chart-pie" style="color:var(--gold)"></i>Répartition des Médias</div>
+          <div id="bk-cont"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MEDIAS -->
+    <div class="atp" id="tp-media">
+      <h2 style="margin-bottom:4px">Médias & Ressources</h2>
+      <p class="sub-h" style="margin-bottom:22px">Gérez les contenus visibles sur le site public</p>
+
+      <!-- Upload par fichier -->
+      <div class="adm-card">
+        <div class="adm-card-title"><i class="fas fa-cloud-upload-alt" style="color:var(--gold)"></i>Importer des fichiers depuis votre appareil</div>
+        <div class="upzone" id="dz">
+          <input type="file" id="fi" accept="image/*,video/*,.pdf" multiple onchange="handleFiles(this.files)">
+          <i class="fas fa-cloud-upload-alt"></i>
+          <h4>Glissez vos fichiers ici ou cliquez pour sélectionner</h4>
+          <p>Images, Vidéos et PDFs depuis votre téléphone ou ordinateur</p>
+          <div class="utype-badges">
+            <span class="utb i"><i class="fas fa-image"></i> JPG · PNG · GIF · WebP</span>
+            <span class="utb v"><i class="fas fa-video"></i> MP4 · WebM · MOV</span>
+            <span class="utb p"><i class="fas fa-file-pdf"></i> PDF</span>
+          </div>
+        </div>
+        <div class="prog-wrap" id="pw"><div class="prog-bar" id="pb"></div></div>
+        <div class="upload-preview-grid" id="upload-prev-grid"></div>
+      </div>
+
+      <!-- Ajout via URL -->
+      <div class="adm-card">
+        <div class="adm-card-title"><i class="fas fa-link" style="color:var(--gold)"></i>Ajouter via URL ou lien YouTube</div>
+        <div class="url-form">
+          <div class="fg-row">
+            <div>
+              <label style="font-size:.77rem;font-weight:600;color:#555;display:block;margin-bottom:5px">Type</label>
+              <select id="nt" onchange="updPlh()">
+                <option value="image">🖼 Image (URL)</option>
+                <option value="video">🎬 Vidéo (URL directe)</option>
+                <option value="youtube">▶️ YouTube</option>
+                <option value="pdf">📄 PDF (URL)</option>
+              </select>
+            </div>
+            <div>
+              <label style="font-size:.77rem;font-weight:600;color:#555;display:block;margin-bottom:5px">Catégorie</label>
+              <select id="nc">
+                <option>Mathématiques</option><option>Français</option><option>Sciences</option>
+                <option>Histoire-Géo</option><option>Anglais</option><option>Général</option>
+              </select>
+            </div>
+          </div>
+          <input type="text" id="nu" placeholder="https://...">
+          <input type="text" id="ntl" placeholder="Titre de la ressource">
+          <textarea id="nd" placeholder="Description courte (optionnel)"></textarea>
+          <div style="display:flex;gap:10px">
+            <button class="btn-add" onclick="addURL()"><i class="fas fa-plus"></i>Ajouter au site</button>
+            <button class="btn-sec" onclick="clearForm()">Effacer</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bibliothèque -->
+      <div class="adm-card">
+        <div class="adm-card-title"><i class="fas fa-th-large" style="color:var(--gold)"></i>Bibliothèque (<span id="mc">0</span> ressources)</div>
+        <div class="mf-wrap">
+          <button class="mfb on" onclick="filt('all',this)"><i class="fas fa-border-all"></i>Tout</button>
+          <button class="mfb" onclick="filt('image',this)"><i class="fas fa-image"></i>Images</button>
+          <button class="mfb" onclick="filt('video',this)"><i class="fas fa-video"></i>Vidéos</button>
+          <button class="mfb" onclick="filt('youtube',this)"><i class="fab fa-youtube"></i>YouTube</button>
+          <button class="mfb" onclick="filt('pdf',this)"><i class="fas fa-file-pdf"></i>PDF</button>
+          <input class="m-search" type="text" placeholder="Rechercher..." oninput="srch(this.value)">
+        </div>
+        <div class="media-grid" id="adm-mg">
+          <div style="grid-column:1/-1;text-align:center;padding:35px;color:#aaa"><i class="fas fa-photo-film" style="font-size:2rem;display:block;margin-bottom:8px;opacity:.3"></i>Aucun média ajouté</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ÉLÈVES -->
+    <div class="atp" id="tp-students">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;flex-wrap:wrap;gap:10px">
+        <div><h2>Gestion des Élèves</h2><p class="sub-h">Inscriptions reçues via WhatsApp</p></div>
+        <div style="display:flex;gap:8px">
+          <button class="btn-sec" style="font-size:.8rem" onclick="addManual()"><i class="fas fa-plus" style="margin-right:5px"></i>Ajouter</button>
+          <button class="btn-sec" style="font-size:.8rem" onclick="exportCSV()"><i class="fas fa-download" style="margin-right:5px"></i>CSV</button>
+        </div>
+      </div>
+      <div class="adm-card">
+        <div class="tbl-wrap">
+          <table><thead><tr><th>#</th><th>Nom</th><th>Classe</th><th>Type de cours</th><th>Matières</th><th>Statut</th><th>Date</th></tr></thead>
+          <tbody id="stb"><tr><td colspan="7" style="text-align:center;padding:28px;color:#aaa"><i class="fas fa-inbox" style="font-size:1.4rem;display:block;margin-bottom:8px"></i>Aucun élève</td></tr></tbody></table>
+        </div>
+      </div>
+    </div>
+
+    <!-- ANNONCES -->
+    <div class="atp" id="tp-ann">
+      <h2 style="margin-bottom:20px">Annonces</h2>
+      <div class="adm-g2">
+        <div class="adm-card">
+          <div class="adm-card-title"><i class="fas fa-pen" style="color:var(--gold)"></i>Nouvelle annonce</div>
+          <div class="ann-form">
+            <input type="text" id="at" placeholder="Titre de l'annonce">
+            <select id="aty"><option value="info">Information générale</option><option value="urgent">Urgent</option><option value="event">Événement</option><option value="holiday">Congé / Vacances</option></select>
+            <textarea id="ab" placeholder="Contenu..."></textarea>
+            <button class="btn-pub" onclick="pubAnn()"><i class="fas fa-paper-plane" style="margin-right:7px"></i>Publier</button>
+          </div>
+        </div>
+        <div class="adm-card">
+          <div class="adm-card-title"><i class="fas fa-list" style="color:var(--gold)"></i>Annonces publiées</div>
+          <div class="ann-list" id="ann-lst"><p style="color:#aaa;font-size:.83rem;text-align:center;padding:20px">Aucune annonce</p></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- RÉSEAUX SOCIAUX -->
+    <div class="atp" id="tp-reseaux">
+      <h2 style="margin-bottom:4px">Réseaux Sociaux</h2>
+      <p class="sub-h" style="margin-bottom:22px">Configurez vos liens pour le footer et le bouton de commande</p>
+      <div class="adm-g2">
+        <div class="adm-card">
+          <div class="adm-card-title"><i class="fas fa-link" style="color:var(--gold)"></i>Vos liens</div>
+
+          <div class="net-field">
+            <div class="net-icon wa"><i class="fab fa-whatsapp"></i></div>
+            <div style="flex:1">
+              <label style="font-size:.75rem;font-weight:700;color:#555;display:block;margin-bottom:5px">Numéro WhatsApp</label>
+              <input type="text" id="net-wa" placeholder="Ex: 221775980304" oninput="saveNets()" style="margin-bottom:0">
+            </div>
+            <button class="net-test" onclick="testWA()"><i class="fas fa-external-link-alt"></i> Tester</button>
+          </div>
+
+          <div class="net-field">
+            <div class="net-icon fb"><i class="fab fa-facebook-f"></i></div>
+            <div style="flex:1">
+              <label style="font-size:.75rem;font-weight:700;color:#555;display:block;margin-bottom:5px">Lien Facebook</label>
+              <input type="text" id="net-fb" placeholder="https://facebook.com/maboutique" oninput="saveNets()" style="margin-bottom:0">
+            </div>
+            <button class="net-test" onclick="testLink('net-fb')"><i class="fas fa-external-link-alt"></i> Tester</button>
+          </div>
+
+          <div class="net-field">
+            <div class="net-icon ig"><i class="fab fa-instagram"></i></div>
+            <div style="flex:1">
+              <label style="font-size:.75rem;font-weight:700;color:#555;display:block;margin-bottom:5px">Lien Instagram</label>
+              <input type="text" id="net-ig" placeholder="https://instagram.com/maboutique" oninput="saveNets()" style="margin-bottom:0">
+            </div>
+            <button class="net-test" onclick="testLink('net-ig')"><i class="fas fa-external-link-alt"></i> Tester</button>
+          </div>
+
+          <div class="net-preview">
+            <h4>Aperçu footer</h4>
+            <div class="net-prev-icons" id="net-prev">
+              <a href="#" class="npi fb"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" class="npi ig"><i class="fab fa-instagram"></i></a>
+              <a href="#" class="npi wa"><i class="fab fa-whatsapp"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="adm-card">
+          <div class="adm-card-title"><i class="fas fa-cart-shopping" style="color:var(--gold)"></i>Panier WhatsApp</div>
+          <p style="font-size:.83rem;color:#666;line-height:1.7;margin-bottom:16px">Activez le bouton panier vert pour permettre à vos visiteurs de composer une commande et l'envoyer directement sur WhatsApp.</p>
+          <label style="display:flex;align-items:center;gap:12px;cursor:pointer;margin-bottom:18px">
+            <div style="position:relative;width:46px;height:26px">
+              <input type="checkbox" id="cart-toggle" onchange="toggleCartFeature(this.checked)" style="width:0;height:0;opacity:0;position:absolute">
+              <div id="cart-slider" style="position:absolute;inset:0;background:#ddd;border-radius:50px;transition:.3s;cursor:pointer" onclick="document.getElementById('cart-toggle').click()">
+                <div id="cart-knob" style="position:absolute;left:3px;top:3px;width:20px;height:20px;background:#fff;border-radius:50%;transition:.3s;box-shadow:0 1px 4px rgba(0,0,0,.2)"></div>
+              </div>
+            </div>
+            <span style="font-size:.88rem;font-weight:600;color:var(--royal)">Activer le panier WhatsApp</span>
+          </label>
+          <div style="background:#f8f9fc;border-radius:12px;padding:16px;border:1px solid #eee">
+            <h4 style="font-size:.78rem;font-weight:700;color:var(--royal);margin-bottom:10px"><i class="fas fa-plus" style="margin-right:6px;color:var(--gold)"></i>Ajouter un article au catalogue</h4>
+            <input type="text" id="prod-name" placeholder="Nom de la formation / service" style="margin-bottom:8px;font-size:.85rem;padding:10px 14px">
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
+              <input type="number" id="prod-price" placeholder="Prix en FCFA" style="font-size:.85rem;padding:10px 14px">
+              <input type="text" id="prod-cat" placeholder="Catégorie (ex: Terminale)" style="font-size:.85rem;padding:10px 14px">
+            </div>
+            <button class="btn-add" style="margin-top:10px" onclick="addProduct()"><i class="fas fa-plus"></i>Ajouter au catalogue</button>
+          </div>
+          <div id="prod-list" style="margin-top:14px;display:flex;flex-direction:column;gap:8px"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- APPARENCE -->
+    <div class="atp" id="tp-apparence">
+      <h2 style="margin-bottom:4px">Apparence du Site</h2>
+      <p class="sub-h" style="margin-bottom:24px">Personnalisez logo, fonds, couleurs, polices et barres défilantes</p>
+
+      <!-- ══ COULEURS ══ -->
+      <div class="adm-card">
+        <div class="adm-card-title"><i class="fas fa-palette" style="color:var(--gold)"></i>Couleurs du site</div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:16px;margin-bottom:16px">
+
+          <div class="color-pick-item">
+            <div class="cp-preview" id="cp-prev-royal" style="background:#0a2351"></div>
+            <div class="cp-info">
+              <div class="cp-label">Couleur principale</div>
+              <div class="cp-sub">Header, titres, boutons</div>
+              <input type="color" value="#0a2351" class="cp-input" oninput="setColor('royal',this.value)" title="Couleur principale">
+            </div>
+          </div>
+
+          <div class="color-pick-item">
+            <div class="cp-preview" id="cp-prev-gold" style="background:#d4af37"></div>
+            <div class="cp-info">
+              <div class="cp-label">Couleur accent (or)</div>
+              <div class="cp-sub">Soulignements, icônes, badges</div>
+              <input type="color" value="#d4af37" class="cp-input" oninput="setColor('gold',this.value)" title="Couleur accent">
+            </div>
+          </div>
+
+          <div class="color-pick-item">
+            <div class="cp-preview" id="cp-prev-light" style="background:#1da1f2"></div>
+            <div class="cp-info">
+              <div class="cp-label">Couleur secondaire</div>
+              <div class="cp-sub">Liens, focus, highlights</div>
+              <input type="color" value="#1da1f2" class="cp-input" oninput="setColor('light',this.value)" title="Couleur secondaire">
+            </div>
+          </div>
+
+          <div class="color-pick-item">
+            <div class="cp-preview" id="cp-prev-bg" style="background:#f4f6fb"></div>
+            <div class="cp-info">
+              <div class="cp-label">Fond de page</div>
+              <div class="cp-sub">Arrière-plan général</div>
+              <input type="color" value="#f4f6fb" class="cp-input" oninput="setColor('bg',this.value)" title="Fond de page">
+            </div>
+          </div>
+
+          <div class="color-pick-item">
+            <div class="cp-preview" id="cp-prev-text" style="background:#2a2a2a"></div>
+            <div class="cp-info">
+              <div class="cp-label">Couleur du texte</div>
+              <div class="cp-sub">Corps du texte principal</div>
+              <input type="color" value="#2a2a2a" class="cp-input" oninput="setColor('text',this.value)" title="Couleur texte">
+            </div>
+          </div>
+
+          <div class="color-pick-item">
+            <div class="cp-preview" id="cp-prev-wa" style="background:#25D366"></div>
+            <div class="cp-info">
+              <div class="cp-label">Couleur WhatsApp</div>
+              <div class="cp-sub">Boutons et icônes WA</div>
+              <input type="color" value="#25D366" class="cp-input" oninput="setColor('wa',this.value)" title="Couleur WhatsApp">
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Palette rapide -->
+        <div style="margin-bottom:10px">
+          <div style="font-size:.75rem;font-weight:700;color:#555;margin-bottom:10px;text-transform:uppercase;letter-spacing:1px">⚡ Thèmes prédéfinis</div>
+          <div style="display:flex;gap:10px;flex-wrap:wrap">
+            <button class="theme-btn" onclick="applyTheme('ocean')" style="--tc1:#0a2351;--tc2:#d4af37">🌊 Ocean (défaut)</button>
+            <button class="theme-btn" onclick="applyTheme('emerald')" style="--tc1:#064e3b;--tc2:#10b981">🌿 Émeraude</button>
+            <button class="theme-btn" onclick="applyTheme('crimson')" style="--tc1:#7f1d1d;--tc2:#ef4444">🔴 Grenat</button>
+            <button class="theme-btn" onclick="applyTheme('violet')" style="--tc1:#2e1065;--tc2:#a855f7">💜 Violet</button>
+            <button class="theme-btn" onclick="applyTheme('sunset')" style="--tc1:#431407;--tc2:#fb923c">🌅 Coucher de soleil</button>
+            <button class="theme-btn" onclick="applyTheme('slate')" style="--tc1:#0f172a;--tc2:#38bdf8">🩵 Ardoise</button>
+          </div>
+        </div>
+        <button class="app-clear-btn" onclick="resetColors()"><i class="fas fa-rotate-left" style="margin-right:4px"></i>Réinitialiser les couleurs</button>
+      </div>
+
+      <!-- ══ POLICES ══ -->
+      <div class="adm-card">
+        <div class="adm-card-title"><i class="fas fa-font" style="color:var(--gold)"></i>Polices d'écriture</div>
+        <div id="font-link-slot"></div>
+        <div class="adm-g2" style="gap:20px;align-items:start">
+          <div>
+            <div class="font-pick-group">
+              <div class="fp-label"><i class="fas fa-heading"></i> Police des titres</div>
+              <div class="fp-sub">Utilisée pour les grands titres et le logo texte</div>
+              <div class="font-options" id="font-titles">
+                <div class="font-opt active" onclick="setFont('titles','DM Serif Display','serif')" data-font="DM Serif Display">
+                  <span class="fo-name" style="font-family:'DM Serif Display',serif">DM Serif Display</span>
+                  <span class="fo-sample" style="font-family:'DM Serif Display',serif">Kay Reussir</span>
+                </div>
+                <div class="font-opt" onclick="setFont('titles','Playfair Display','serif')" data-font="Playfair Display">
+                  <span class="fo-name" style="font-family:'Playfair Display',serif">Playfair Display</span>
+                  <span class="fo-sample" style="font-family:'Playfair Display',serif">Kay Reussir</span>
+                </div>
+                <div class="font-opt" onclick="setFont('titles','Cormorant Garamond','serif')" data-font="Cormorant Garamond">
+                  <span class="fo-name" style="font-family:'Cormorant Garamond',serif">Cormorant Garamond</span>
+                  <span class="fo-sample" style="font-family:'Cormorant Garamond',serif">Kay Reussir</span>
+                </div>
+                <div class="font-opt" onclick="setFont('titles','Montserrat','sans-serif')" data-font="Montserrat">
+                  <span class="fo-name" style="font-family:'Montserrat',sans-serif">Montserrat</span>
+                  <span class="fo-sample" style="font-family:'Montserrat',sans-serif">Kay Reussir</span>
+                </div>
+                <div class="font-opt" onclick="setFont('titles','Raleway','sans-serif')" data-font="Raleway">
+                  <span class="fo-name" style="font-family:'Raleway',sans-serif">Raleway</span>
+                  <span class="fo-sample" style="font-family:'Raleway',sans-serif">Kay Reussir</span>
+                </div>
+                <div class="font-opt" onclick="setFont('titles','Oswald','sans-serif')" data-font="Oswald">
+                  <span class="fo-name" style="font-family:'Oswald',sans-serif">Oswald</span>
+                  <span class="fo-sample" style="font-family:'Oswald',sans-serif">Kay Reussir</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="font-pick-group">
+              <div class="fp-label"><i class="fas fa-align-left"></i> Police du corps de texte</div>
+              <div class="fp-sub">Paragraphes, menus, boutons</div>
+              <div class="font-options" id="font-body">
+                <div class="font-opt active" onclick="setFont('body','Poppins','sans-serif')" data-font="Poppins">
+                  <span class="fo-name" style="font-family:'Poppins',sans-serif">Poppins</span>
+                  <span class="fo-sample" style="font-family:'Poppins',sans-serif">Cours à domicile</span>
+                </div>
+                <div class="font-opt" onclick="setFont('body','Inter','sans-serif')" data-font="Inter">
+                  <span class="fo-name" style="font-family:'Inter',sans-serif">Inter</span>
+                  <span class="fo-sample" style="font-family:'Inter',sans-serif">Cours à domicile</span>
+                </div>
+                <div class="font-opt" onclick="setFont('body','Nunito','sans-serif')" data-font="Nunito">
+                  <span class="fo-name" style="font-family:'Nunito',sans-serif">Nunito</span>
+                  <span class="fo-sample" style="font-family:'Nunito',sans-serif">Cours à domicile</span>
+                </div>
+                <div class="font-opt" onclick="setFont('body','Lato','sans-serif')" data-font="Lato">
+                  <span class="fo-name" style="font-family:'Lato',sans-serif">Lato</span>
+                  <span class="fo-sample" style="font-family:'Lato',sans-serif">Cours à domicile</span>
+                </div>
+                <div class="font-opt" onclick="setFont('body','Source Sans 3','sans-serif')" data-font="Source Sans 3">
+                  <span class="fo-name" style="font-family:'Source Sans 3',sans-serif">Source Sans 3</span>
+                  <span class="fo-sample" style="font-family:'Source Sans 3',sans-serif">Cours à domicile</span>
+                </div>
+                <div class="font-opt" onclick="setFont('body','Ubuntu','sans-serif')" data-font="Ubuntu">
+                  <span class="fo-name" style="font-family:'Ubuntu',sans-serif">Ubuntu</span>
+                  <span class="fo-sample" style="font-family:'Ubuntu',sans-serif">Cours à domicile</span>
+                </div>
+              </div>
+            </div>
+            <button class="app-clear-btn" style="margin-top:12px" onclick="resetFonts()"><i class="fas fa-rotate-left" style="margin-right:4px"></i>Réinitialiser les polices</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- ══ BARRES DÉFILANTES ══ -->
+      <div class="adm-card">
+        <div class="adm-card-title"><i class="fas fa-scroll" style="color:var(--gold)"></i>Barres défilantes (Ticker)</div>
+        <p style="font-size:.83rem;color:#666;margin-bottom:18px">Modifiez le contenu et le style de la barre d'annonces en haut du site</p>
+
+        <div class="adm-g2" style="gap:20px;align-items:start">
+          <div>
+            <div class="fg" style="margin-bottom:12px">
+              <label style="font-size:.78rem;font-weight:700;color:#555;display:block;margin-bottom:6px"><i class="fas fa-plus-circle" style="color:var(--gold);margin-right:5px"></i>Ajouter un message</label>
+              <div style="display:flex;gap:8px">
+                <input type="text" id="ticker-new" placeholder="Nouveau message défilant..." style="flex:1;margin-bottom:0">
+                <button class="btn-add" onclick="addTickerMsg()" style="white-space:nowrap"><i class="fas fa-plus"></i></button>
+              </div>
+            </div>
+            <div id="ticker-list" style="display:flex;flex-direction:column;gap:6px;margin-bottom:16px"></div>
+          </div>
+          <div>
+            <div style="font-size:.78rem;font-weight:700;color:#555;margin-bottom:12px">🎨 Style de la barre</div>
+
+            <div class="fg" style="margin-bottom:10px">
+              <label style="font-size:.75rem;font-weight:600;color:#555;display:block;margin-bottom:5px">Fond de la barre</label>
+              <div style="display:flex;align-items:center;gap:10px">
+                <input type="color" id="ticker-bg-color" value="#0a2351" oninput="applyTickerStyle()" style="width:44px;height:36px;border:none;border-radius:8px;cursor:pointer;padding:2px">
+                <span style="font-size:.78rem;color:#888">Couleur actuelle</span>
+              </div>
+            </div>
+
+            <div class="fg" style="margin-bottom:10px">
+              <label style="font-size:.75rem;font-weight:600;color:#555;display:block;margin-bottom:5px">Couleur du texte</label>
+              <div style="display:flex;align-items:center;gap:10px">
+                <input type="color" id="ticker-text-color" value="#ffffff" oninput="applyTickerStyle()" style="width:44px;height:36px;border:none;border-radius:8px;cursor:pointer;padding:2px">
+                <span style="font-size:.78rem;color:#888">Couleur du texte</span>
+              </div>
+            </div>
+
+            <div class="fg" style="margin-bottom:10px">
+              <label style="font-size:.75rem;font-weight:600;color:#555;display:block;margin-bottom:5px">Couleur de la bordure</label>
+              <div style="display:flex;align-items:center;gap:10px">
+                <input type="color" id="ticker-border-color" value="#d4af37" oninput="applyTickerStyle()" style="width:44px;height:36px;border:none;border-radius:8px;cursor:pointer;padding:2px">
+                <span style="font-size:.78rem;color:#888">Bordure inférieure</span>
+              </div>
+            </div>
+
+            <div class="overlay-slider-wrap" style="margin-bottom:10px">
+              <label>Vitesse de défilement : <strong id="ticker-speed-val">Normale</strong></label>
+              <input type="range" id="ticker-speed" min="10" max="80" value="38" oninput="applyTickerStyle()">
+            </div>
+
+            <div class="fg" style="margin-bottom:10px">
+              <label style="font-size:.75rem;font-weight:600;color:#555;display:block;margin-bottom:5px">Taille du texte</label>
+              <select id="ticker-size" onchange="applyTickerStyle()" style="padding:8px 12px;font-size:.82rem">
+                <option value=".75rem">Petite</option>
+                <option value=".85rem" selected>Normale</option>
+                <option value=".95rem">Grande</option>
+                <option value="1rem">Très grande</option>
+              </select>
+            </div>
+
+            <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px">
+              <label style="font-size:.75rem;font-weight:600;color:#555">Afficher la barre</label>
+              <label style="position:relative;width:40px;height:22px;cursor:pointer">
+                <input type="checkbox" id="ticker-visible" checked onchange="toggleTicker(this.checked)" style="opacity:0;width:0;height:0;position:absolute">
+                <div id="ticker-toggle-ui" style="position:absolute;inset:0;background:var(--wa);border-radius:50px;transition:.3s" onclick="document.getElementById('ticker-visible').click()">
+                  <div style="position:absolute;left:3px;top:3px;width:16px;height:16px;background:#fff;border-radius:50%;transition:.3s" id="ticker-knob"></div>
+                </div>
+              </label>
+            </div>
+
+            <!-- Aperçu barre -->
+            <div style="margin-top:12px">
+              <div style="font-size:.75rem;font-weight:700;color:#555;margin-bottom:6px">Aperçu</div>
+              <div id="ticker-preview" style="background:#0a2351;color:#fff;padding:8px 0;font-size:.85rem;overflow:hidden;white-space:nowrap;border-bottom:2px solid #d4af37;border-radius:8px">
+                <div style="display:inline-block;animation:scroll 38s linear infinite;padding-left:100%">🎓 KAY REUSSIR : Inscriptions 2026 ouvertes · Cours à domicile · Cours en ligne · Renforcement</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- LOGO -->
+      <div class="adm-card">
+        <div class="adm-card-title"><i class="fas fa-star" style="color:var(--gold)"></i>Logo du site</div>
+        <div class="adm-g2" style="align-items:start">
+          <div>
+            <div class="app-zone" id="dz-logo">
+              <input type="file" accept="image/*" onchange="uploadAppImg(this,'logo')">
+              <i class="fas fa-image"></i>
+              <strong>Importer votre logo</strong>
+              <p>PNG transparent recommandé · JPG, SVG acceptés</p>
+            </div>
+            <div style="display:flex;gap:8px;margin-top:8px;flex-wrap:wrap">
+              <button class="app-clear-btn" onclick="clearApp('logo')"><i class="fas fa-times" style="margin-right:4px"></i>Supprimer le logo</button>
+              <button class="app-clear-btn" style="border-color:#ccc;color:#666" onclick="resetLogoText()"><i class="fas fa-font" style="margin-right:4px"></i>Revenir au texte</button>
+            </div>
+          </div>
+          <div>
+            <p style="font-size:.78rem;font-weight:700;color:#555;margin-bottom:8px">Aperçu en direct</p>
+            <div class="logo-preview-bar">
+              <img id="app-prev-logo-img" src="" alt="Logo" style="display:none;height:44px;max-width:140px;object-fit:contain">
+              <span class="logo-text-prev" id="app-prev-logo-text">Kay <span>Reussir</span></span>
+            </div>
+            <div style="background:#0a2351;border-radius:10px;padding:12px 16px;margin-top:8px;display:flex;align-items:center;gap:10px">
+              <img id="app-prev-logo-img-dark" src="" alt="Logo" style="display:none;height:36px;max-width:120px;object-fit:contain">
+              <span style="font-family:'DM Serif Display',serif;font-size:1.3rem;color:#fff" id="app-prev-logo-text-dark">Kay <span style="color:var(--gold)">Reussir</span></span>
+            </div>
+            <p style="font-size:.7rem;color:#aaa;margin-top:6px"><i class="fas fa-info-circle" style="margin-right:4px"></i>Aperçu sur fond clair (header) et fond sombre (footer/admin)</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- FONDS D'ÉCRAN -->
+      <div class="adm-card">
+        <div class="adm-card-title"><i class="fas fa-image" style="color:var(--gold)"></i>Fonds d'écran des sections</div>
+
+        <!-- Hero -->
+        <div class="app-section-card">
+          <div class="app-section-title"><i class="fas fa-home" style="color:var(--gold)"></i>Section Hero (bannière principale)</div>
+          <div class="app-section-desc">Grande image en haut de page, derrière le titre principal</div>
+          <div class="adm-g2" style="align-items:start;gap:16px">
+            <div>
+              <div class="app-zone">
+                <input type="file" accept="image/*" onchange="uploadAppImg(this,'hero')">
+                <i class="fas fa-mountain-sun"></i>
+                <strong>Fond du Hero</strong>
+                <p>Idéal : 1920×900px · JPG/PNG</p>
+              </div>
+              <div class="overlay-slider-wrap">
+                <label>Opacité de l'overlay sombre : <strong id="hero-ov-val">88%</strong></label>
+                <input type="range" min="20" max="95" value="88" oninput="setHeroOverlay(this.value)">
+              </div>
+              <button class="app-clear-btn" onclick="clearApp('hero')"><i class="fas fa-times" style="margin-right:4px"></i>Remettre l'image par défaut</button>
+            </div>
+            <div>
+              <p style="font-size:.78rem;font-weight:700;color:#555;margin-bottom:8px">Aperçu</p>
+              <div id="app-prev-hero" style="height:130px;border-radius:10px;overflow:hidden;position:relative;background:linear-gradient(135deg,rgba(10,35,81,.88),rgba(10,35,81,.5)),url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&q=80&w=600')center/cover;display:flex;align-items:center;justify-content:center">
+                <span style="color:#fff;font-family:'DM Serif Display',serif;font-size:1.1rem;text-align:center">Réussis avec<br><em style="color:var(--gold-l)">Kay Reussir</em></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Offers -->
+        <div class="app-section-card" style="border-left-color:#1da1f2">
+          <div class="app-section-title"><i class="fas fa-layer-group" style="color:#1da1f2"></i>Section "Nos Offres"</div>
+          <div class="app-section-desc">Fond de la section bleue marine des 3 formules</div>
+          <div class="adm-g2" style="align-items:start;gap:16px">
+            <div>
+              <div class="app-zone">
+                <input type="file" accept="image/*" onchange="uploadAppImg(this,'offers')">
+                <i class="fas fa-layer-group"></i>
+                <strong>Fond des Offres</strong>
+                <p>Idéal : 1920×700px · JPG/PNG</p>
+              </div>
+              <button class="app-clear-btn" onclick="clearApp('offers')"><i class="fas fa-times" style="margin-right:4px"></i>Remettre par défaut</button>
+            </div>
+            <div>
+              <p style="font-size:.78rem;font-weight:700;color:#555;margin-bottom:8px">Aperçu</p>
+              <div id="app-prev-offers" style="height:100px;border-radius:10px;background:var(--royal);display:flex;align-items:center;justify-content:center">
+                <span style="color:rgba(255,255,255,.5);font-size:.8rem">Section Nos Offres</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="app-section-card" style="border-left-color:#888">
+          <div class="app-section-title"><i class="fas fa-grip-lines" style="color:#888"></i>Footer (bas de page)</div>
+          <div class="app-section-desc">Image ou texture de fond pour le footer</div>
+          <div class="adm-g2" style="align-items:start;gap:16px">
+            <div>
+              <div class="app-zone">
+                <input type="file" accept="image/*" onchange="uploadAppImg(this,'footer')">
+                <i class="fas fa-grip-lines"></i>
+                <strong>Fond du Footer</strong>
+                <p>Idéal : texture sombre ou motif · PNG/JPG</p>
+              </div>
+              <button class="app-clear-btn" onclick="clearApp('footer')"><i class="fas fa-times" style="margin-right:4px"></i>Remettre par défaut</button>
+            </div>
+            <div>
+              <p style="font-size:.78rem;font-weight:700;color:#555;margin-bottom:8px">Aperçu</p>
+              <div id="app-prev-footer" style="height:80px;border-radius:10px;background:#060d1f;display:flex;align-items:center;justify-content:center">
+                <span style="color:rgba(255,255,255,.3);font-size:.8rem">Footer</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</div><!-- /adm -->
+
+<div class="toast-n" id="tn"></div>
+
+<script>
+/* ── CONFIG ── */
+const CREDS = { user:'admin', pass:'kayreussir2026' };
+
+/* ── STATE ── */
+let media=[], students=[], anns=[], loggedIn=false, curFilt='all', curSrch='';
+const TC={image:'#1da1f2',video:'#e74c3c',youtube:'#FF0000',pdf:'#e67e22'};
+const TL={image:'Image',video:'Vidéo',youtube:'YouTube',pdf:'PDF'};
+const TI={image:'fa-image',video:'fa-video',youtube:'fa-youtube',pdf:'fa-file-pdf'};
+
+/* ── TOAST ── */
+function toast(m,t='ok'){const el=document.getElementById('tn');el.className='toast-n show '+t;el.innerHTML=`<i class="fas fa-${t==='ok'?'check-circle':'exclamation-circle'}"></i> ${m}`;setTimeout(()=>el.classList.remove('show'),3200)}
+
+/* ── AUTH ── */
+function openLogin(){document.getElementById('aml').classList.add('active');setTimeout(()=>document.getElementById('au').focus(),250)}
+function closeLogin(){document.getElementById('aml').classList.remove('active');document.getElementById('lerr').style.display='none';document.getElementById('au').value='';document.getElementById('ap').value=''}
+function tpw(){const i=document.getElementById('ap'),e=document.getElementById('pweye');i.type=i.type==='password'?'text':'password';e.classList.toggle('fa-eye');e.classList.toggle('fa-eye-slash')}
+function doLogin(){
+  if(document.getElementById('au').value.trim()===CREDS.user&&document.getElementById('ap').value===CREDS.pass){
+    loggedIn=true;closeLogin();openAdm();
+  }else{
+    document.getElementById('lerr').style.display='block';document.getElementById('ap').value='';
+    const b=document.querySelector('.modal-box');b.style.animation='none';b.offsetHeight;b.style.animation='shake .4s ease';
+  }
+}
+function openAdm(){
+  document.getElementById('adm').style.display='block';document.body.style.overflow='hidden';
+  document.getElementById('adm-date').textContent='Bonjour ! '+new Date().toLocaleDateString('fr-FR',{weekday:'long',year:'numeric',month:'long',day:'numeric'});
+  updStats();renderAdmMedia();renderBK();
+}
+function logout(){loggedIn=false;document.getElementById('adm').style.display='none';document.body.style.overflow=''}
+
+/* ── TABS ── */
+function stab(n,btn){document.querySelectorAll('.atab').forEach(b=>b.classList.remove('on'));document.querySelectorAll('.atp').forEach(p=>p.classList.remove('on'));btn.classList.add('on');document.getElementById('tp-'+n).classList.add('on')}
+
+/* ── STATS ── */
+function updStats(){
+  document.getElementById('sv-stu').textContent=students.length;
+  document.getElementById('sv-pend').textContent=students.filter(s=>s.status==='pending').length;
+  document.getElementById('sv-med').textContent=media.length;
+  document.getElementById('sv-ann').textContent=anns.length;
+  document.getElementById('mc').textContent=media.length;
+}
+
+/* ── MEDIA HELPERS ── */
+function ytID(url){const m=url.match(/(?:youtube\.com\/watch\?v=|youtu\.be\/|youtube\.com\/embed\/)([^&?/]+)/);return m?m[1]:null}
+function today(){return new Date().toLocaleDateString('fr-FR')}
+function fmtSz(b){return b<1048576?(b/1024).toFixed(1)+'KB':(b/1048576).toFixed(1)+'MB'}
+
+/* ── FILE UPLOAD ── */
+function handleFiles(files){
+  if(!files.length)return;
+  const pw=document.getElementById('pw'),pb=document.getElementById('pb');
+  pw.style.display='block';pb.style.width='0';
+  let done=0;
+  Array.from(files).forEach(file=>{
+    if(file.size>80*1024*1024){toast('Fichier trop grand (max 80MB) : '+file.name,'err');done++;if(done===files.length)pw.style.display='none';return}
+    const t=file.type.startsWith('image/')?'image':file.type.startsWith('video/')?'video':file.type==='application/pdf'?'pdf':null;
+    if(!t){toast('Type non supporté : '+file.name,'err');done++;if(done===files.length)pw.style.display='none';return}
+    const r=new FileReader();
+    r.onload=e=>{
+      addMItem({type:t,url:e.target.result,title:file.name.replace(/\.[^.]+$/,''),desc:'',cat:'Général',size:fmtSz(file.size),date:today(),fromDevice:true});
+      done++;pb.style.width=(done/files.length*100)+'%';
+      if(done===files.length){setTimeout(()=>{pw.style.display='none';toast(done+' fichier(s) importé(s) avec succès')},600)}
+    };
+    r.readAsDataURL(file);
+  });
+}
+
+/* ── ADD VIA URL ── */
+function addURL(){
+  const type=document.getElementById('nt').value,url=document.getElementById('nu').value.trim(),title=document.getElementById('ntl').value.trim(),desc=document.getElementById('nd').value.trim(),cat=document.getElementById('nc').value;
+  if(!url){toast('Entrez une URL.','err');return}
+  if(!title){toast('Entrez un titre.','err');return}
+  if(type==='youtube'&&!ytID(url)){toast('Lien YouTube invalide.','err');return}
+  addMItem({type,url,title,desc,cat,size:'—',date:today()});
+  clearForm();toast('Ressource ajoutée avec succès !');
+}
+function clearForm(){document.getElementById('nu').value='';document.getElementById('ntl').value='';document.getElementById('nd').value=''}
+function updPlh(){const ph={image:'https://exemple.com/image.jpg',video:'https://exemple.com/video.mp4',youtube:'https://youtube.com/watch?v=...',pdf:'https://exemple.com/doc.pdf'};document.getElementById('nu').placeholder=ph[document.getElementById('nt').value]}
+
+/* ── ADD ITEM ── */
+function addMItem(item){item.id=Date.now()+Math.random();media.unshift(item);updStats();renderAdmMedia();renderPub();renderBK();if(typeof updatePrevGrid==='function')updatePrevGrid()}
+
+/* ── DELETE ── */
+function delM(id){if(!confirm('Supprimer cette ressource ?'))return;media=media.filter(m=>m.id!=id);updStats();renderAdmMedia();renderPub();renderBK();toast('Ressource supprimée.','err')}
+
+/* ── FILTER / SEARCH ── */
+function filt(f,btn){curFilt=f;document.querySelectorAll('.mfb').forEach(b=>b.classList.remove('on'));btn.classList.add('on');renderAdmMedia()}
+function srch(q){curSrch=q.toLowerCase();renderAdmMedia()}
+function getFilt(){return media.filter(m=>(curFilt==='all'||m.type===curFilt)&&(!curSrch||m.title.toLowerCase().includes(curSrch)||m.cat.toLowerCase().includes(curSrch)))}
+
+/* ── THUMB HTML (admin) ── */
+function thumbA(m){
+  if(m.type==='image')return`<img src="${m.url}" alt="${m.title}" loading="lazy">`;
+  if(m.type==='video')return`<video src="${m.url}" muted preload="metadata"></video>`;
+  if(m.type==='youtube'){const id=ytID(m.url);return id?`<img src="https://img.youtube.com/vi/${id}/mqdefault.jpg" alt="${m.title}" loading="lazy"><div class="yt-play"><i class="fab fa-youtube" style="color:#FF0000;font-size:1.5rem"></i></div>`:`<div class="vt"><div class="yt-play"><i class="fab fa-youtube" style="color:#FF0000"></i></div></div>`}
+  if(m.type==='pdf')return`<div class="pt"><i class="fas fa-file-pdf"></i><span>PDF</span></div>`;
+  return'';
+}
+/* ── THUMB HTML (public) ── */
+function thumbP(m){
+  if(m.type==='image')return`<img src="${m.url}" alt="${m.title}" style="width:100%;height:100%;object-fit:cover" loading="lazy">`;
+  if(m.type==='video')return`<video src="${m.url}" style="width:100%;height:100%;object-fit:cover" muted preload="metadata"></video>`;
+  if(m.type==='youtube'){const id=ytID(m.url);return id?`<img src="https://img.youtube.com/vi/${id}/mqdefault.jpg" alt="${m.title}" style="width:100%;height:100%;object-fit:cover" loading="lazy"><div class="play-badge"><i class="fab fa-youtube"></i> YouTube</div>`:`<div class="pdf-preview" style="background:#1a1a2e"><i class="fab fa-youtube" style="color:#FF0000;font-size:3rem"></i></div>`}
+  if(m.type==='pdf')return`<div class="pdf-preview"><i class="fas fa-file-pdf"></i><span>PDF</span></div>`;
+  return'';
+}
+
+/* ── RENDER ADMIN MEDIA ── */
+function renderAdmMedia(){
+  const g=document.getElementById('adm-mg'),items=getFilt();
+  if(!items.length){g.innerHTML='<div style="grid-column:1/-1;text-align:center;padding:35px;color:#aaa"><i class="fas fa-photo-film" style="font-size:2rem;display:block;margin-bottom:8px;opacity:.3"></i>Aucun média trouvé</div>';return}
+  g.innerHTML=items.map(m=>`
+    <div class="mi">
+      <div class="mi-thumb" onclick="openLB('${m.id}')">
+        ${thumbA(m)}
+        <div class="mi-ov">
+          <button onclick="event.stopPropagation();openLB('${m.id}')" title="Aperçu"><i class="fas fa-eye"></i></button>
+          <button class="db" onclick="event.stopPropagation();delM('${m.id}')" title="Supprimer"><i class="fas fa-trash"></i></button>
+        </div>
+      </div>
+      <div class="mi-info">
+        <div class="mi-name" title="${m.title}">${m.title}</div>
+        <div class="mi-meta"><span><span class="tdot d${m.type==='youtube'?'v':m.type[0]}"></span>${TL[m.type]}</span><span>${m.cat}</span></div>
+      </div>
+    </div>`).join('');
+}
+
+/* ── RENDER PUBLIC ── */
+function renderPub(){
+  const g=document.getElementById('pub-grid');
+  if(!media.length){g.innerHTML='<div class="empty-state"><i class="fas fa-book-open"></i><p>Les ressources publiées par l\'administrateur apparaîtront ici.</p></div>';return}
+  g.innerHTML=media.map(m=>`
+    <div class="res-card" onclick="openLB('${m.id}')">
+      <div class="res-thumb">${thumbP(m)}<div class="res-overlay"><i class="fas fa-${m.type==='pdf'?'file-pdf':m.type==='youtube'||m.type==='video'?'play-circle':'expand'}"></i></div></div>
+      <div class="res-body">
+        <span class="res-tag tag-${m.type}"><i class="fa${m.type==='youtube'?'b':'s'} ${TI[m.type]}"></i> ${TL[m.type]}</span>
+        <h3>${m.title}</h3>${m.desc?`<p>${m.desc}</p>`:''}
+        <div class="res-meta">${m.cat} · ${m.date}</div>
+      </div>
+    </div>`).join('');
+}
+
+/* ── BREAKDOWN ── */
+function renderBK(){
+  const el=document.getElementById('bk-cont');
+  const cnts={image:0,video:0,youtube:0,pdf:0};
+  media.forEach(m=>cnts[m.type]=(cnts[m.type]||0)+1);
+  const tot=media.length||1;
+  el.innerHTML=Object.entries(cnts).map(([t,c])=>`
+    <div class="bk-row">
+      <div class="bk-icon" style="background:${TC[t]}22"><i class="fa${t==='youtube'?'b':'s'} ${TI[t]}" style="color:${TC[t]}"></i></div>
+      <div class="bk-bar-wrap"><div class="bk-label">${TL[t]} <span style="color:#aaa;font-weight:400">(${c})</span></div><div class="bk-bar"><div class="bk-fill" style="background:${TC[t]};width:${c/tot*100}%"></div></div></div>
+    </div>`).join('');
+}
+
+/* ── LIGHTBOX ── */
+function openLB(id){
+  const m=media.find(x=>x.id==id);if(!m)return;
+  const ct=document.getElementById('lb-ct');
+  document.getElementById('lb-cap').textContent=m.title;
+  if(m.type==='image')ct.innerHTML=`<img src="${m.url}" alt="${m.title}">`;
+  else if(m.type==='video')ct.innerHTML=`<video src="${m.url}" controls autoplay style="max-width:88vw;max-height:82vh;border-radius:10px"></video>`;
+  else if(m.type==='youtube'){const id=ytID(m.url);ct.innerHTML=`<iframe src="https://www.youtube.com/embed/${id}?autoplay=1" allow="autoplay;encrypted-media" allowfullscreen></iframe>`}
+  else if(m.type==='pdf')ct.innerHTML=`<iframe src="${m.url}"></iframe>`;
+  document.getElementById('lb').classList.add('active');
+  document.body.style.overflow='hidden';
+}
+function closeLB(e){
+  if(e&&e.target!==document.getElementById('lb')&&!e.target.classList.contains('lb-close')&&!e.target.closest('.lb-close'))return;
+  document.getElementById('lb').classList.remove('active');
+  document.getElementById('lb-ct').innerHTML='';
+  if(!loggedIn)document.body.style.overflow='';
+}
+
+/* ── STUDENTS ── */
+function renderStu(){
+  const tb=document.getElementById('stb');
+  if(!students.length){tb.innerHTML='<tr><td colspan="7" style="text-align:center;padding:28px;color:#aaa"><i class="fas fa-inbox" style="font-size:1.4rem;display:block;margin-bottom:7px"></i>Aucun élève</td></tr>';return}
+  const typeLabel={domicile:'🏠 Domicile',enligne:'💻 En ligne',renforcement:'🚀 Renforcement'};
+  tb.innerHTML=students.map((s,i)=>`<tr><td style="color:#aaa">${i+1}</td><td style="font-weight:600">${s.name}</td><td>${s.level}</td><td>${typeLabel[s.type]||s.area||'—'}</td><td>${s.subject||'—'}</td><td><span class="badge ${s.status}">${{active:'Actif',pending:'En attente',new:'Nouveau'}[s.status]}</span></td><td style="color:#aaa">${s.date}</td></tr>`).join('');
+  updStats();
+}
+function addManual(){const n=prompt("Nom complet :");if(!n)return;students.push({name:n,level:prompt("Classe :")||'—',area:prompt("Quartier :")||'—',subject:'—',status:'new',date:today()});renderStu();toast('Élève ajouté.')}
+function exportCSV(){
+  if(!students.length){toast('Aucun élève.','err');return}
+  let c="Nom,Classe,Quartier,Matières,Statut,Date\n";
+  students.forEach(s=>{c+=`"${s.name}","${s.level}","${s.area}","${s.subject}","${s.status}","${s.date}"\n`});
+  const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([c],{type:'text/csv'}));a.download='eleves-kayreussir.csv';a.click();toast('Export CSV téléchargé.');
+}
+
+/* ── ANNOUNCEMENTS ── */
+function pubAnn(){
+  const t=document.getElementById('at').value.trim();if(!t){toast('Entrez un titre.','err');return}
+  anns.unshift({title:t,type:document.getElementById('aty').value,body:document.getElementById('ab').value.trim(),date:today()});
+  document.getElementById('at').value='';document.getElementById('ab').value='';
+  renderAnns();updStats();toast('Annonce publiée !');
+}
+function renderAnns(){
+  const el=document.getElementById('ann-lst');
+  if(!anns.length){el.innerHTML='<p style="color:#aaa;font-size:.83rem;text-align:center;padding:20px">Aucune annonce</p>';return}
+  const tc={info:'#1da1f2',urgent:'#e74c3c',event:'#9b59b6',holiday:'#27ae60'};
+  el.innerHTML=anns.map((a,i)=>`<div class="ann-it"><div style="display:flex;align-items:center;gap:7px"><div style="width:8px;height:8px;border-radius:50%;background:${tc[a.type]||'#aaa'};flex-shrink:0"></div><div class="ann-ttl">${a.title}</div></div><div class="ann-meta">${a.date} · ${a.type}</div>${a.body?`<div style="font-size:.78rem;color:#666;margin-top:5px">${a.body}</div>`:''}<button class="ann-del" onclick="delAnn(${i})"><i class="fas fa-trash"></i></button></div>`).join('');
+}
+function delAnn(i){if(confirm('Supprimer ?')){anns.splice(i,1);renderAnns();updStats()}}
+
+/* ── COURSE TYPE TABS ── */
+let activeTab='domicile';
+const offerInfo={
+  domicile:{
+    title:'Cours à Domicile',
+    desc:'Un répétiteur qualifié se déplace chez vous. Horaires flexibles, suivi personnalisé.',
+    features:['Répétiteur dédié à votre enfant','Horaires flexibles (matin/soir/weekend)','Suivi hebdomadaire des progrès','Toute la région de Dakar']
+  },
+  enligne:{
+    title:'Cours en Ligne',
+    desc:'Sessions live ou enregistrées accessibles partout au Sénégal depuis votre téléphone.',
+    features:['Sessions Zoom / WhatsApp Video','Vidéos de cours à rejouer','Exercices et corrections PDF','Accessible partout au Sénégal']
+  },
+  renforcement:{
+    title:'Cours de Renforcement',
+    desc:'Stages intensifs avant BFEM & BAC pour consolider les acquis et booster les notes.',
+    features:['Stages intensifs avant les examens','Groupes de 3 à 8 élèves maximum','Annales et exercices corrigés','Simulations d\'examens blancs']
+  }
+};
+
+function switchTab(type){
+  activeTab=type;
+  document.querySelectorAll('.ctab').forEach(t=>t.classList.remove('active'));
+  document.getElementById('tab-'+type).classList.add('active');
+  document.querySelectorAll('.course-fields').forEach(f=>f.classList.remove('show'));
+  document.getElementById('fields-'+type).classList.add('show');
+  // Update left panel
+  const info=offerInfo[type];
+  document.getElementById('enroll-title').innerHTML=info.title.replace(' ','<br><em style="font-style:italic;color:var(--gold-l)">').replace(/(\w+)$/,'$1</em>');
+  document.getElementById('enroll-desc').textContent=info.desc;
+  const icons={domicile:'fa-house-chimney-window',enligne:'fa-laptop-code',renforcement:'fa-rocket'};
+  document.getElementById('enroll-features').innerHTML=info.features.map(f=>`<div class="feature-item"><div class="fi-icon"><i class="fas fa-check"></i></div><span>${f}</span></div>`).join('');
+  document.getElementById('enroll-title').innerHTML=`${info.title.split(' ').slice(0,2).join('<br>')}<br><em style="font-style:italic;color:var(--gold-l)">${info.title.split(' ').slice(2).join(' ')||''}</em>`;
+  // Simpler title update
+  const titles={domicile:'Cours à<br><em style="font-style:italic;color:var(--gold-l)">Domicile</em>',enligne:'Cours<br><em style="font-style:italic;color:var(--gold-l)">En Ligne</em>',renforcement:'Cours de<br><em style="font-style:italic;color:var(--gold-l)">Renforcement</em>'};
+  document.getElementById('enroll-title').innerHTML=titles[type];
+}
+
+function selectOffer(type){
+  document.getElementById('inscription').scrollIntoView({behavior:'smooth'});
+  setTimeout(()=>switchTab(type),400);
+}
+
+/* ── WA INSCRIPTION ── */
+function sendWA(){
+  const n=document.getElementById('sn').value.trim();
+  const l=document.getElementById('sl').value;
+  const s=document.getElementById('ss').value.trim();
+  if(!n||!l){alert('Veuillez remplir Nom et Classe.');return}
+
+  const labels={domicile:'🏠 COURS À DOMICILE',enligne:'💻 COURS EN LIGNE',renforcement:'🚀 COURS DE RENFORCEMENT'};
+  let extra='';
+
+  if(activeTab==='domicile'){
+    const q=document.getElementById('sa-dom').value.trim();
+    const d=document.getElementById('dispo-dom').value;
+    if(!q){alert('Veuillez indiquer votre quartier.');return}
+    extra=`📍 *Quartier :* ${q}\n⏰ *Disponibilités :* ${d||'Non précisé'}`;
+  } else if(activeTab==='enligne'){
+    const t=document.getElementById('tel-online').value.trim();
+    const p=document.getElementById('plat-online').value;
+    extra=`📱 *Téléphone :* ${t||'Non précisé'}\n💬 *Plateforme :* ${p||'Non précisé'}`;
+  } else if(activeTab==='renforcement'){
+    const e=document.getElementById('exam-renf').value;
+    const f=document.getElementById('format-renf').value;
+    const t=document.getElementById('tel-renf').value.trim();
+    extra=`📅 *Examen ciblé :* ${e||'Non précisé'}\n👥 *Format :* ${f||'Non précisé'}\n📱 *Téléphone :* ${t||'Non précisé'}`;
+  }
+
+  const msg=`*DEMANDE D'INSCRIPTION - KAY REUSSIR*\n*${labels[activeTab]}*\n\n👨‍🎓 *Élève :* ${n}\n📚 *Classe :* ${l}\n📖 *Matières :* ${s||'Non spécifié'}\n${extra}\n\nBonjour, je souhaite m'inscrire. Pouvez-vous m'indiquer la marche à suivre ?`;
+
+  students.push({name:n,level:l,area:activeTab==='domicile'?(document.getElementById('sa-dom').value.trim()||'—'):'En ligne',subject:s||'Non spécifié',status:'pending',date:today(),type:activeTab});
+  window.open(`https://wa.me/${nets.wa||'221775980304'}?text=${encodeURIComponent(msg)}`,'_blank');
+  // Reset
+  ['sn','ss','sa-dom','tel-online','tel-renf'].forEach(id=>{const el=document.getElementById(id);if(el)el.value=''});
+  ['sl','dispo-dom','plat-online','exam-renf','format-renf'].forEach(id=>{const el=document.getElementById(id);if(el)el.value=''});
+}
+
+/* ── DRAG & DROP ── */
+const dz=document.getElementById('dz');
+dz.addEventListener('dragover',e=>{e.preventDefault();dz.classList.add('drag-over')});
+dz.addEventListener('dragleave',()=>dz.classList.remove('drag-over'));
+dz.addEventListener('drop',e=>{e.preventDefault();dz.classList.remove('drag-over');handleFiles(e.dataTransfer.files)});
+
+/* ── UPLOAD PREVIEW ── */
+const prevGrid=document.getElementById('upload-prev-grid');
+function updatePrevGrid(){
+  prevGrid.innerHTML=media.filter(m=>m.fromDevice).slice(0,12).map(m=>`
+    <div class="up-prev-item">
+      ${m.type==='image'?`<img src="${m.url}" alt="${m.title}" loading="lazy">`:
+        m.type==='video'?`<video src="${m.url}" muted preload="metadata"></video>`:
+        `<div style="width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;background:#fff5f5"><i class="fas fa-file-pdf" style="font-size:1.8rem;color:#c0392b;margin-bottom:4px"></i><span style="font-size:.6rem;font-weight:700;color:#c0392b">PDF</span></div>`}
+      <div class="up-prev-overlay"><span class="up-prev-name">${m.title}</span></div>
+      <button class="up-prev-del" onclick="delM('${m.id}');updatePrevGrid()" title="Supprimer"><i class="fas fa-times"></i></button>
+    </div>`).join('')+
+    (media.filter(m=>m.fromDevice).length===0?'':'');
+}
+
+/* ── SOCIAL NETWORKS ── */
+let nets={wa:'221775980304',fb:'',ig:''};
+function saveNets(){
+  nets.wa=document.getElementById('net-wa').value.trim()||'221775980304';
+  nets.fb=document.getElementById('net-fb').value.trim();
+  nets.ig=document.getElementById('net-ig').value.trim();
+  applyNets();
+}
+function applyNets(){
+  // Footer icons
+  const waEl=document.querySelector('.wa-link');
+  const fbEl=document.querySelector('.fb-link');
+  const igEl=document.querySelector('.ig-link');
+  if(waEl)waEl.href=nets.wa?`https://wa.me/${nets.wa}`:'#';
+  if(fbEl)fbEl.href=nets.fb||'#';
+  if(igEl)igEl.href=nets.ig||'#';
+  // Float WA button
+  const floatWa=document.querySelector('.float-wa');
+  if(floatWa&&nets.wa)floatWa.href=`https://wa.me/${nets.wa}`;
+  // Preview in settings
+  const prev=document.getElementById('net-prev');
+  if(prev)prev.innerHTML=`
+    ${nets.fb?`<a href="${nets.fb}" class="npi fb" target="_blank"><i class="fab fa-facebook-f"></i></a>`:''}
+    ${nets.ig?`<a href="${nets.ig}" class="npi ig" target="_blank"><i class="fab fa-instagram"></i></a>`:''}
+    ${nets.wa?`<a href="https://wa.me/${nets.wa}" class="npi wa" target="_blank"><i class="fab fa-whatsapp"></i></a>`:''}
+    ${!nets.fb&&!nets.ig&&!nets.wa?'<p style="color:#aaa;font-size:.78rem">Aucun lien configuré</p>':''}`;
+}
+function testWA(){const n=document.getElementById('net-wa').value.trim()||'221775980304';window.open(`https://wa.me/${n}`,'_blank')}
+function testLink(id){const v=document.getElementById(id).value.trim();if(!v){toast('Entrez un lien d\'abord.','err');return}window.open(v,'_blank')}
+
+/* ── CART ── */
+let cart=[],products=[],cartOpen=false;
+
+function toggleCartFeature(on){
+  document.getElementById('cart-btn').style.display=on?'flex':'none';
+  const slider=document.getElementById('cart-slider');
+  const knob=document.getElementById('cart-knob');
+  slider.style.background=on?'var(--wa)':'#ddd';
+  knob.style.left=on?'23px':'3px';
+}
+
+function toggleCart(){
+  cartOpen=!cartOpen;
+  document.getElementById('cart-panel').classList.toggle('open',cartOpen);
+}
+
+function addProduct(){
+  const name=document.getElementById('prod-name').value.trim();
+  const price=parseInt(document.getElementById('prod-price').value)||0;
+  const cat=document.getElementById('prod-cat').value.trim()||'Général';
+  if(!name){toast('Entrez un nom.','err');return}
+  if(!price){toast('Entrez un prix.','err');return}
+  products.push({id:Date.now(),name,price,cat});
+  document.getElementById('prod-name').value='';
+  document.getElementById('prod-price').value='';
+  document.getElementById('prod-cat').value='';
+  renderProducts();
+  toast(`"${name}" ajouté au catalogue !`);
+}
+
+function renderProducts(){
+  const el=document.getElementById('prod-list');
+  if(!products.length){el.innerHTML='';return}
+  el.innerHTML=`<div style="font-size:.75rem;font-weight:700;color:#888;text-transform:uppercase;letter-spacing:1px;margin-bottom:6px">Catalogue (${products.length})</div>`+
+    products.map(p=>`
+    <div style="display:flex;align-items:center;gap:10px;background:#f8f9fc;border-radius:10px;padding:10px 14px;border:1px solid #eee">
+      <div style="flex:1;min-width:0">
+        <div style="font-size:.82rem;font-weight:600;color:var(--royal)">${p.name}</div>
+        <div style="font-size:.72rem;color:#888">${p.cat} · ${p.price.toLocaleString('fr-FR')} FCFA</div>
+      </div>
+      <button onclick="addToCart(${p.id})" style="background:var(--wa);color:#fff;border:none;border-radius:8px;padding:6px 12px;font-size:.72rem;font-weight:700;cursor:pointer;white-space:nowrap"><i class="fas fa-plus" style="margin-right:4px"></i>Panier</button>
+      <button onclick="delProduct(${p.id})" style="background:none;border:none;color:#ddd;cursor:pointer;font-size:.8rem" title="Supprimer"><i class="fas fa-trash"></i></button>
+    </div>`).join('');
+}
+
+function delProduct(id){products=products.filter(p=>p.id!==id);renderProducts();toast('Article supprimé.','err')}
+
+function addToCart(pid){
+  const p=products.find(x=>x.id===pid);if(!p)return;
+  const existing=cart.find(c=>c.id===pid);
+  if(existing)existing.qty++;
+  else cart.push({...p,qty:1});
+  renderCart();
+  toast(`"${p.name}" ajouté au panier !`);
+  if(!cartOpen)toggleCart();
+}
+
+function renderCart(){
+  const body=document.getElementById('cart-body');
+  const footer=document.getElementById('cart-footer');
+  const badge=document.getElementById('cart-badge');
+  const total=cart.reduce((s,c)=>s+c.price*c.qty,0);
+  const count=cart.reduce((s,c)=>s+c.qty,0);
+  badge.textContent=count;
+  badge.style.display=count>0?'flex':'none';
+  if(!cart.length){
+    body.innerHTML='<div class="cart-empty"><i class="fas fa-shopping-basket"></i><p>Votre panier est vide</p></div>';
+    footer.style.display='none';return;
+  }
+  body.innerHTML='<div class="cart-items">'+cart.map(c=>`
+    <div class="cart-item">
+      <div class="ci-img" style="background:#f0f7ff;color:var(--royal)"><i class="fas fa-graduation-cap"></i></div>
+      <div class="ci-info">
+        <div class="ci-name">${c.name}</div>
+        <div class="ci-price">${c.price.toLocaleString('fr-FR')} FCFA × ${c.qty}</div>
+      </div>
+      <div class="ci-qty">
+        <button class="cq-btn" onclick="chgQty(${c.id},-1)"><i class="fas fa-minus" style="font-size:.6rem"></i></button>
+        <span class="cq-n">${c.qty}</span>
+        <button class="cq-btn" onclick="chgQty(${c.id},1)"><i class="fas fa-plus" style="font-size:.6rem"></i></button>
+      </div>
+    </div>`).join('')+'</div>';
+  document.getElementById('cart-total-val').textContent=total.toLocaleString('fr-FR')+' FCFA';
+  footer.style.display='block';
+}
+
+function chgQty(id,delta){
+  const item=cart.find(c=>c.id===id);if(!item)return;
+  item.qty+=delta;
+  if(item.qty<=0)cart=cart.filter(c=>c.id!==id);
+  renderCart();
+}
+
+function sendCartWA(){
+  if(!cart.length)return;
+  const total=cart.reduce((s,c)=>s+c.price*c.qty,0);
+  let msg=`*🛒 COMMANDE - KAY REUSSIR*\n\n`;
+  cart.forEach(c=>{msg+=`• ${c.name} × ${c.qty} = ${(c.price*c.qty).toLocaleString('fr-FR')} FCFA\n`});
+  msg+=`\n*💰 TOTAL : ${total.toLocaleString('fr-FR')} FCFA*\n\nBonjour, je souhaite finaliser cette commande. Merci !`;
+  window.open(`https://wa.me/${nets.wa||'221775980304'}?text=${encodeURIComponent(msg)}`,'_blank');
+  cart=[];renderCart();toggleCart();toast('Commande envoyée sur WhatsApp !');
+}
+
+/* ── EVENTS ── */
+document.getElementById('aml').addEventListener('click',e=>{if(e.target===document.getElementById('aml'))closeLogin()});
+document.getElementById('lb').addEventListener('click',closeLB);
+document.addEventListener('keydown',e=>{if(e.key==='Escape'){closeLB();closeLogin()}});
+document.addEventListener('click',e=>{if(cartOpen&&!e.target.closest('.cart-panel')&&!e.target.closest('.cart-btn'))toggleCart()});
+
+/* ── COULEURS ── */
+const defaultColors={royal:'#0a2351',mid:'#0d3270',light:'#1da1f2',gold:'#d4af37','gold-l':'#f0d060',wa:'#25D366',bg:'#f4f6fb',text:'#2a2a2a'};
+const themes={
+  ocean:{royal:'#0a2351',mid:'#0d3270',light:'#1da1f2',gold:'#d4af37','gold-l':'#f0d060',bg:'#f4f6fb',text:'#2a2a2a'},
+  emerald:{royal:'#064e3b',mid:'#065f46',light:'#10b981',gold:'#34d399','gold-l':'#6ee7b7',bg:'#f0fdf4',text:'#1a2e22'},
+  crimson:{royal:'#7f1d1d',mid:'#991b1b',light:'#ef4444',gold:'#f87171','gold-l':'#fca5a5',bg:'#fff5f5',text:'#2d1515'},
+  violet:{royal:'#2e1065',mid:'#3b0764',light:'#a855f7',gold:'#c084fc','gold-l':'#e9d5ff',bg:'#faf5ff',text:'#1e0a3c'},
+  sunset:{royal:'#431407',mid:'#7c2d12',light:'#fb923c',gold:'#fbbf24','gold-l':'#fde68a',bg:'#fff7ed',text:'#292524'},
+  slate:{royal:'#0f172a',mid:'#1e293b',light:'#38bdf8',gold:'#7dd3fc','gold-l':'#bae6fd',bg:'#f1f5f9',text:'#1e293b'}
+};
+
+function setColor(varName,val){
+  const root=document.documentElement;
+  root.style.setProperty('--'+varName,val);
+  if(varName==='royal')root.style.setProperty('--mid',adjustColor(val,15));
+  const prev=document.getElementById('cp-prev-'+varName);
+  if(prev)prev.style.background=val;
+}
+
+function adjustColor(hex,pct){
+  const n=parseInt(hex.slice(1),16);
+  const r=Math.min(255,((n>>16)&255)+pct);
+  const g=Math.min(255,((n>>8)&255)+pct);
+  const b=Math.min(255,(n&255)+pct);
+  return '#'+[r,g,b].map(x=>x.toString(16).padStart(2,'0')).join('');
+}
+
+function applyTheme(name){
+  const t=themes[name];if(!t)return;
+  const root=document.documentElement;
+  Object.entries(t).forEach(([k,v])=>{
+    root.style.setProperty('--'+k,v);
+    const prev=document.getElementById('cp-prev-'+k.replace('-l',''));
+    if(prev)prev.style.background=v;
+    // Update color inputs
+    const inputs=document.querySelectorAll('.cp-input');
+    inputs.forEach(inp=>{
+      if(inp.title.toLowerCase().includes(k.replace('-',' ')))inp.value=v;
+    });
+  });
+  // Sync color inputs by position
+  const colorMap=[['royal','#0a2351'],['gold','#d4af37'],['light','#1da1f2'],['bg','#f4f6fb'],['text','#2a2a2a'],['wa','#25D366']];
+  colorMap.forEach(([k])=>{if(t[k]){const el=document.getElementById('cp-prev-'+k);if(el)el.style.background=t[k]}});
+  document.querySelectorAll('.cp-input')[0].value=t.royal||'#0a2351';
+  document.querySelectorAll('.cp-input')[1].value=t.gold||'#d4af37';
+  document.querySelectorAll('.cp-input')[2].value=t.light||'#1da1f2';
+  document.querySelectorAll('.cp-input')[3].value=t.bg||'#f4f6fb';
+  document.querySelectorAll('.cp-input')[4].value=t.text||'#2a2a2a';
+  toast('Thème appliqué !');
+}
+
+function resetColors(){
+  const root=document.documentElement;
+  Object.entries(defaultColors).forEach(([k,v])=>root.style.setProperty('--'+k,v));
+  document.querySelectorAll('.cp-input')[0].value='#0a2351';
+  document.querySelectorAll('.cp-input')[1].value='#d4af37';
+  document.querySelectorAll('.cp-input')[2].value='#1da1f2';
+  document.querySelectorAll('.cp-input')[3].value='#f4f6fb';
+  document.querySelectorAll('.cp-input')[4].value='#2a2a2a';
+  document.querySelectorAll('.cp-input')[5].value='#25D366';
+  document.getElementById('cp-prev-royal').style.background='#0a2351';
+  document.getElementById('cp-prev-gold').style.background='#d4af37';
+  document.getElementById('cp-prev-light').style.background='#1da1f2';
+  document.getElementById('cp-prev-bg').style.background='#f4f6fb';
+  document.getElementById('cp-prev-text').style.background='#2a2a2a';
+  document.getElementById('cp-prev-wa').style.background='#25D366';
+  toast('Couleurs réinitialisées.');
+}
+
+/* ── POLICES ── */
+const googleFontUrls={
+  'Playfair Display':'https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&display=swap',
+  'Cormorant Garamond':'https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap',
+  'Montserrat':'https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap',
+  'Raleway':'https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&display=swap',
+  'Oswald':'https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&display=swap',
+  'Inter':'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap',
+  'Nunito':'https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap',
+  'Lato':'https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap',
+  'Source Sans 3':'https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;600;700&display=swap',
+  'Ubuntu':'https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap'
+};
+
+function loadGoogleFont(name){
+  if(!googleFontUrls[name])return;
+  const id='gf-'+name.replace(/\s/g,'-');
+  if(!document.getElementById(id)){
+    const link=document.createElement('link');
+    link.id=id;link.rel='stylesheet';link.href=googleFontUrls[name];
+    document.head.appendChild(link);
+  }
+}
+
+function setFont(target,fontName,fallback){
+  loadGoogleFont(fontName);
+  if(target==='titles'){
+    document.querySelectorAll('.logo,.section-header h2,h1,h2,h3,.offer-card h3,.enroll-info h2,.adm-card-title,.stat-item .num').forEach(el=>{
+      el.style.fontFamily=`'${fontName}',${fallback}`;
+    });
+    document.querySelectorAll('#font-titles .font-opt').forEach(o=>o.classList.remove('active'));
+    document.querySelector(`#font-titles [data-font="${fontName}"]`)?.classList.add('active');
+  } else {
+    document.body.style.fontFamily=`'${fontName}',${fallback}`;
+    document.querySelectorAll('#font-body .font-opt').forEach(o=>o.classList.remove('active'));
+    document.querySelector(`#font-body [data-font="${fontName}"]`)?.classList.add('active');
+  }
+  toast(`Police "${fontName}" appliquée !`);
+}
+
+function resetFonts(){
+  document.body.style.fontFamily="'Poppins',sans-serif";
+  document.querySelectorAll('.logo,.section-header h2,h1,h2,h3,.offer-card h3,.enroll-info h2,.adm-card-title,.stat-item .num').forEach(el=>el.style.fontFamily='');
+  document.querySelectorAll('.font-opt').forEach(o=>o.classList.remove('active'));
+  document.querySelector('#font-titles [data-font="DM Serif Display"]')?.classList.add('active');
+  document.querySelector('#font-body [data-font="Poppins"]')?.classList.add('active');
+  toast('Polices réinitialisées.');
+}
+
+/* ── TICKER / BARRE DÉFILANTE ── */
+let tickerMsgs=['🎓 KAY REUSSIR : Inscriptions 2026 ouvertes','🏠 Cours à domicile partout à Dakar','💻 Cours en ligne disponibles','🚀 Cours de renforcement BFEM & BAC','💳 Paiement Wave & Orange Money ✨'];
+
+function renderTickerList(){
+  const el=document.getElementById('ticker-list');
+  if(!el)return;
+  el.innerHTML=tickerMsgs.map((m,i)=>`
+    <div class="ticker-msg-item">
+      <i class="fas fa-grip-dots" style="color:#ccc;font-size:.8rem"></i>
+      <span class="tmi-text">${m}</span>
+      <button class="tmi-del" onclick="delTickerMsg(${i})" title="Supprimer"><i class="fas fa-times"></i></button>
+    </div>`).join('');
+  rebuildTicker();
+}
+
+function addTickerMsg(){
+  const inp=document.getElementById('ticker-new');
+  const val=inp.value.trim();
+  if(!val){toast('Entrez un message.','err');return}
+  tickerMsgs.push(val);inp.value='';
+  renderTickerList();toast('Message ajouté !');
+}
+
+function delTickerMsg(i){
+  tickerMsgs.splice(i,1);
+  renderTickerList();
+}
+
+function rebuildTicker(){
+  const track=document.querySelector('.promo-track');
+  if(!track)return;
+  const speed=document.getElementById('ticker-speed')?.value||38;
+  track.textContent=tickerMsgs.join('   ·   ');
+  track.style.animationDuration=speed+'s';
+  // Update preview
+  const prev=document.getElementById('ticker-preview');
+  if(prev){
+    const inner=prev.querySelector('div');
+    if(inner)inner.textContent=tickerMsgs.join('   ·   ');
+  }
+}
+
+function applyTickerStyle(){
+  const bg=document.getElementById('ticker-bg-color')?.value||'#0a2351';
+  const tc=document.getElementById('ticker-text-color')?.value||'#ffffff';
+  const bc=document.getElementById('ticker-border-color')?.value||'#d4af37';
+  const sz=document.getElementById('ticker-size')?.value||'.85rem';
+  const spd=parseInt(document.getElementById('ticker-speed')?.value||38);
+  const bar=document.querySelector('.promo-bar');
+  if(bar){
+    bar.style.background=bg;bar.style.color=tc;
+    bar.style.borderBottomColor=bc;bar.style.fontSize=sz;
+  }
+  const track=document.querySelector('.promo-track');
+  if(track)track.style.animationDuration=spd+'s';
+  // Speed label
+  const spLabels={10:'Très rapide',20:'Rapide',38:'Normale',55:'Lente',80:'Très lente'};
+  const closest=Object.keys(spLabels).reduce((a,b)=>Math.abs(b-spd)<Math.abs(a-spd)?b:a);
+  const lbl=document.getElementById('ticker-speed-val');
+  if(lbl)lbl.textContent=spLabels[closest]||'Normale';
+  // Preview
+  const prev=document.getElementById('ticker-preview');
+  if(prev){
+    prev.style.background=bg;prev.style.color=tc;
+    prev.style.borderBottomColor=bc;prev.style.fontSize=sz;
+    const inner=prev.querySelector('div');
+    if(inner)inner.style.animationDuration=spd+'s';
+  }
+}
+
+function toggleTicker(on){
+  const bar=document.querySelector('.promo-bar');
+  if(bar)bar.style.display=on?'':'none';
+  const knob=document.getElementById('ticker-knob');
+  const ui=document.getElementById('ticker-toggle-ui');
+  if(knob)knob.style.left=on?'21px':'3px';
+  if(ui)ui.style.background=on?'var(--wa)':'#ddd';
+}
+
+/* ── INIT TICKER ── */
+renderTickerList();
+const appData={logo:null,hero:null,offers:null,footer:null};
+
+function uploadAppImg(input,zone){
+  const file=input.files[0];if(!file)return;
+  if(file.size>15*1024*1024){toast('Image trop grande (max 15MB)','err');return}
+  const r=new FileReader();
+  r.onload=e=>{
+    appData[zone]=e.target.result;
+    applyAppearance(zone,e.target.result);
+    toast('Image appliquée avec succès !');
+  };
+  r.readAsDataURL(file);
+}
+
+function applyAppearance(zone,url){
+  if(zone==='logo'){
+    // Header logo
+    const img=document.getElementById('site-logo-img');
+    const txt=document.getElementById('site-logo-text');
+    img.src=url;img.style.display='block';txt.style.display='none';
+    // Admin previews
+    const pi=document.getElementById('app-prev-logo-img');
+    const pt=document.getElementById('app-prev-logo-text');
+    const pid=document.getElementById('app-prev-logo-img-dark');
+    const ptd=document.getElementById('app-prev-logo-text-dark');
+    pi.src=url;pi.style.display='block';pt.style.display='none';
+    pid.src=url;pid.style.display='block';ptd.style.display='none';
+    // Footer logos
+    document.querySelectorAll('.footer-logo-img').forEach(el=>{el.src=url;el.style.display='block'});
+    document.querySelectorAll('.footer-logo-txt').forEach(el=>el.style.display='none');
+    // Admin header
+    const ah=document.getElementById('adm-logo-img');
+    if(ah){ah.src=url;ah.style.display='block';document.getElementById('adm-logo-txt').style.display='none'}
+  } else if(zone==='hero'){
+    const hero=document.querySelector('.hero');
+    const ov=parseInt(document.getElementById('hero-ov-val').textContent)||88;
+    hero.style.backgroundImage=`linear-gradient(135deg,rgba(10,35,81,${ov/100}),rgba(10,35,81,${(ov/100)*.55})),url('${url}')`;
+    document.getElementById('app-prev-hero').style.backgroundImage=`linear-gradient(135deg,rgba(10,35,81,.88),rgba(10,35,81,.5)),url('${url}')`;
+  } else if(zone==='offers'){
+    const sec=document.querySelector('.offers-section');
+    sec.style.backgroundImage=`url('${url}')`;
+    sec.style.backgroundSize='cover';sec.style.backgroundPosition='center';
+    document.getElementById('app-prev-offers').style.backgroundImage=`url('${url}')`;
+    document.getElementById('app-prev-offers').style.backgroundSize='cover';
+  } else if(zone==='footer'){
+    const ft=document.querySelector('footer');
+    ft.style.backgroundImage=`url('${url}')`;
+    ft.style.backgroundSize='cover';ft.style.backgroundPosition='center';
+    document.getElementById('app-prev-footer').style.backgroundImage=`url('${url}')`;
+    document.getElementById('app-prev-footer').style.backgroundSize='cover';
+  }
+}
+
+function clearApp(zone){
+  appData[zone]=null;
+  if(zone==='logo'){
+    document.getElementById('site-logo-img').style.display='none';
+    document.getElementById('site-logo-text').style.display='';
+    document.getElementById('app-prev-logo-img').style.display='none';
+    document.getElementById('app-prev-logo-text').style.display='';
+    document.getElementById('app-prev-logo-img-dark').style.display='none';
+    document.getElementById('app-prev-logo-text-dark').style.display='';
+    document.querySelectorAll('.footer-logo-img').forEach(el=>el.style.display='none');
+    document.querySelectorAll('.footer-logo-txt').forEach(el=>el.style.display='');
+    const ah=document.getElementById('adm-logo-img');
+    if(ah){ah.style.display='none';document.getElementById('adm-logo-txt').style.display=''}
+  } else if(zone==='hero'){
+    document.querySelector('.hero').style.backgroundImage="linear-gradient(135deg,rgba(10,35,81,.88),rgba(10,35,81,.5)),url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&q=80&w=2070')";
+    document.getElementById('app-prev-hero').style.backgroundImage="linear-gradient(135deg,rgba(10,35,81,.88),rgba(10,35,81,.5)),url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&q=80&w=600')";
+  } else if(zone==='offers'){
+    document.querySelector('.offers-section').style.backgroundImage='none';
+    document.getElementById('app-prev-offers').style.backgroundImage='none';
+  } else if(zone==='footer'){
+    document.querySelector('footer').style.backgroundImage='none';
+    document.getElementById('app-prev-footer').style.backgroundImage='none';
+  }
+  toast('Image supprimée.','err');
+}
+
+function resetLogoText(){clearApp('logo')}
+
+function setHeroOverlay(val){
+  document.getElementById('hero-ov-val').textContent=val+'%';
+  const heroUrl=appData.hero||'https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&q=80&w=2070';
+  document.querySelector('.hero').style.backgroundImage=`linear-gradient(135deg,rgba(10,35,81,${val/100}),rgba(10,35,81,${(val/100)*.55})),url('${heroUrl}')`;
+}
+
+/* ── INIT ── */
+applyNets();
+</script>
+</body>
+</html>
